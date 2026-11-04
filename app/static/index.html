@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Urban Tandoor — Fire, recorded.</title>
+  <meta name="description" content="A living ledger of the Urban Tandoor menu, supply and kitchen notes." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23171310'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' font-weight='bold' text-anchor='middle' fill='%23f2ece0'%3EUT%3C/text%3E%3Crect x='48' y='0' width='16' height='16' fill='%23d94f1e'/%3E%3C/svg%3E" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,900;1,9..144,300;1,9..144,900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="ember-glow" id="emberGlow" aria-hidden="true"></div>
+
+  <aside class="rail">
+    <a class="rail-brand" href="#top" aria-label="Urban Tandoor home">
+      <span class="rail-mark">UT</span>
+      <span class="rail-name">Urban<br />Tandoor</span>
+    </a>
+    <nav class="rail-nav" aria-label="Sections">
+      <a href="#menu"><span>01</span> Menu</a>
+      <a href="#supply"><span>02</span> Supply</a>
+      <a href="#archive"><span>03</span> Archive</a>
+      <a href="#concierge"><span>04</span> Concierge</a>
+    </nav>
+    <div class="rail-foot">
+      <span class="live"><i></i> live</span>
+      <time id="clock">--:--</time>
+      <button class="ops-link" id="opsToggle" type="button">Ops</button>
+    </div>
+  </aside>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Karachi · two kitchens · open 24/7</p>
+          <h1>Fire,<br /><em>recorded.</em></h1>
+          <p class="lede">A living ledger of what we cook, what we hold, and what we can honestly promise you tonight.</p>
+          <div class="stats">
+            <div><b id="statItems">—</b><span>active dishes</span></div>
+            <div><b id="statChunks">—</b><span>kitchen notes</span></div>
+            <div><b id="statBranches">—</b><span>branches</span></div>
+          </div>
+        </div>
+        <div class="hero-side">
+          <svg class="stamp" viewBox="0 0 200 200" aria-hidden="true">
+            <defs>
+              <path id="circlePath" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0" />
+            </defs>
+            <circle cx="100" cy="100" r="96" fill="none" stroke="currentColor" stroke-width="1.2" />
+            <circle cx="100" cy="100" r="66" fill="none" stroke="currentColor" stroke-width=".7" stroke-dasharray="2 5" />
+            <text class="stamp-ring">
+              <textPath href="#circlePath">URBAN TANDOOR &amp; GRILL · KARACHI · EST. 2024 · HALAL · </textPath>
+            </text>
+            <text x="100" y="94" text-anchor="middle" class="stamp-big">UT</text>
+            <text x="100" y="116" text-anchor="middle" class="stamp-small">NO. 02</text>
+          </svg>
+          <p class="hero-note">Synthetic demo data.<br />Real async pipeline.</p>
+        </div>
+      </div>
+      <div class="hero-rule" aria-hidden="true"></div>
+    </section>
+
+    <section class="section" id="menu">
+      <header class="sec-head reveal">
+        <span class="sec-no">01</span>
+        <h2>The Menu</h2>
+        <p class="sec-note">Tap a line to read its passport.</p>
+      </header>
+      <div class="chips reveal" id="categoryChips" role="group" aria-label="Filter by category"></div>
+      <div class="ledger reveal" id="menuList" aria-live="polite">
+        <p class="empty">Opening the ledger…</p>
+      </div>
+    </section>
+
+    <section class="section supply" id="supply">
+      <header class="sec-head reveal">
+        <span class="sec-no">02</span>
+        <h2>The Supply</h2>
+        <p class="sec-note">What the kitchen can actually deliver.</p>
+      </header>
+      <div class="supply-grid reveal">
+        <div class="supply-controls">
+          <label class="field">Kitchen
+            <select id="branchSelect"></select>
+          </label>
+          <label class="field">Dish
+            <select id="dishSelect"></select>
+          </label>
+          <div class="lowstock">
+            <h3>Running low</h3>
+            <ul id="lowStock"><li class="empty">Reading stock…</li></ul>
+          </div>
+        </div>
+        <div class="gauge" id="gauge" data-status="idle">
+          <p class="gauge-label">portions we can promise</p>
+          <div class="gauge-number" id="portions">—</div>
+          <p class="gauge-status" id="portionStatus">choose a dish</p>
+          <p class="gauge-detail" id="portionDetail"></p>
+          <div class="gauge-bar"><i id="portionBar"></i></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="archive">
+      <header class="sec-head reveal">
+        <span class="sec-no">03</span>
+        <h2>The Archive</h2>
+        <p class="sec-note">Search the kitchen notes by meaning.</p>
+      </header>
+      <form class="searchbar reveal" id="searchForm" role="search">
+        <span class="search-slash" aria-hidden="true">/</span>
+        <input id="searchInput" type="search" placeholder="biryani, karahi, something cold…" autocomplete="off" aria-label="Search kitchen notes" />
+        <button type="submit">Search <span aria-hidden="true">→</span></button>
+      </form>
+      <div class="results reveal" id="searchResults" aria-live="polite">
+        <p class="empty">Nothing searched yet. Try “smoky”, “breakfast”, or “chai”.</p>
+      </div>
+    </section>
+
+    <section class="section" id="concierge">
+      <header class="sec-head reveal">
+        <span class="sec-no">04</span>
+        <h2>The Concierge</h2>
+        <p class="sec-note">Grounded in tonight's menu and stock.</p>
+      </header>
+      <div class="chat-shell reveal">
+        <div class="chat-intro">
+          <p class="chat-kicker">Ask the pass</p>
+          <p>Menu advice, availability, low stock — answered from this restaurant's data only.</p>
+          <div class="suggestions" id="suggestions"></div>
+          <p class="model-note">Powered by <b>gpt-oss-120b</b> via Groq. The key never leaves the server.</p>
+        </div>
+        <div class="chat">
+          <div class="messages" id="messages">
+            <div class="msg assistant">
+              <span class="msg-label">Concierge</span>
+              <p>Good evening. Ask me what to eat, what's running low, or what we can promise at either branch.</p>
+            </div>
+          </div>
+          <form class="chat-form" id="chatForm">
+            <textarea id="chatInput" rows="1" placeholder="What should I order for two?" maxlength="1000"></textarea>
+            <button type="submit" aria-label="Send message">↑</button>
+          </form>
+          <p class="chat-hint">Enter to send · Shift+Enter for a new line</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <p>Urban Tandoor &amp; Grill — fire, recorded.</p>
+      <p class="foot-links">
+        <a href="/docs">API docs</a>
+        <a href="/api/v1/">Endpoints</a>
+        <a href="/health">Health</a>
+      </p>
+    </footer>
+  </main>
+
+  <dialog class="sheet" id="dishDialog">
+    <button class="sheet-close" id="dishClose" aria-label="Close">×</button>
+    <div class="sheet-body" id="dishBody"></div>
+  </dialog>
+
+  <div class="ops" id="opsPanel" aria-hidden="true">
+    <div class="ops-head">
+      <h3>Kitchen Ops</h3>
+      <button type="button" id="opsClose" aria-label="Close ops">×</button>
+    </div>
+    <label class="ops-token">Admin token
+      <input id="opsToken" value="change-me" autocomplete="off" />
+    </label>
+    <div class="ops-buttons">
+      <button data-domain="menu">Refresh menu</button>
+      <button data-domain="inventory">Refresh inventory</button>
+      <button data-domain="docs">Refresh docs</button>
+      <button data-domain="all" class="wide">Refresh everything</button>
+    </div>
+    <div class="ops-job" id="opsJob">No job yet.</div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

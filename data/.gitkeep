@@ -1,0 +1,6 @@
+# Place the 3 source files (Excel / Word) here before running the ingestion.
+#
+# data/
+#   ├── <menu>.xlsx
+#   ├── <faq>.docx
+#   └── ...
