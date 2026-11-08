@@ -1,9 +1,15 @@
 # Urban Tandoor & Grill — Menu & Inventory API
 
-Data engineering pipeline that ingests two Excel workbooks and a DOCX restaurant
-profile into a Neon PostgreSQL database (with `pgvector`), then serves the data
-through an async FastAPI application with menu, inventory, availability,
-semantic-search and admin-refresh endpoints.
+Data engineering pipeline that turns two Excel workbooks and a DOCX restaurant
+profile into JSON snapshots, loads those snapshots into **MongoDB Atlas**, and
+serves the data through an async **FastAPI** application with menu, inventory,
+availability, semantic-search and admin-refresh endpoints.
+
+JSON is the canonical ingestion format:
+
+```text
+Excel / DOCX  ->  data/json/<collection>.json  ->  MongoDB Atlas  ->  FastAPI
+```
 
 All data is **synthetic demo data**. The three source files live in `data/`.
 
@@ -11,36 +17,37 @@ All data is **synthetic demo data**. The three source files live in `data/`.
 
 ## Architecture
 
-```
+```text
                          ┌──────────────────────────────────────────┐
                          │              data/ (sources)             │
                          │  Menu catalog .xlsx                      │
                          │  Inventory dataset .xlsx                 │
                          │  Restaurant profile .docx                │
                          └──────────────────┬───────────────────────┘
-                                            │
-                       ┌────────────────────▼─────────────────────┐
-                       │        Ingestion layer (async)           │
-                       │  app/ingestion/excel_menu.py             │
-                       │  app/ingestion/excel_inventory.py        │
-                       │  app/ingestion/docs_pipeline.py          │
-                       │  chunker + embedder (1536-d vectors)     │
-                       └────────────────────┬─────────────────────┘
-                                            │ idempotent upserts
-                       ┌────────────────────▼─────────────────────┐
-                       │     PostgreSQL (Neon) + pgvector         │
-                       │  20 tables · HNSW index · GIN indexes    │
-                       └────────────────────┬─────────────────────┘
-                                            │ async SQLAlchemy 2.x
-                       ┌────────────────────▼─────────────────────┐
-                       │           FastAPI application            │
-                       │  RequestID · CORS · GZip middleware      │
-                       │  /health                                 │
-                       │  /api/v1/menu/...                        │
-                       │  /api/v1/inventory/...                   │
-                       │  /api/v1/search/...                      │
-                       │  /api/v1/admin/...   (X-Admin-Token)     │
-                       └──────────────────────────────────────────┘
+                                            │  utg-export / admin refresh
+                         ┌──────────────────▼───────────────────────┐
+                         │     JSON snapshots (canonical format)    │
+                         │  data/json/categories.json               │
+                         │  data/json/menu_items.json               │
+                         │  ... one file per collection ...         │
+                         │  data/json/document_chunks.json          │
+                         └──────────────────┬───────────────────────┘
+                                            │  utg-ingest / admin refresh
+                         ┌──────────────────▼───────────────────────┐
+                         │           MongoDB Atlas (M0)             │
+                         │  20 collections · unique natural keys    │
+                         │  embeddings stored as float arrays       │
+                         └──────────────────┬───────────────────────┘
+                                            │  Motor (async PyMongo)
+                         ┌──────────────────▼───────────────────────┐
+                         │           FastAPI application            │
+                         │  RequestID · CORS · GZip middleware      │
+                         │  /health                                 │
+                         │  /api/v1/menu/...                        │
+                         │  /api/v1/inventory/...                   │
+                         │  /api/v1/search/...                      │
+                         │  /api/v1/admin/...   (X-Admin-Token)     │
+                         └──────────────────────────────────────────┘
 ```
 
 ---
@@ -57,13 +64,15 @@ All data is **synthetic demo data**. The three source files live in `data/`.
   from recipe requirements and live stock, with the limiting ingredient
   identified.
 - **Document pipeline** — DOCX profile + one narrative chunk per menu item,
-  split into chunks with configurable size/overlap and embedded as
-  `VECTOR(1536)`.
-- **Semantic search** — cosine-distance ranking (`<=>`), min-score filtering,
-  pagination, document listing and index health.
+  split into chunks with configurable size/overlap. Vectors are generated at
+  import time, so the JSON stays small and readable.
+- **Semantic search** — cosine similarity ranking with NumPy, min-score
+  filtering, document listing and index health. Works on the Atlas free tier
+  without a Vector Search index.
 - **Admin refresh** — background, non-blocking refreshes per domain
   (`menu | inventory | docs | all`) with an in-memory job lifecycle
   (`pending → running → success | error`) protected by `X-Admin-Token`.
+  A refresh re-exports the source files to JSON and re-ingests that JSON.
 - **Hand-built frontend** — a dependency-free, paper-and-ember kitchen ledger
   served at `/ui/`: menu passport drawer, live portion gauge, semantic archive
   search, kitchen ops drawer and a grounded AI concierge.
@@ -77,27 +86,35 @@ All data is **synthetic demo data**. The three source files live in `data/`.
 
 ## Project layout
 
-```
+```text
 urban-tandoor-pipeline/
-├── alembic/                  # migrations (async env.py)
 ├── app/
 │   ├── api/
-│   │   ├── deps.py           # SessionDep
+│   │   ├── deps.py           # DatabaseDep / SettingsDep
 │   │   ├── middleware.py     # RequestID / CORS / GZip
-│   │   └── routes/           # health, menu, inventory, search, admin
-│   ├── ingestion/            # excel, docs, chunker, embedder, CLI helpers
-│   ├── models/               # SQLModel tables (menu, inventory, documents)
+│   │   └── routes/           # health, menu, inventory, search, admin, assistant
+│   ├── ingestion/
+│   │   ├── excel_menu.py     # workbook -> menu JSON
+│   │   ├── excel_inventory.py# workbook -> inventory JSON
+│   │   ├── docs_pipeline.py  # DOCX/narratives -> docs JSON
+│   │   ├── json_store.py     # JSON read/write
+│   │   ├── json_ingest.py    # JSON -> MongoDB upserts + embeddings
+│   │   ├── chunker.py        # document chunking
+│   │   └── embedder.py       # fake / OpenAI / Gemini providers
 │   ├── schemas/              # Pydantic response/request DTOs
 │   ├── services/             # availability, search, jobs, refresh, assistant
 │   ├── static/               # hand-built frontend (HTML/CSS/JS)
+│   ├── collections.py        # collection names, natural keys, index specs
 │   ├── config.py             # pydantic-settings
-│   ├── database.py           # async engine + session factory
+│   ├── database.py           # Motor client, database dependency, index bootstrap
 │   └── main.py               # FastAPI app + lifespan
 ├── data/                     # source workbooks + DOCX
-├── scripts/                  # ingest CLI + phase self-checks
-├── tests/                    # pytest suite
+│   └── json/                 # canonical JSON snapshots (committed)
+├── scripts/
+│   ├── export_all.py         # utg-export CLI
+│   └── ingest_all.py         # utg-ingest CLI
+├── tests/                    # pytest suite (mongomock-motor, no Atlas needed)
 ├── .env.example
-├── alembic.ini
 ├── pyproject.toml
 └── README.md
 ```
@@ -109,8 +126,7 @@ urban-tandoor-pipeline/
 ### 1. Prerequisites
 
 - Python 3.11+ and [`uv`](https://docs.astral.sh/uv/)
-- A PostgreSQL database with the `vector` extension available
-  (Neon works out of the box)
+- A free **MongoDB Atlas M0** cluster (or any MongoDB 5+ deployment)
 
 ### 2. Install
 
@@ -124,17 +140,27 @@ uv sync
 cp .env.example .env      # Windows: copy .env.example .env
 ```
 
-Edit `.env`:
+Create a free cluster at <https://www.mongodb.com/atlas>, add a database user,
+allow your IP (or `0.0.0.0/0` for a throwaway demo), then copy the connection
+string into `.env`:
+
+```env
+MONGODB_URI=mongodb+srv://USER:PASSWORD@cluster0.xxxxx.mongodb.net/?retryWrites=true&w=majority
+MONGODB_DB=urban_tandoor
+```
 
 | Variable | Default | Purpose |
 | --- | --- | --- |
-| `APP_ENV` | `dev` | `dev` enables SQL echo; use `test` for quiet runs |
-| `DATABASE_URL` | local Postgres | Pooled asyncpg URL used by the app |
-| `EMBEDDING_PROVIDER` | `openai` | `openai`, `gemini` or `fake` |
+| `MONGODB_URI` | `mongodb://localhost:27017` | Atlas connection string used by the app and CLIs |
+| `MONGODB_DB` | `urban_tandoor` | Database name |
+| `MONGODB_TIMEOUT_MS` | `8000` | Server-selection timeout |
+| `JSON_DIR` | `./data/json` | Canonical JSON snapshot directory |
+| `APP_ENV` | `dev` | Free-form environment label |
+| `EMBEDDING_PROVIDER` | `fake` in `.env.example` | `openai`, `gemini` or `fake` |
 | `EMBEDDING_MODEL` | `text-embedding-3-small` | Provider model name |
-| `EMBEDDING_DIM` | `1536` | Must match the `VECTOR(n)` column |
+| `EMBEDDING_DIM` | `1536` | Vector dimension stored with each chunk |
 | `OPENAI_API_KEY` | — | Required when provider is `openai` |
-| `GEMINI_API_KEY` | — | Required when provider is `gemini` |
+| `GEMINI_API_KEY` | — | Reserved for the Gemini provider |
 | `DATA_DIR` | `./data` | Source files directory |
 | `CHUNK_SIZE` | `800` | Document chunk size (characters) |
 | `CHUNK_OVERLAP` | `120` | Chunk overlap (characters) |
@@ -143,10 +169,7 @@ Edit `.env`:
 | `GROQ_API_KEY` | — | Server-side key for the AI concierge (never sent to the browser) |
 | `GROQ_MODEL` | `openai/gpt-oss-120b` | Groq chat model used by the concierge |
 
-> The app connects through the pooled Neon host. Alembic strips `-pooler`
-> from the host automatically so migrations use a direct connection.
-
-For deterministic offline development use:
+For deterministic offline development keep:
 
 ```env
 EMBEDDING_PROVIDER=fake
@@ -155,13 +178,20 @@ EMBEDDING_PROVIDER=fake
 `FakeEmbedder` produces deterministic hash-based vectors. Retrieval structure
 is testable, but semantic relevance is **not** meaningful with this provider.
 
-### 4. Migrate
+### 4. Export the JSON snapshots
+
+The repository already contains `data/json/*.json`, but you can regenerate them
+from the source workbooks and DOCX at any time:
 
 ```bash
-uv run alembic upgrade head
+uv run utg-export                  # menu + inventory + docs
+uv run utg-export --only menu
+uv run utg-export --only inventory
+uv run utg-export --only docs
+uv run utg-export --json-dir ./tmp/json
 ```
 
-### 5. Ingest
+### 5. Load JSON into MongoDB
 
 ```bash
 uv run utg-ingest                 # all domains
@@ -172,8 +202,9 @@ uv run utg-ingest --strict        # fail fast on any domain error
 uv run utg-ingest --wipe --yes    # destructive clean reload
 ```
 
-Ingestion is idempotent: rerunning updates rows in place and regenerates
-document chunks only when the source checksum changes.
+Ingestion is idempotent: every document is upserted on its natural key, so
+rerunning updates documents in place. Document embeddings are generated during
+`utg-ingest --only docs`, not inside the JSON files.
 
 ### 6. Run the API
 
@@ -215,7 +246,7 @@ the UI keeps working.
 
 | Method | Path | Description |
 | --- | --- | --- |
-| `GET` | `/health` | App + DB status, version, request ID |
+| `GET` | `/health` | App + MongoDB status, version, request ID |
 | `GET` | `/api/v1/` | Service metadata and endpoint index |
 
 ### Menu
@@ -224,7 +255,7 @@ the UI keeps working.
 | --- | --- | --- |
 | `GET` | `/api/v1/menu/categories` | All 8 categories |
 | `GET` | `/api/v1/menu/items` | Items; defaults to `catalog_status=Active` |
-| `GET` | `/api/v1/menu/items/{menu_id}` | Item with variants + addons |
+| `GET` | `/api/v1/menu/items/{menu_id}` | Item with variants |
 | `GET` | `/api/v1/menu/items/{menu_id}/variants` | Variants ordered by price |
 | `GET` | `/api/v1/menu/items/{menu_id}/addons` | Addons with selectability |
 | `GET` | `/api/v1/menu/aliases?phrase=...` | Alias search (substring) |
@@ -251,8 +282,9 @@ Menu item filters: `category`, `q` (name search), `catalog_status`
 | `GET` | `/api/v1/search/health` | Chunk/index statistics |
 | `GET` | `/api/v1/search/documents` | Source documents + chunk counts |
 
-Results are ordered by cosine similarity descending
-(`similarity = 1 - cosine_distance`), rounded to 6 decimal places.
+Results are ordered by cosine similarity descending, rounded to 6 decimals.
+`/api/v1/search/health` reports `vector_index_present: false` because ranking
+runs in the application process.
 
 ### Admin
 
@@ -260,7 +292,7 @@ All admin routes require the header `X-Admin-Token`.
 
 | Method | Path | Description |
 | --- | --- | --- |
-| `POST` | `/api/v1/admin/refresh/{domain}` | Enqueue refresh; returns `202` + job |
+| `POST` | `/api/v1/admin/refresh/{domain}` | Enqueue export+ingest; returns `202` + job |
 | `GET` | `/api/v1/admin/jobs/{job_id}` | Job status/result |
 | `GET` | `/api/v1/admin/jobs?limit=20` | Recent jobs (1–100) |
 
@@ -289,29 +321,29 @@ Request body:
 {
   "message": "What should I order for two?",
   "history": [{ "role": "user", "content": "I like smoky food." }],
-  "branch_id": "BR-01"
+  "branch_id": "UTG-KHI-001"
 }
 ```
 
 `history` is optional (max 12 turns, the server uses the last 8) and
 `branch_id` is optional. The service rebuilds a compact snapshot of the active
 menu, branches and low-stock lines for that branch and puts it in the system
-prompt, so answers stay tied to the demo data. Travels as `502`/`503`/`504` when
+prompt, so answers stay tied to the demo data. Returns `502`/`503`/`504` when
 Groq is unreachable, unconfigured or slow.
 
 ---
 
-## Data model (20 tables)
+## Data model (20 collections)
 
-| Group | Tables |
+| Group | Collections |
 | --- | --- |
 | Menu | `categories`, `menu_items`, `variants`, `addons`, `item_addons`, `item_aliases`, `branch_menu`, `inventory_links`, `deals`, `deal_items`, `allergen_guide`, `service_rules` |
 | Inventory | `suppliers`, `ingredients`, `branches`, `branch_stock`, `recipes`, `stock_movements` |
-| Documents | `source_documents`, `document_chunks` (`VECTOR(1536)`, JSONB metadata) |
+| Documents | `source_documents`, `document_chunks` (`embedding` float array, `metadata_json` object) |
 
-Baseline row counts:
+Baseline document counts:
 
-```
+```text
 suppliers       7    categories      8    source_documents    2
 ingredients    60    menu_items    118    document_chunks   128
 branches        2    variants      148
@@ -326,8 +358,10 @@ stock_movements 8    item_aliases  158
                      service_rules   7
 ```
 
-Indexes include an HNSW cosine index on `document_chunks.embedding` and GIN
-indexes on JSONB metadata columns.
+Natural keys are declared in `app/collections.py` and drive idempotent upserts.
+Unique indexes enforce those keys; secondary indexes cover the read paths
+(branch stock, menu filters, document chunks). JSON snapshots use ISO-8601
+strings for dates; the importer converts them back to BSON dates.
 
 ---
 
@@ -337,12 +371,15 @@ indexes on JSONB metadata columns.
 uv run pytest -q
 ```
 
-Coverage by file:
+The suite runs fully offline against **`mongomock-motor`**. One in-memory
+database is seeded per session through the real JSON ingestion path, so no
+Atlas connection or API key is required. Embeddings are forced to the
+deterministic `fake` provider.
 
 | File | Scope |
 | --- | --- |
 | `tests/test_health.py` | Health, request IDs, API index, OpenAPI |
-| `tests/test_ingestion.py` | Workbook-derived row counts, computed stock fields, spot checks |
+| `tests/test_ingestion.py` | Workbook-derived counts, computed stock fields, spot checks |
 | `tests/test_menu_api.py` | Menu categories/items/variants/addons/aliases |
 | `tests/test_inventory_api.py` | Branches and stock endpoints |
 | `tests/test_availability.py` | Exact portion math (including limiting ingredient) |
@@ -350,29 +387,35 @@ Coverage by file:
 | `tests/test_admin_api.py` | Auth, lifecycle, `all` domain, concurrency |
 | `tests/test_end_to_end.py` | Cross-layer journeys and refresh isolation |
 
-Tests are read-only against the database; only admin refresh tests trigger
-writes, and ingestion is idempotent so counts remain stable.
-
-The repository also contains `scripts/_selfcheck_*.py`, one per phase, used to
-verify each migration/ingestion/API milestone end to end. They are diagnostic
-tools, not part of the pytest suite.
+Only admin refresh tests trigger writes; ingestion is idempotent, so counts
+remain stable.
 
 ---
 
 ## Design notes
 
-- **Async everywhere** — async SQLAlchemy 2.x engine/session, async ingestion,
-  async httpx tests via `ASGITransport`.
-- **No pandas `to_sql`** — ingestion uses PostgreSQL `INSERT ... ON CONFLICT
-  DO UPDATE` for deterministic idempotent upserts.
-- **Migration URLs** — `alembic/env.py` removes the `-pooler` suffix so
-  migrations use a direct Neon connection; the API keeps the pooled URL.
+- **JSON is the contract** — every write path (CLI and admin refresh) goes
+  through Excel/DOCX → JSON → MongoDB. Nothing writes directly from a parser
+  into the database.
+- **One collection per former table** — field names are unchanged, so the API
+  and frontend did not need a rewrite when the storage engine changed.
+- **Async everywhere** — Motor async client, async ingestion, async httpx
+  tests via `ASGITransport`.
+- **Embeddings at import time** — `document_chunks.json` stores text and
+  metadata only; `utg-ingest --only docs` embeds chunks with the configured
+  provider. This keeps the committed JSON small and lets you swap providers
+  without regenerating the corpus.
+- **Search without Atlas Vector Search** — for the 128-chunk demo, cosine
+  similarity is computed in Python/NumPy. If the corpus grows, replace
+  `_rank_chunks` in `app/services/search_service.py` with a `$vectorSearch`
+  aggregation stage; the response contract stays the same.
+- **Index bootstrap** — `app/database.py` creates unique/secondary indexes at
+  startup. Startup never fails if Atlas is temporarily unreachable; the health
+  endpoint reports `degraded` instead.
 - **Availability formula** — portions are the minimum across recipe lines of
   `floor(available_ingredient / qty_per_portion)`; zero/negative outcomes are
   reported as `OUT_OF_STOCK`/`NOT_ACTIVE` with a limiting ingredient where
   applicable.
-- **Embeddings** — the provider is pluggable. The committed demo uses
-  `fake` deterministic 1536-d vectors so the pipeline runs without API keys.
 - **Job store** — in-memory singleton guarded by `asyncio.Lock`; background
   task references are retained until completion so they are not garbage
   collected mid-flight.
@@ -384,17 +427,19 @@ tools, not part of the pytest suite.
 
 ## Limitations / production notes
 
-- The admin job store is **not persistent**; use a database table or Redis for
-  multi-process deployments.
+- The admin job store is **not persistent**; use a database collection or
+  Redis for multi-process deployments.
 - Background refreshes use the API process event loop. In production move them
   to a worker queue (Celery/RQ/Arq) and add per-domain locking.
 - `FakeEmbedder` is for development/testing only; real semantic relevance
-  requires `EMBEDDING_PROVIDER=openai` or `gemini` and a re-embed of all
-  chunks.
+  requires `EMBEDDING_PROVIDER=openai` (or a wired Gemini provider) and a
+  re-ingest of the docs domain.
 - Admin auth is a single shared token (demo). Use OAuth2/OIDC and scoped tokens
   for real deployments.
 - Ingestion assumes the source workbooks keep their current sheet names and
   column headers.
+- MongoDB Atlas M0 is fine for this demo. Very large embedding collections
+  should use Atlas Vector Search or a dedicated vector store.
 
 ---
 
@@ -402,9 +447,11 @@ tools, not part of the pytest suite.
 
 | Symptom | Fix |
 | --- | --- |
-| `asyncpg ... attached to a different loop` | Dispose the engine between event loops (the test suite does this automatically) |
-| `type "vector" does not exist` | Enable the extension: run the Phase 5 extensions migration |
+| `ServerSelectionTimeoutError` | Check `MONGODB_URI`, the database user and the Atlas IP allowlist |
+| `DNS operation timed out` / SRV lookup fails | Some networks block `_mongodb._tcp` SRV queries. Use the direct form instead: `mongodb://USER:PASSWORD@shard-00-00…,shard-00-01…,shard-00-02…/?authSource=admin&replicaSet=…&tls=true` (hostnames and replica set name are in the SRV records / Atlas UI) |
+| `JSON snapshot missing ... Run utg-export first` | Run `uv run utg-export` (or pass `--json-dir`) |
+| `E11000 duplicate key` | Stale documents from an older natural key; run `uv run utg-ingest --wipe --yes` |
 | `Missing data file` | Confirm the three source files exist under `DATA_DIR` |
 | `401` on admin routes | Send `X-Admin-Token` matching `ADMIN_TOKEN` |
 | Search returns chunks but scores look random | Expected with `EMBEDDING_PROVIDER=fake` |
-| Alembic SSL/connection errors | Verify `DATABASE_URL`; `-pooler` is stripped automatically |
+| Tests cannot connect to MongoDB | They do not need Atlas; `mongomock-motor` is used automatically |

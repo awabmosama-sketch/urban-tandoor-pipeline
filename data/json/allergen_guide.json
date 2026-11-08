@@ -1,0 +1,50 @@
+[
+  {
+    "allergen_code": "GLUTEN",
+    "display_name": "Wheat/Gluten",
+    "status": "Unverified",
+    "use_policy": "Ingredient supplier labels and cross-contact verification required"
+  },
+  {
+    "allergen_code": "MILK",
+    "display_name": "Milk",
+    "status": "Unverified",
+    "use_policy": "Review dairy ingredients and shared equipment"
+  },
+  {
+    "allergen_code": "EGG",
+    "display_name": "Egg",
+    "status": "Unverified",
+    "use_policy": "Review recipe and mayonnaise/baked goods"
+  },
+  {
+    "allergen_code": "SOY",
+    "display_name": "Soy",
+    "status": "Unverified",
+    "use_policy": "Review sauces and cooking oils"
+  },
+  {
+    "allergen_code": "FISH",
+    "display_name": "Fish",
+    "status": "Unverified",
+    "use_policy": "Review fish items and shared fryer"
+  },
+  {
+    "allergen_code": "NUTS",
+    "display_name": "Tree nuts / Peanut",
+    "status": "Unverified",
+    "use_policy": "Review all sauces, desserts and cross-contact"
+  },
+  {
+    "allergen_code": "SESAME",
+    "display_name": "Sesame",
+    "status": "Unverified",
+    "use_policy": "Review bakery and sauces"
+  },
+  {
+    "allergen_code": "SHELLFISH",
+    "display_name": "Shellfish",
+    "status": "Unverified",
+    "use_policy": "Review supplier ingredients and shared cooking"
+  }
+]

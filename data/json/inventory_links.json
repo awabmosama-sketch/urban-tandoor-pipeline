@@ -1,0 +1,1890 @@
+[
+  {
+    "menu_id": "MENU001",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": true,
+    "snapshot_max_portions": 142,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU001",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": true,
+    "snapshot_max_portions": 250,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU002",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": true,
+    "snapshot_max_portions": 81,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU002",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": true,
+    "snapshot_max_portions": 115,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU003",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": true,
+    "snapshot_max_portions": 71,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU003",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": true,
+    "snapshot_max_portions": 125,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU004",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": true,
+    "snapshot_max_portions": 6,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU004",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": true,
+    "snapshot_max_portions": 42,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU005",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": true,
+    "snapshot_max_portions": 144,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU005",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": true,
+    "snapshot_max_portions": 205,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU006",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": true,
+    "snapshot_max_portions": 117,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU006",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": true,
+    "snapshot_max_portions": 155,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU007",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": true,
+    "snapshot_max_portions": 93,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU007",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": true,
+    "snapshot_max_portions": 164,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU008",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": true,
+    "snapshot_max_portions": 162,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU008",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": true,
+    "snapshot_max_portions": 230,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU009",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": true,
+    "snapshot_max_portions": 82,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU009",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": true,
+    "snapshot_max_portions": 104,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU010",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": true,
+    "snapshot_max_portions": 114,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU010",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": true,
+    "snapshot_max_portions": 144,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU011",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": true,
+    "snapshot_max_portions": 67,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU011",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": true,
+    "snapshot_max_portions": 82,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU012",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": true,
+    "snapshot_max_portions": 67,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU012",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": true,
+    "snapshot_max_portions": 82,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU013",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": true,
+    "snapshot_max_portions": 54,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU013",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": true,
+    "snapshot_max_portions": 80,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU014",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": true,
+    "snapshot_max_portions": 226,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU014",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": true,
+    "snapshot_max_portions": 15,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU015",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": true,
+    "snapshot_max_portions": 44,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU015",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": true,
+    "snapshot_max_portions": 5,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU016",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": true,
+    "snapshot_max_portions": 44,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU016",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": true,
+    "snapshot_max_portions": 5,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU017",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": true,
+    "snapshot_max_portions": 109,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU017",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": true,
+    "snapshot_max_portions": 5,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU018",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": true,
+    "snapshot_max_portions": 109,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU018",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": true,
+    "snapshot_max_portions": 11,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU019",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": true,
+    "snapshot_max_portions": 107,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU019",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": true,
+    "snapshot_max_portions": 163,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU020",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": true,
+    "snapshot_max_portions": 223,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU020",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": true,
+    "snapshot_max_portions": 289,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU021",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": true,
+    "snapshot_max_portions": 184,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU021",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": true,
+    "snapshot_max_portions": 261,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU022",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": true,
+    "snapshot_max_portions": 97,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU022",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": true,
+    "snapshot_max_portions": 4,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU023",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": true,
+    "snapshot_max_portions": 187,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU023",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": true,
+    "snapshot_max_portions": 227,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU024",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": true,
+    "snapshot_max_portions": 63,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU024",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": true,
+    "snapshot_max_portions": 124,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU025",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": true,
+    "snapshot_max_portions": 104,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU025",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": true,
+    "snapshot_max_portions": 126,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU026",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": true,
+    "snapshot_max_portions": 44,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU026",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": true,
+    "snapshot_max_portions": 58,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU027",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": true,
+    "snapshot_max_portions": 44,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU027",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": true,
+    "snapshot_max_portions": 58,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU028",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": true,
+    "snapshot_max_portions": 148,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU028",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": true,
+    "snapshot_max_portions": 117,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU029",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": true,
+    "snapshot_max_portions": 52,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU029",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": true,
+    "snapshot_max_portions": 81,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU030",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": true,
+    "snapshot_max_portions": 368,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU030",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": true,
+    "snapshot_max_portions": 444,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU031",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": true,
+    "snapshot_max_portions": 234,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU031",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": true,
+    "snapshot_max_portions": 322,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU032",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": true,
+    "snapshot_max_portions": 51,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU032",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": true,
+    "snapshot_max_portions": 223,
+    "recipe_link_status": "Original inventory dataset MENU_ID",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU033",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU033",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU034",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU034",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU035",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU035",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU036",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU036",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU037",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU037",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU038",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU038",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU039",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU039",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU040",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU040",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU041",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU041",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU042",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU042",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU043",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU043",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU044",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU044",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU045",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU045",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU046",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU046",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU047",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU047",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU048",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU048",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU049",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU049",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU050",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU050",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU051",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU051",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU052",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU052",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU053",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU053",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU054",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU054",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU055",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU055",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU056",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU056",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU057",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU057",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU058",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU058",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU059",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU059",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU060",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU060",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU061",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU061",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU062",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU062",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU063",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU063",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU064",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU064",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU065",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU065",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU066",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU066",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU067",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU067",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU068",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU068",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU069",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU069",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU070",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU070",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU071",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU071",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU072",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU072",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU073",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU073",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU074",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU074",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU075",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU075",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU076",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU076",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU077",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU077",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU078",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU078",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU079",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU079",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU080",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU080",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU081",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU081",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU082",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU082",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU083",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU083",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU084",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU084",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU085",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU085",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU086",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU086",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU087",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU087",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU088",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU088",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU089",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU089",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU090",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU090",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU091",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU091",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU092",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU092",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU093",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU093",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU094",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU094",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU095",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU095",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU096",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU096",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU097",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU097",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU098",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU098",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU099",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU099",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU100",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU100",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU101",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU101",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU102",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU102",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU103",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU103",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU104",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU104",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU105",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU105",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU106",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU106",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU107",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU107",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU108",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU108",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU109",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU109",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU110",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU110",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU111",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU111",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU112",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU112",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU113",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU113",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU114",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU114",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU115",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU115",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU116",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU116",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU117",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU117",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU118",
+    "branch_id": "UTG-KHI-001",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  },
+  {
+    "menu_id": "MENU118",
+    "branch_id": "UTG-KHI-002",
+    "recipe_linked": false,
+    "snapshot_max_portions": null,
+    "recipe_link_status": "Recipe mapping required",
+    "runtime_check_policy": "Use live branch stock API for actual checkout"
+  }
+]

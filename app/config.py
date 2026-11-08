@@ -20,8 +20,10 @@ class Settings(BaseSettings):
     # Application
     app_env: str = "dev"
 
-    # Database (engine wiring comes later)
-    database_url: str = "postgresql+asyncpg://postgres:postgres@localhost:5432/urban_tandoor"
+    # MongoDB Atlas (free M0 tier works fine)
+    mongodb_uri: str = "mongodb://localhost:27017"
+    mongodb_db: str = "urban_tandoor"
+    mongodb_timeout_ms: int = Field(default=8000, gt=0)
 
     # Embeddings
     embedding_provider: Literal["openai", "gemini", "fake"] = "openai"
@@ -32,6 +34,8 @@ class Settings(BaseSettings):
 
     # Ingestion
     data_dir: str = "./data"
+    # JSON is the canonical ingestion format. Export writes here; ingest reads here.
+    json_dir: str = "./data/json"
     chunk_size: int = Field(default=800, gt=0)
     chunk_overlap: int = Field(default=120, ge=0)
 

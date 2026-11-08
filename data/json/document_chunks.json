@@ -1,0 +1,1410 @@
+[
+  {
+    "chunk_id": "docx:urban_tandoor_profile:0000",
+    "document_id": "docx:urban_tandoor_profile",
+    "ordinal": 0,
+    "content": "URBAN TANDOOR & GRILL\n\nRESTAURANT PROFILE  |  AI RESTAURANT ASSISTANT DEMO\n\nGreat Food, Every Hour, Every Day.",
+    "token_count": 17,
+    "section": "intro",
+    "metadata_json": {
+      "section": "intro"
+    }
+  },
+  {
+    "chunk_id": "docx:urban_tandoor_profile:0001",
+    "document_id": "docx:urban_tandoor_profile",
+    "ordinal": 1,
+    "content": "Urban Tandoor & Grill is a fictional, family-oriented multi-cuisine restaurant in Karachi, Pakistan. It serves traditional Pakistani food, BBQ, fast food, pizza, Chinese and continental dishes, breakfast, desserts and beverages. Both branches operate 24 hours a day, seven days a week, with separate kitchens, ingredient inventories, dining spaces and order queues.\n\nGuests can dine in, order takeaway at the counter, request home delivery, or submit a pre-order for a scheduled pickup or delivery time. The restaurant also accepts orders via Foodpanda, subject to available platform integration. Its AI voice and chat assistant supports menu discovery, ordering, order tracking, table reservations, recommendations, complaints and feedback.",
+    "token_count": 104,
+    "section": "1  Restaurant overview",
+    "metadata_json": {
+      "section": "1  Restaurant overview"
+    }
+  },
+  {
+    "chunk_id": "docx:urban_tandoor_profile:0002",
+    "document_id": "docx:urban_tandoor_profile",
+    "ordinal": 2,
+    "content": "PECHS seating configuration:  8 four-person tables, 6 two-person tables and 4 seven-person tables. Family seating, takeaway counter, kitchen, inventory and own-delivery dispatch.\n\nGulshan seating configuration:  8 two-person tables, 10 four-person tables and 6 group tables (four with 9 seats, two with 10). Family/group seating, takeaway counter, kitchen, inventory and dispatch.\n\nBoth addresses are location placeholders for synthetic test data; building numbers and verified delivery zones have not been defined.",
+    "token_count": 69,
+    "section": "2  Branches and seating",
+    "metadata_json": {
+      "section": "2  Branches and seating"
+    }
+  },
+  {
+    "chunk_id": "docx:urban_tandoor_profile:0003",
+    "document_id": "docx:urban_tandoor_profile",
+    "ordinal": 3,
+    "content": "Menu item prices, variants, preparation times, allergens and branch-level availability will be defined in the menu master dataset. Breakfast availability may follow scheduled service hours despite 24/7 branch operations.",
+    "token_count": 29,
+    "section": "3  Food and beverage offering",
+    "metadata_json": {
+      "section": "3  Food and beverage offering"
+    }
+  },
+  {
+    "chunk_id": "docx:urban_tandoor_profile:0004",
+    "document_id": "docx:urban_tandoor_profile",
+    "ordinal": 4,
+    "content": "Dine-in and OTC:  Customers place orders with restaurant staff or through the assistant; kitchen tickets enter the branch queue. Counter payments and takeaway collection are supported.\n\nDirect delivery:  The AI assistant collects the customer address, validates branch delivery coverage, checks menu and ingredient availability, confirms payment terms, and creates an order for in-house delivery.\n\nFoodpanda:  Third-party orders enter the same operational order model through an approved integration or supported staff workflow; platform-managed delivery and settlement rules remain distinct.\n\nPre-orders (scheduled orders):  Customers may order in advance for a specified future pickup or delivery date and time, selecting the branch and available items. The assistant confirms the requested schedule, items, quantity, contact details and fulfillment method. Backend checks include lead time, branch capacity, stock policy and delivery coverage. Pre-orders enter a scheduled queue and are released to the kitchen at the appropriate preparation time; acceptance is subject to availability and restaurant confirmation. Inventory reservation timing and changes/cancellation cutoffs are configurable.",
+    "token_count": 159,
+    "section": "4  Ordering, delivery and pre-orders",
+    "metadata_json": {
+      "section": "4  Ordering, delivery and pre-orders"
+    }
+  },
+  {
+    "chunk_id": "docx:urban_tandoor_profile:0005",
+    "document_id": "docx:urban_tandoor_profile",
+    "ordinal": 5,
+    "content": "Customers can reserve tables at either branch by party size, date and time. The system checks table availability and capacity to prevent double bookings, records reservation status and supports modifications or cancellations under configured policies. Kitchen queue management tracks orders from accepted through preparing, ready, dispatched/served and completed, while keeping pre-orders separate until their release time.",
+    "token_count": 56,
+    "section": "5  Table reservations and queue management",
+    "metadata_json": {
+      "section": "5  Table reservations and queue management"
+    }
+  },
+  {
+    "chunk_id": "docx:urban_tandoor_profile:0006",
+    "document_id": "docx:urban_tandoor_profile",
+    "ordinal": 6,
+    "content": "Supported flows include Cash on Delivery, cash on-counter, and eligible bank-card transactions where payment facilities exist. The demo business rule specifies a 10% bank discount; eligibility, caps, bank list, discount stacking and whether it applies to delivery or pre-orders must be configured before production use. The assistant can suggest combo deals, add-ons and relevant discounts without applying unverified offers.",
+    "token_count": 59,
+    "section": "6  Payments, discounts and promotions",
+    "metadata_json": {
+      "section": "6  Payments, discounts and promotions"
+    }
+  },
+  {
+    "chunk_id": "docx:urban_tandoor_profile:0007",
+    "document_id": "docx:urban_tandoor_profile",
+    "ordinal": 7,
+    "content": "Each branch tracks its own ingredient stock and recipe consumption. Before an order is accepted, the backend verifies available-to-promise inventory against recipe requirements and existing reservations. If an item is unavailable, the assistant suggests genuinely available alternatives in the same category, taking customer preferences and dietary constraints into account. Completed or cancelled orders reconcile stock reservations according to the inventory policy.",
+    "token_count": 61,
+    "section": "7  Inventory-aware menu and recommendations",
+    "metadata_json": {
+      "section": "7  Inventory-aware menu and recommendations"
+    }
+  },
+  {
+    "chunk_id": "docx:urban_tandoor_profile:0008",
+    "document_id": "docx:urban_tandoor_profile",
+    "ordinal": 8,
+    "content": "The voice/chat assistant supports menu questions, ingredient inquiries, order status, reservation changes, delivery issues, complaints and feedback. Cases are logged, categorized and escalated to staff when needed. Restaurant master data is maintained in a validated Excel workbook and synchronized to the operational database; live orders, payment states, queues and inventory transactions remain database-managed.",
+    "token_count": 53,
+    "section": "8  Customer support and data operations",
+    "metadata_json": {
+      "section": "8  Customer support and data operations"
+    }
+  },
+  {
+    "chunk_id": "docx:urban_tandoor_profile:0009",
+    "document_id": "docx:urban_tandoor_profile",
+    "ordinal": 9,
+    "content": "DEMO DATA NOTICE  |  This document describes a fictional restaurant. Name, locations, capacities and menu examples are synthetic and must not be represented as verified business facts.\n\n| Branch | Location (demo address) | Tables | Seating |\n| UTG-KHI-001 · PECHS | Main Shahrah-e-Faisal, PECHS, Karachi, Sindh | 18 | 72 |\n| UTG-KHI-002 · Gulshan-e-Iqbal | Main University Road, Gulshan-e-Iqbal, Karachi, Sindh | 24 | 112 |\n| TOTAL | 2 locations · 24/7 operation | 42 | 184 |\n\n| Menu category | Representative dishes |\n| Pakistani cuisine | Chicken / mutton karahi, handi, biryani, pulao, daal, vegetable curry |\n| BBQ & grills | Chicken tikka, malai boti, seekh kabab, reshmi kabab, mixed BBQ platters |\n| Burgers & fast food | Zinger / beef burgers, sandwiches, shawarma, wraps, fries, nuggets |\n| Pizza & pasta | Chicken fajita / tikka / BBQ pizza, Alfredo and arrabbiata pasta |\n| Chinese & continental | Chow mein, fried rice, Manchurian, shashlik, grilled chicken steak |\n| Breakfast | Halwa puri, anda paratha, omelette, aloo paratha, chana masala |\n| Desserts & drinks | Gulab jamun, kheer, brownies, ice cream, shakes, soft drinks, tea |\n\n| Business attribute | Demo configuration |\n| Branches / hours | 2 branches · 24 hours, 7 days |\n| Tables / capacity | 42 tables · 184 guest seats |\n| Ordering channels | AI voice/chat, OTC, Foodpanda |\n| Fulfillment | Dine-in, takeaway, own delivery, Foodpanda, scheduled pre-orders |\n| Payment options | COD, on-counter, eligible bank card |\n| Backend / data | FastAPI; Excel master-data input; operational database |",
+    "token_count": 272,
+    "section": "9  Quick reference",
+    "metadata_json": {
+      "section": "9  Quick reference"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0000",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 0,
+    "content": "MENU001 Chicken Biryani. Category: Pakistani. Description: Traditional Pakistani-style preparation. Dietary hint: Non-Vegetarian. Allergen hint: Not verified. Base price PKR 420.00. Preparation time 35 minutes. Service window: All day.",
+    "token_count": 28,
+    "section": "Pakistani",
+    "metadata_json": {
+      "section": "Pakistani"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0001",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 1,
+    "content": "MENU002 Beef Biryani. Category: Pakistani. Description: Traditional Pakistani-style preparation. Dietary hint: Non-Vegetarian. Allergen hint: Not verified. Base price PKR 520.00. Preparation time 35 minutes. Service window: All day.",
+    "token_count": 28,
+    "section": "Pakistani",
+    "metadata_json": {
+      "section": "Pakistani"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0002",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 2,
+    "content": "MENU003 Chicken Karahi. Category: Pakistani. Description: Traditional Pakistani-style preparation. Dietary hint: Non-Vegetarian. Allergen hint: Not verified. Base price PKR 1750.00. Preparation time 47 minutes. Service window: All day.",
+    "token_count": 28,
+    "section": "Pakistani",
+    "metadata_json": {
+      "section": "Pakistani"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0003",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 3,
+    "content": "MENU004 Mutton Karahi. Category: Pakistani. Description: Traditional Pakistani-style preparation. Dietary hint: Non-Vegetarian. Allergen hint: Not verified. Base price PKR 2950.00. Preparation time 47 minutes. Service window: All day.",
+    "token_count": 28,
+    "section": "Pakistani",
+    "metadata_json": {
+      "section": "Pakistani"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0004",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 4,
+    "content": "MENU005 Chicken Handi. Category: Pakistani. Description: Traditional Pakistani-style preparation. Dietary hint: Non-Vegetarian. Allergen hint: Not verified. Base price PKR 1850.00. Preparation time 47 minutes. Service window: All day.",
+    "token_count": 28,
+    "section": "Pakistani",
+    "metadata_json": {
+      "section": "Pakistani"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0005",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 5,
+    "content": "MENU006 Daal Makhani. Category: Pakistani. Description: Traditional Pakistani-style preparation. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Not verified. Base price PKR 490.00. Preparation time 35 minutes. Service window: All day.",
+    "token_count": 32,
+    "section": "Pakistani",
+    "metadata_json": {
+      "section": "Pakistani"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0006",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 6,
+    "content": "MENU007 Chicken Tikka. Category: BBQ. Description: Marinated and grilled specialty. Dietary hint: Non-Vegetarian. Allergen hint: Not verified. Base price PKR 590.00. Preparation time 28 minutes. Service window: All day.",
+    "token_count": 29,
+    "section": "BBQ",
+    "metadata_json": {
+      "section": "BBQ"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0007",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 7,
+    "content": "MENU008 Chicken Malai Boti. Category: BBQ. Description: Marinated and grilled specialty. Dietary hint: Non-Vegetarian. Allergen hint: Milk. Base price PKR 790.00. Preparation time 28 minutes. Service window: All day.",
+    "token_count": 29,
+    "section": "BBQ",
+    "metadata_json": {
+      "section": "BBQ"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0008",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 8,
+    "content": "MENU009 Beef Seekh Kabab. Category: BBQ. Description: Marinated and grilled specialty. Dietary hint: Non-Vegetarian. Allergen hint: Not verified. Base price PKR 670.00. Preparation time 28 minutes. Service window: All day.",
+    "token_count": 30,
+    "section": "BBQ",
+    "metadata_json": {
+      "section": "BBQ"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0009",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 9,
+    "content": "MENU010 Mixed BBQ Platter. Category: BBQ. Description: Marinated and grilled specialty. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Not verified. Base price PKR 2190.00. Preparation time 40 minutes. Service window: All day.",
+    "token_count": 34,
+    "section": "BBQ",
+    "metadata_json": {
+      "section": "BBQ"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0010",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 10,
+    "content": "MENU011 Zinger Burger. Category: Fast Food. Description: Freshly assembled quick-service selection. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Wheat/Gluten. Base price PKR 690.00. Preparation time 15 minutes. Service window: All day.",
+    "token_count": 33,
+    "section": "Fast Food",
+    "metadata_json": {
+      "section": "Fast Food"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0011",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 11,
+    "content": "MENU012 Beef Burger. Category: Fast Food. Description: Freshly assembled quick-service selection. Dietary hint: Non-Vegetarian. Allergen hint: Wheat/Gluten. Base price PKR 790.00. Preparation time 15 minutes. Service window: All day.",
+    "token_count": 29,
+    "section": "Fast Food",
+    "metadata_json": {
+      "section": "Fast Food"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0012",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 12,
+    "content": "MENU013 Club Sandwich. Category: Fast Food. Description: Freshly assembled quick-service selection. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Wheat/Gluten. Base price PKR 680.00. Preparation time 15 minutes. Service window: All day.",
+    "token_count": 33,
+    "section": "Fast Food",
+    "metadata_json": {
+      "section": "Fast Food"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0013",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 13,
+    "content": "MENU014 Loaded Fries. Category: Fast Food. Description: Freshly assembled quick-service selection. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Not verified. Base price PKR 570.00. Preparation time 15 minutes. Service window: All day.",
+    "token_count": 34,
+    "section": "Fast Food",
+    "metadata_json": {
+      "section": "Fast Food"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0014",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 14,
+    "content": "MENU015 Chicken Fajita Pizza. Category: Pizza & Italian. Description: Kitchen-prepared Italian-inspired item. Dietary hint: Non-Vegetarian. Allergen hint: Wheat/Gluten. Base price PKR 1090.00. Preparation time 25 minutes. Service window: All day.",
+    "token_count": 30,
+    "section": "Pizza & Italian",
+    "metadata_json": {
+      "section": "Pizza & Italian"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0015",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 15,
+    "content": "MENU016 Chicken Tikka Pizza. Category: Pizza & Italian. Description: Kitchen-prepared Italian-inspired item. Dietary hint: Non-Vegetarian. Allergen hint: Wheat/Gluten. Base price PKR 1090.00. Preparation time 25 minutes. Service window: All day.",
+    "token_count": 30,
+    "section": "Pizza & Italian",
+    "metadata_json": {
+      "section": "Pizza & Italian"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0016",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 16,
+    "content": "MENU017 Alfredo Pasta. Category: Pizza & Italian. Description: Kitchen-prepared Italian-inspired item. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Wheat/Gluten, Milk. Base price PKR 990.00. Preparation time 25 minutes. Service window: All day.",
+    "token_count": 34,
+    "section": "Pizza & Italian",
+    "metadata_json": {
+      "section": "Pizza & Italian"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0017",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 17,
+    "content": "MENU018 Arrabbiata Pasta. Category: Pizza & Italian. Description: Kitchen-prepared Italian-inspired item. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Wheat/Gluten. Base price PKR 850.00. Preparation time 25 minutes. Service window: All day.",
+    "token_count": 33,
+    "section": "Pizza & Italian",
+    "metadata_json": {
+      "section": "Pizza & Italian"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0018",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 18,
+    "content": "MENU019 Chicken Chow Mein. Category: Chinese & Continental. Description: Freshly prepared Asian/continental selection. Dietary hint: Non-Vegetarian. Allergen hint: Wheat/Gluten, Soy. Base price PKR 820.00. Preparation time 22 minutes. Service window: All day.",
+    "token_count": 32,
+    "section": "Chinese & Continental",
+    "metadata_json": {
+      "section": "Chinese & Continental"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0019",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 19,
+    "content": "MENU020 Chicken Fried Rice. Category: Chinese & Continental. Description: Freshly prepared Asian/continental selection. Dietary hint: Non-Vegetarian. Allergen hint: Not verified. Base price PKR 720.00. Preparation time 22 minutes. Service window: All day.",
+    "token_count": 32,
+    "section": "Chinese & Continental",
+    "metadata_json": {
+      "section": "Chinese & Continental"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0020",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 20,
+    "content": "MENU021 Chicken Manchurian. Category: Chinese & Continental. Description: Freshly prepared Asian/continental selection. Dietary hint: Non-Vegetarian. Allergen hint: Soy. Base price PKR 930.00. Preparation time 22 minutes. Service window: All day.",
+    "token_count": 30,
+    "section": "Chinese & Continental",
+    "metadata_json": {
+      "section": "Chinese & Continental"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0021",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 21,
+    "content": "MENU022 Grilled Chicken Steak. Category: Chinese & Continental. Description: Freshly prepared Asian/continental selection. Dietary hint: Non-Vegetarian. Allergen hint: Not verified. Base price PKR 1490.00. Preparation time 22 minutes. Service window: All day.",
+    "token_count": 32,
+    "section": "Chinese & Continental",
+    "metadata_json": {
+      "section": "Chinese & Continental"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0022",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 22,
+    "content": "MENU023 Halwa Puri. Category: Breakfast. Description: Prepared-to-order breakfast item. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Wheat/Gluten. Base price PKR 380.00. Preparation time 15 minutes. Service window: 06:00–12:00 (demo).",
+    "token_count": 31,
+    "section": "Breakfast",
+    "metadata_json": {
+      "section": "Breakfast"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0023",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 23,
+    "content": "MENU024 Anda Paratha. Category: Breakfast. Description: Prepared-to-order breakfast item. Dietary hint: Ovo-Vegetarian. Allergen hint: Wheat/Gluten, Egg. Base price PKR 290.00. Preparation time 15 minutes. Service window: 06:00–12:00 (demo).",
+    "token_count": 28,
+    "section": "Breakfast",
+    "metadata_json": {
+      "section": "Breakfast"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0024",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 24,
+    "content": "MENU025 Chana Masala. Category: Breakfast. Description: Prepared-to-order breakfast item. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Not verified. Base price PKR 320.00. Preparation time 15 minutes. Service window: 06:00–12:00 (demo).",
+    "token_count": 32,
+    "section": "Breakfast",
+    "metadata_json": {
+      "section": "Breakfast"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0025",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 25,
+    "content": "MENU026 Chocolate Brownie. Category: Desserts. Description: Sweet dessert selection. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Milk. Base price PKR 420.00. Preparation time 10 minutes. Service window: All day.",
+    "token_count": 31,
+    "section": "Desserts",
+    "metadata_json": {
+      "section": "Desserts"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0026",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 26,
+    "content": "MENU027 Brownie with Ice Cream. Category: Desserts. Description: Sweet dessert selection. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Milk. Base price PKR 550.00. Preparation time 10 minutes. Service window: All day.",
+    "token_count": 33,
+    "section": "Desserts",
+    "metadata_json": {
+      "section": "Desserts"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0027",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 27,
+    "content": "MENU028 Mango Shake. Category: Beverages. Description: Fresh or packaged beverage. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Milk. Base price PKR 490.00. Preparation time 5 minutes. Service window: All day.",
+    "token_count": 32,
+    "section": "Beverages",
+    "metadata_json": {
+      "section": "Beverages"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0028",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 28,
+    "content": "MENU029 Mint Margarita. Category: Beverages. Description: Fresh or packaged beverage. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Not verified. Base price PKR 390.00. Preparation time 5 minutes. Service window: All day.",
+    "token_count": 33,
+    "section": "Beverages",
+    "metadata_json": {
+      "section": "Beverages"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0029",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 29,
+    "content": "MENU030 Tea. Category: Beverages. Description: Fresh or packaged beverage. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Not verified. Base price PKR 160.00. Preparation time 5 minutes. Service window: All day.",
+    "token_count": 32,
+    "section": "Beverages",
+    "metadata_json": {
+      "section": "Beverages"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0030",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 30,
+    "content": "MENU031 Mineral Water. Category: Beverages. Description: Fresh or packaged beverage. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Not verified. Base price PKR 100.00. Preparation time 5 minutes. Service window: All day.",
+    "token_count": 33,
+    "section": "Beverages",
+    "metadata_json": {
+      "section": "Beverages"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0031",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 31,
+    "content": "MENU032 Soft Drink Can. Category: Beverages. Description: Fresh or packaged beverage. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Not verified. Base price PKR 150.00. Preparation time 5 minutes. Service window: All day.",
+    "token_count": 34,
+    "section": "Beverages",
+    "metadata_json": {
+      "section": "Beverages"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0032",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 32,
+    "content": "MENU033 Chicken Pulao. Category: Pakistani. Description: Traditional Pakistani-style preparation. Dietary hint: Non-Vegetarian. Allergen hint: Not verified. Base price PKR 1050.00. Preparation time 35 minutes. Service window: All day.",
+    "token_count": 28,
+    "section": "Pakistani",
+    "metadata_json": {
+      "section": "Pakistani"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0033",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 33,
+    "content": "MENU034 Mutton Pulao. Category: Pakistani. Description: Traditional Pakistani-style preparation. Dietary hint: Non-Vegetarian. Allergen hint: Not verified. Base price PKR 1100.00. Preparation time 35 minutes. Service window: All day.",
+    "token_count": 28,
+    "section": "Pakistani",
+    "metadata_json": {
+      "section": "Pakistani"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0034",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 34,
+    "content": "MENU035 Chicken White Karahi. Category: Pakistani. Description: Traditional Pakistani-style preparation. Dietary hint: Non-Vegetarian. Allergen hint: Not verified. Base price PKR 1950.00. Preparation time 47 minutes. Service window: All day.",
+    "token_count": 29,
+    "section": "Pakistani",
+    "metadata_json": {
+      "section": "Pakistani"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0035",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 35,
+    "content": "MENU036 Chicken Achari Karahi. Category: Pakistani. Description: Traditional Pakistani-style preparation. Dietary hint: Non-Vegetarian. Allergen hint: Not verified. Base price PKR 1150.00. Preparation time 47 minutes. Service window: All day.",
+    "token_count": 29,
+    "section": "Pakistani",
+    "metadata_json": {
+      "section": "Pakistani"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0036",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 36,
+    "content": "MENU037 Mutton White Karahi. Category: Pakistani. Description: Traditional Pakistani-style preparation. Dietary hint: Non-Vegetarian. Allergen hint: Not verified. Base price PKR 3250.00. Preparation time 47 minutes. Service window: All day.",
+    "token_count": 29,
+    "section": "Pakistani",
+    "metadata_json": {
+      "section": "Pakistani"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0037",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 37,
+    "content": "MENU038 Chicken Tikka Handi. Category: Pakistani. Description: Traditional Pakistani-style preparation. Dietary hint: Non-Vegetarian. Allergen hint: Not verified. Base price PKR 950.00. Preparation time 47 minutes. Service window: All day.",
+    "token_count": 29,
+    "section": "Pakistani",
+    "metadata_json": {
+      "section": "Pakistani"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0038",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 38,
+    "content": "MENU039 Beef Nihari. Category: Pakistani. Description: Traditional Pakistani-style preparation. Dietary hint: Non-Vegetarian. Allergen hint: Not verified. Base price PKR 1050.00. Preparation time 35 minutes. Service window: All day.",
+    "token_count": 28,
+    "section": "Pakistani",
+    "metadata_json": {
+      "section": "Pakistani"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0039",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 39,
+    "content": "MENU040 Chicken Qorma. Category: Pakistani. Description: Traditional Pakistani-style preparation. Dietary hint: Non-Vegetarian. Allergen hint: Not verified. Base price PKR 1100.00. Preparation time 35 minutes. Service window: All day.",
+    "token_count": 28,
+    "section": "Pakistani",
+    "metadata_json": {
+      "section": "Pakistani"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0040",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 40,
+    "content": "MENU041 Mix Vegetable Curry. Category: Pakistani. Description: Traditional Pakistani-style preparation. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Not verified. Base price PKR 900.00. Preparation time 35 minutes. Service window: All day.",
+    "token_count": 33,
+    "section": "Pakistani",
+    "metadata_json": {
+      "section": "Pakistani"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0041",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 41,
+    "content": "MENU042 Palak Paneer. Category: Pakistani. Description: Traditional Pakistani-style preparation. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Milk. Base price PKR 1150.00. Preparation time 35 minutes. Service window: All day.",
+    "token_count": 31,
+    "section": "Pakistani",
+    "metadata_json": {
+      "section": "Pakistani"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0042",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 42,
+    "content": "MENU043 Chicken Haleem. Category: Pakistani. Description: Traditional Pakistani-style preparation. Dietary hint: Non-Vegetarian. Allergen hint: Not verified. Base price PKR 850.00. Preparation time 35 minutes. Service window: All day.",
+    "token_count": 28,
+    "section": "Pakistani",
+    "metadata_json": {
+      "section": "Pakistani"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0043",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 43,
+    "content": "MENU044 Chapli Kabab Platter. Category: Pakistani. Description: Traditional Pakistani-style preparation. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Not verified. Base price PKR 950.00. Preparation time 47 minutes. Service window: All day.",
+    "token_count": 33,
+    "section": "Pakistani",
+    "metadata_json": {
+      "section": "Pakistani"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0044",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 44,
+    "content": "MENU045 Plain Naan. Category: Pakistani. Description: Traditional Pakistani-style preparation. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Wheat/Gluten. Base price PKR 80.00. Preparation time 35 minutes. Service window: All day.",
+    "token_count": 31,
+    "section": "Pakistani",
+    "metadata_json": {
+      "section": "Pakistani"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0045",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 45,
+    "content": "MENU046 Garlic Naan. Category: Pakistani. Description: Traditional Pakistani-style preparation. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Wheat/Gluten. Base price PKR 150.00. Preparation time 35 minutes. Service window: All day.",
+    "token_count": 31,
+    "section": "Pakistani",
+    "metadata_json": {
+      "section": "Pakistani"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0046",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 46,
+    "content": "MENU047 Butter Naan. Category: Pakistani. Description: Traditional Pakistani-style preparation. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Wheat/Gluten, Milk. Base price PKR 120.00. Preparation time 35 minutes. Service window: All day.",
+    "token_count": 32,
+    "section": "Pakistani",
+    "metadata_json": {
+      "section": "Pakistani"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0047",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 47,
+    "content": "MENU048 Tandoori Roti. Category: Pakistani. Description: Traditional Pakistani-style preparation. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Wheat/Gluten. Base price PKR 55.00. Preparation time 35 minutes. Service window: All day.",
+    "token_count": 31,
+    "section": "Pakistani",
+    "metadata_json": {
+      "section": "Pakistani"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0048",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 48,
+    "content": "MENU049 Chicken Seekh Kabab. Category: BBQ. Description: Marinated and grilled specialty. Dietary hint: Non-Vegetarian. Allergen hint: Not verified. Base price PKR 750.00. Preparation time 28 minutes. Service window: All day.",
+    "token_count": 30,
+    "section": "BBQ",
+    "metadata_json": {
+      "section": "BBQ"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0049",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 49,
+    "content": "MENU050 Reshmi Kabab. Category: BBQ. Description: Marinated and grilled specialty. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Not verified. Base price PKR 850.00. Preparation time 28 minutes. Service window: All day.",
+    "token_count": 33,
+    "section": "BBQ",
+    "metadata_json": {
+      "section": "BBQ"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0050",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 50,
+    "content": "MENU051 Chicken Bihari Boti. Category: BBQ. Description: Marinated and grilled specialty. Dietary hint: Non-Vegetarian. Allergen hint: Not verified. Base price PKR 950.00. Preparation time 28 minutes. Service window: All day.",
+    "token_count": 30,
+    "section": "BBQ",
+    "metadata_json": {
+      "section": "BBQ"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0051",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 51,
+    "content": "MENU052 Beef Bihari Boti. Category: BBQ. Description: Marinated and grilled specialty. Dietary hint: Non-Vegetarian. Allergen hint: Not verified. Base price PKR 1000.00. Preparation time 28 minutes. Service window: All day.",
+    "token_count": 30,
+    "section": "BBQ",
+    "metadata_json": {
+      "section": "BBQ"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0052",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 52,
+    "content": "MENU053 Chicken Wings BBQ. Category: BBQ. Description: Marinated and grilled specialty. Dietary hint: Non-Vegetarian. Allergen hint: Not verified. Base price PKR 800.00. Preparation time 28 minutes. Service window: All day.",
+    "token_count": 30,
+    "section": "BBQ",
+    "metadata_json": {
+      "section": "BBQ"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0053",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 53,
+    "content": "MENU054 Grilled Chicken Half. Category: BBQ. Description: Marinated and grilled specialty. Dietary hint: Non-Vegetarian. Allergen hint: Not verified. Base price PKR 1190.00. Preparation time 28 minutes. Service window: All day.",
+    "token_count": 30,
+    "section": "BBQ",
+    "metadata_json": {
+      "section": "BBQ"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0054",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 54,
+    "content": "MENU055 Grilled Chicken Full. Category: BBQ. Description: Marinated and grilled specialty. Dietary hint: Non-Vegetarian. Allergen hint: Not verified. Base price PKR 2150.00. Preparation time 28 minutes. Service window: All day.",
+    "token_count": 30,
+    "section": "BBQ",
+    "metadata_json": {
+      "section": "BBQ"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0055",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 55,
+    "content": "MENU056 BBQ Family Platter. Category: BBQ. Description: Marinated and grilled specialty. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Not verified. Base price PKR 3500.00. Preparation time 40 minutes. Service window: All day.",
+    "token_count": 34,
+    "section": "BBQ",
+    "metadata_json": {
+      "section": "BBQ"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0056",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 56,
+    "content": "MENU057 Fish Tikka. Category: BBQ. Description: Marinated and grilled specialty. Dietary hint: Non-Vegetarian. Allergen hint: Not verified. Base price PKR 950.00. Preparation time 28 minutes. Service window: All day.",
+    "token_count": 29,
+    "section": "BBQ",
+    "metadata_json": {
+      "section": "BBQ"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0057",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 57,
+    "content": "MENU058 Chicken Cheese Kabab. Category: BBQ. Description: Marinated and grilled specialty. Dietary hint: Non-Vegetarian. Allergen hint: Milk. Base price PKR 1000.00. Preparation time 28 minutes. Service window: All day.",
+    "token_count": 29,
+    "section": "BBQ",
+    "metadata_json": {
+      "section": "BBQ"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0058",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 58,
+    "content": "MENU059 Grilled Chicken Burger. Category: Fast Food. Description: Freshly assembled quick-service selection. Dietary hint: Non-Vegetarian. Allergen hint: Wheat/Gluten. Base price PKR 540.00. Preparation time 15 minutes. Service window: All day.",
+    "token_count": 30,
+    "section": "Fast Food",
+    "metadata_json": {
+      "section": "Fast Food"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0059",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 59,
+    "content": "MENU060 Double Zinger Burger. Category: Fast Food. Description: Freshly assembled quick-service selection. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Wheat/Gluten. Base price PKR 790.00. Preparation time 15 minutes. Service window: All day.",
+    "token_count": 34,
+    "section": "Fast Food",
+    "metadata_json": {
+      "section": "Fast Food"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0060",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 60,
+    "content": "MENU061 Cheese Beef Burger. Category: Fast Food. Description: Freshly assembled quick-service selection. Dietary hint: Non-Vegetarian. Allergen hint: Wheat/Gluten, Milk. Base price PKR 490.00. Preparation time 15 minutes. Service window: All day.",
+    "token_count": 31,
+    "section": "Fast Food",
+    "metadata_json": {
+      "section": "Fast Food"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0061",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 61,
+    "content": "MENU062 Chicken Shawarma. Category: Fast Food. Description: Freshly assembled quick-service selection. Dietary hint: Non-Vegetarian. Allergen hint: Wheat/Gluten. Base price PKR 590.00. Preparation time 15 minutes. Service window: All day.",
+    "token_count": 29,
+    "section": "Fast Food",
+    "metadata_json": {
+      "section": "Fast Food"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0062",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 62,
+    "content": "MENU063 Chicken Wrap. Category: Fast Food. Description: Freshly assembled quick-service selection. Dietary hint: Non-Vegetarian. Allergen hint: Wheat/Gluten. Base price PKR 690.00. Preparation time 15 minutes. Service window: All day.",
+    "token_count": 29,
+    "section": "Fast Food",
+    "metadata_json": {
+      "section": "Fast Food"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0063",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 63,
+    "content": "MENU064 Crispy Chicken Wrap. Category: Fast Food. Description: Freshly assembled quick-service selection. Dietary hint: Non-Vegetarian. Allergen hint: Wheat/Gluten. Base price PKR 740.00. Preparation time 15 minutes. Service window: All day.",
+    "token_count": 30,
+    "section": "Fast Food",
+    "metadata_json": {
+      "section": "Fast Food"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0064",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 64,
+    "content": "MENU065 Plain French Fries. Category: Fast Food. Description: Freshly assembled quick-service selection. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Not verified. Base price PKR 290.00. Preparation time 15 minutes. Service window: All day.",
+    "token_count": 35,
+    "section": "Fast Food",
+    "metadata_json": {
+      "section": "Fast Food"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0065",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 65,
+    "content": "MENU066 Masala Fries. Category: Fast Food. Description: Freshly assembled quick-service selection. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Not verified. Base price PKR 790.00. Preparation time 15 minutes. Service window: All day.",
+    "token_count": 34,
+    "section": "Fast Food",
+    "metadata_json": {
+      "section": "Fast Food"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0066",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 66,
+    "content": "MENU067 Chicken Nuggets. Category: Fast Food. Description: Freshly assembled quick-service selection. Dietary hint: Non-Vegetarian. Allergen hint: Not verified. Base price PKR 490.00. Preparation time 15 minutes. Service window: All day.",
+    "token_count": 30,
+    "section": "Fast Food",
+    "metadata_json": {
+      "section": "Fast Food"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0067",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 67,
+    "content": "MENU068 Chicken Cheese Sandwich. Category: Fast Food. Description: Freshly assembled quick-service selection. Dietary hint: Non-Vegetarian. Allergen hint: Wheat/Gluten, Milk. Base price PKR 590.00. Preparation time 15 minutes. Service window: All day.",
+    "token_count": 31,
+    "section": "Fast Food",
+    "metadata_json": {
+      "section": "Fast Food"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0068",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 68,
+    "content": "MENU069 Fish Burger. Category: Fast Food. Description: Freshly assembled quick-service selection. Dietary hint: Non-Vegetarian. Allergen hint: Wheat/Gluten. Base price PKR 690.00. Preparation time 15 minutes. Service window: All day.",
+    "token_count": 29,
+    "section": "Fast Food",
+    "metadata_json": {
+      "section": "Fast Food"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0069",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 69,
+    "content": "MENU070 Chicken Cheese Loaded Fries. Category: Fast Food. Description: Freshly assembled quick-service selection. Dietary hint: Non-Vegetarian. Allergen hint: Milk. Base price PKR 740.00. Preparation time 15 minutes. Service window: All day.",
+    "token_count": 31,
+    "section": "Fast Food",
+    "metadata_json": {
+      "section": "Fast Food"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0070",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 70,
+    "content": "MENU071 BBQ Chicken Pizza. Category: Pizza & Italian. Description: Kitchen-prepared Italian-inspired item. Dietary hint: Non-Vegetarian. Allergen hint: Wheat/Gluten. Base price PKR 1100.00. Preparation time 25 minutes. Service window: All day.",
+    "token_count": 30,
+    "section": "Pizza & Italian",
+    "metadata_json": {
+      "section": "Pizza & Italian"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0071",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 71,
+    "content": "MENU072 Margherita Pizza. Category: Pizza & Italian. Description: Kitchen-prepared Italian-inspired item. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Wheat/Gluten. Base price PKR 1350.00. Preparation time 25 minutes. Service window: All day.",
+    "token_count": 33,
+    "section": "Pizza & Italian",
+    "metadata_json": {
+      "section": "Pizza & Italian"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0072",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 72,
+    "content": "MENU073 Pepperoni-Style Pizza. Category: Pizza & Italian. Description: Kitchen-prepared Italian-inspired item. Dietary hint: Non-Vegetarian. Allergen hint: Wheat/Gluten. Base price PKR 1050.00. Preparation time 25 minutes. Service window: All day.",
+    "token_count": 29,
+    "section": "Pizza & Italian",
+    "metadata_json": {
+      "section": "Pizza & Italian"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0073",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 73,
+    "content": "MENU074 Veggie Pizza. Category: Pizza & Italian. Description: Kitchen-prepared Italian-inspired item. Dietary hint: Ovo-Vegetarian. Allergen hint: Wheat/Gluten, Egg. Base price PKR 1150.00. Preparation time 25 minutes. Service window: All day.",
+    "token_count": 30,
+    "section": "Pizza & Italian",
+    "metadata_json": {
+      "section": "Pizza & Italian"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0074",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 74,
+    "content": "MENU075 Four Cheese Pizza. Category: Pizza & Italian. Description: Kitchen-prepared Italian-inspired item. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Wheat/Gluten, Milk. Base price PKR 1250.00. Preparation time 25 minutes. Service window: All day.",
+    "token_count": 35,
+    "section": "Pizza & Italian",
+    "metadata_json": {
+      "section": "Pizza & Italian"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0075",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 75,
+    "content": "MENU076 Creamy Mushroom Pasta. Category: Pizza & Italian. Description: Kitchen-prepared Italian-inspired item. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Wheat/Gluten, Milk. Base price PKR 1300.00. Preparation time 25 minutes. Service window: All day.",
+    "token_count": 35,
+    "section": "Pizza & Italian",
+    "metadata_json": {
+      "section": "Pizza & Italian"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0076",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 76,
+    "content": "MENU077 Chicken Penne Pasta. Category: Pizza & Italian. Description: Kitchen-prepared Italian-inspired item. Dietary hint: Non-Vegetarian. Allergen hint: Wheat/Gluten. Base price PKR 1100.00. Preparation time 25 minutes. Service window: All day.",
+    "token_count": 30,
+    "section": "Pizza & Italian",
+    "metadata_json": {
+      "section": "Pizza & Italian"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0077",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 77,
+    "content": "MENU078 Spaghetti Bolognese. Category: Pizza & Italian. Description: Kitchen-prepared Italian-inspired item. Dietary hint: Non-Vegetarian. Allergen hint: Not verified. Base price PKR 1350.00. Preparation time 25 minutes. Service window: All day.",
+    "token_count": 30,
+    "section": "Pizza & Italian",
+    "metadata_json": {
+      "section": "Pizza & Italian"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0078",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 78,
+    "content": "MENU079 Egg Fried Rice. Category: Chinese & Continental. Description: Freshly prepared Asian/continental selection. Dietary hint: Ovo-Vegetarian. Allergen hint: Egg. Base price PKR 750.00. Preparation time 22 minutes. Service window: All day.",
+    "token_count": 31,
+    "section": "Chinese & Continental",
+    "metadata_json": {
+      "section": "Chinese & Continental"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0079",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 79,
+    "content": "MENU080 Vegetable Fried Rice. Category: Chinese & Continental. Description: Freshly prepared Asian/continental selection. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Not verified. Base price PKR 850.00. Preparation time 22 minutes. Service window: All day.",
+    "token_count": 36,
+    "section": "Chinese & Continental",
+    "metadata_json": {
+      "section": "Chinese & Continental"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0080",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 80,
+    "content": "MENU081 Beef Chow Mein. Category: Chinese & Continental. Description: Freshly prepared Asian/continental selection. Dietary hint: Non-Vegetarian. Allergen hint: Wheat/Gluten, Soy. Base price PKR 950.00. Preparation time 22 minutes. Service window: All day.",
+    "token_count": 32,
+    "section": "Chinese & Continental",
+    "metadata_json": {
+      "section": "Chinese & Continental"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0081",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 81,
+    "content": "MENU082 Vegetable Chow Mein. Category: Chinese & Continental. Description: Freshly prepared Asian/continental selection. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Wheat/Gluten, Soy. Base price PKR 1000.00. Preparation time 22 minutes. Service window: All day.",
+    "token_count": 36,
+    "section": "Chinese & Continental",
+    "metadata_json": {
+      "section": "Chinese & Continental"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0082",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 82,
+    "content": "MENU083 Kung Pao Chicken. Category: Chinese & Continental. Description: Freshly prepared Asian/continental selection. Dietary hint: Non-Vegetarian. Allergen hint: Soy. Base price PKR 800.00. Preparation time 22 minutes. Service window: All day.",
+    "token_count": 31,
+    "section": "Chinese & Continental",
+    "metadata_json": {
+      "section": "Chinese & Continental"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0083",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 83,
+    "content": "MENU084 Chicken Shashlik. Category: Chinese & Continental. Description: Freshly prepared Asian/continental selection. Dietary hint: Non-Vegetarian. Allergen hint: Soy. Base price PKR 1050.00. Preparation time 22 minutes. Service window: All day.",
+    "token_count": 30,
+    "section": "Chinese & Continental",
+    "metadata_json": {
+      "section": "Chinese & Continental"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0084",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 84,
+    "content": "MENU085 Hot and Sour Soup. Category: Chinese & Continental. Description: Freshly prepared Asian/continental selection. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Not verified. Base price PKR 450.00. Preparation time 22 minutes. Service window: All day.",
+    "token_count": 37,
+    "section": "Chinese & Continental",
+    "metadata_json": {
+      "section": "Chinese & Continental"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0085",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 85,
+    "content": "MENU086 Chicken Corn Soup. Category: Chinese & Continental. Description: Freshly prepared Asian/continental selection. Dietary hint: Non-Vegetarian. Allergen hint: Not verified. Base price PKR 430.00. Preparation time 22 minutes. Service window: All day.",
+    "token_count": 32,
+    "section": "Chinese & Continental",
+    "metadata_json": {
+      "section": "Chinese & Continental"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0086",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 86,
+    "content": "MENU087 Creamy Mushroom Chicken. Category: Chinese & Continental. Description: Freshly prepared Asian/continental selection. Dietary hint: Non-Vegetarian. Allergen hint: Milk. Base price PKR 950.00. Preparation time 22 minutes. Service window: All day.",
+    "token_count": 31,
+    "section": "Chinese & Continental",
+    "metadata_json": {
+      "section": "Chinese & Continental"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0087",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 87,
+    "content": "MENU088 Fish and Chips. Category: Chinese & Continental. Description: Freshly prepared Asian/continental selection. Dietary hint: Non-Vegetarian. Allergen hint: Not verified. Base price PKR 1050.00. Preparation time 22 minutes. Service window: All day.",
+    "token_count": 32,
+    "section": "Chinese & Continental",
+    "metadata_json": {
+      "section": "Chinese & Continental"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0088",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 88,
+    "content": "MENU089 Plain Paratha. Category: Breakfast. Description: Prepared-to-order breakfast item. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Wheat/Gluten. Base price PKR 150.00. Preparation time 15 minutes. Service window: 06:00–12:00 (demo).",
+    "token_count": 31,
+    "section": "Breakfast",
+    "metadata_json": {
+      "section": "Breakfast"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0089",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 89,
+    "content": "MENU090 Aloo Paratha. Category: Breakfast. Description: Prepared-to-order breakfast item. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Wheat/Gluten. Base price PKR 500.00. Preparation time 15 minutes. Service window: 06:00–12:00 (demo).",
+    "token_count": 31,
+    "section": "Breakfast",
+    "metadata_json": {
+      "section": "Breakfast"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0090",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 90,
+    "content": "MENU091 Omelette. Category: Breakfast. Description: Prepared-to-order breakfast item. Dietary hint: Ovo-Vegetarian. Allergen hint: Egg. Base price PKR 200.00. Preparation time 15 minutes. Service window: 06:00–12:00 (demo).",
+    "token_count": 26,
+    "section": "Breakfast",
+    "metadata_json": {
+      "section": "Breakfast"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0091",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 91,
+    "content": "MENU092 Cheese Omelette. Category: Breakfast. Description: Prepared-to-order breakfast item. Dietary hint: Ovo-Vegetarian. Allergen hint: Milk, Egg. Base price PKR 300.00. Preparation time 15 minutes. Service window: 06:00–12:00 (demo).",
+    "token_count": 28,
+    "section": "Breakfast",
+    "metadata_json": {
+      "section": "Breakfast"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0092",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 92,
+    "content": "MENU093 Halwa. Category: Breakfast. Description: Prepared-to-order breakfast item. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Not verified. Base price PKR 180.00. Preparation time 15 minutes. Service window: 06:00–12:00 (demo).",
+    "token_count": 31,
+    "section": "Breakfast",
+    "metadata_json": {
+      "section": "Breakfast"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0093",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 93,
+    "content": "MENU094 Puri. Category: Breakfast. Description: Prepared-to-order breakfast item. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Wheat/Gluten. Base price PKR 65.00. Preparation time 15 minutes. Service window: 06:00–12:00 (demo).",
+    "token_count": 30,
+    "section": "Breakfast",
+    "metadata_json": {
+      "section": "Breakfast"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0094",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 94,
+    "content": "MENU095 Masala Chai. Category: Breakfast. Description: Prepared-to-order breakfast item. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Not verified. Base price PKR 170.00. Preparation time 15 minutes. Service window: 06:00–12:00 (demo).",
+    "token_count": 32,
+    "section": "Breakfast",
+    "metadata_json": {
+      "section": "Breakfast"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0095",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 95,
+    "content": "MENU096 French Toast. Category: Breakfast. Description: Prepared-to-order breakfast item. Dietary hint: Ovo-Vegetarian. Allergen hint: Wheat/Gluten, Egg. Base price PKR 500.00. Preparation time 15 minutes. Service window: 06:00–12:00 (demo).",
+    "token_count": 28,
+    "section": "Breakfast",
+    "metadata_json": {
+      "section": "Breakfast"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0096",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 96,
+    "content": "MENU097 Pancakes. Category: Breakfast. Description: Prepared-to-order breakfast item. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Wheat/Gluten, Egg. Base price PKR 200.00. Preparation time 15 minutes. Service window: 06:00–12:00 (demo).",
+    "token_count": 31,
+    "section": "Breakfast",
+    "metadata_json": {
+      "section": "Breakfast"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0097",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 97,
+    "content": "MENU098 Boiled Eggs. Category: Breakfast. Description: Prepared-to-order breakfast item. Dietary hint: Ovo-Vegetarian. Allergen hint: Egg. Base price PKR 180.00. Preparation time 15 minutes. Service window: 06:00–12:00 (demo).",
+    "token_count": 27,
+    "section": "Breakfast",
+    "metadata_json": {
+      "section": "Breakfast"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0098",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 98,
+    "content": "MENU099 Gulab Jamun. Category: Desserts. Description: Sweet dessert selection. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Not verified. Base price PKR 520.00. Preparation time 10 minutes. Service window: All day.",
+    "token_count": 32,
+    "section": "Desserts",
+    "metadata_json": {
+      "section": "Desserts"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0099",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 99,
+    "content": "MENU100 Kheer. Category: Desserts. Description: Sweet dessert selection. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Not verified. Base price PKR 570.00. Preparation time 10 minutes. Service window: All day.",
+    "token_count": 31,
+    "section": "Desserts",
+    "metadata_json": {
+      "section": "Desserts"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0100",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 100,
+    "content": "MENU101 Chocolate Lava Cake. Category: Desserts. Description: Sweet dessert selection. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Not verified. Base price PKR 370.00. Preparation time 10 minutes. Service window: All day.",
+    "token_count": 33,
+    "section": "Desserts",
+    "metadata_json": {
+      "section": "Desserts"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0101",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 101,
+    "content": "MENU102 Vanilla Ice Cream. Category: Desserts. Description: Sweet dessert selection. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Milk. Base price PKR 310.00. Preparation time 10 minutes. Service window: All day.",
+    "token_count": 32,
+    "section": "Desserts",
+    "metadata_json": {
+      "section": "Desserts"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0102",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 102,
+    "content": "MENU103 Chocolate Ice Cream. Category: Desserts. Description: Sweet dessert selection. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Milk. Base price PKR 330.00. Preparation time 10 minutes. Service window: All day.",
+    "token_count": 32,
+    "section": "Desserts",
+    "metadata_json": {
+      "section": "Desserts"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0103",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 103,
+    "content": "MENU104 Chocolate Sundae. Category: Desserts. Description: Sweet dessert selection. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Not verified. Base price PKR 420.00. Preparation time 10 minutes. Service window: All day.",
+    "token_count": 32,
+    "section": "Desserts",
+    "metadata_json": {
+      "section": "Desserts"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0104",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 104,
+    "content": "MENU105 Fruit Trifle. Category: Desserts. Description: Sweet dessert selection. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Not verified. Base price PKR 520.00. Preparation time 10 minutes. Service window: All day.",
+    "token_count": 32,
+    "section": "Desserts",
+    "metadata_json": {
+      "section": "Desserts"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0105",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 105,
+    "content": "MENU106 Caramel Custard. Category: Desserts. Description: Sweet dessert selection. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Milk. Base price PKR 570.00. Preparation time 10 minutes. Service window: All day.",
+    "token_count": 31,
+    "section": "Desserts",
+    "metadata_json": {
+      "section": "Desserts"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0106",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 106,
+    "content": "MENU107 Fresh Lime. Category: Beverages. Description: Fresh or packaged beverage. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Not verified. Base price PKR 250.00. Preparation time 5 minutes. Service window: All day.",
+    "token_count": 33,
+    "section": "Beverages",
+    "metadata_json": {
+      "section": "Beverages"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0107",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 107,
+    "content": "MENU108 Chocolate Shake. Category: Beverages. Description: Fresh or packaged beverage. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Milk. Base price PKR 500.00. Preparation time 5 minutes. Service window: All day.",
+    "token_count": 32,
+    "section": "Beverages",
+    "metadata_json": {
+      "section": "Beverages"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0108",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 108,
+    "content": "MENU109 Strawberry Shake. Category: Beverages. Description: Fresh or packaged beverage. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Milk. Base price PKR 200.00. Preparation time 5 minutes. Service window: All day.",
+    "token_count": 32,
+    "section": "Beverages",
+    "metadata_json": {
+      "section": "Beverages"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0109",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 109,
+    "content": "MENU110 Banana Shake. Category: Beverages. Description: Fresh or packaged beverage. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Milk. Base price PKR 300.00. Preparation time 5 minutes. Service window: All day.",
+    "token_count": 32,
+    "section": "Beverages",
+    "metadata_json": {
+      "section": "Beverages"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0110",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 110,
+    "content": "MENU111 Fresh Orange Juice. Category: Beverages. Description: Fresh or packaged beverage. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Not verified. Base price PKR 400.00. Preparation time 5 minutes. Service window: All day.",
+    "token_count": 34,
+    "section": "Beverages",
+    "metadata_json": {
+      "section": "Beverages"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0111",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 111,
+    "content": "MENU112 Fresh Apple Juice. Category: Beverages. Description: Fresh or packaged beverage. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Not verified. Base price PKR 450.00. Preparation time 5 minutes. Service window: All day.",
+    "token_count": 34,
+    "section": "Beverages",
+    "metadata_json": {
+      "section": "Beverages"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0112",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 112,
+    "content": "MENU113 Coffee. Category: Beverages. Description: Fresh or packaged beverage. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Milk. Base price PKR 230.00. Preparation time 5 minutes. Service window: All day.",
+    "token_count": 31,
+    "section": "Beverages",
+    "metadata_json": {
+      "section": "Beverages"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0113",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 113,
+    "content": "MENU114 Cappuccino. Category: Beverages. Description: Fresh or packaged beverage. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Milk. Base price PKR 360.00. Preparation time 5 minutes. Service window: All day.",
+    "token_count": 31,
+    "section": "Beverages",
+    "metadata_json": {
+      "section": "Beverages"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0114",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 114,
+    "content": "MENU115 Cold Coffee. Category: Beverages. Description: Fresh or packaged beverage. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Milk. Base price PKR 200.00. Preparation time 5 minutes. Service window: All day.",
+    "token_count": 32,
+    "section": "Beverages",
+    "metadata_json": {
+      "section": "Beverages"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0115",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 115,
+    "content": "MENU116 Soft Drink 1.5L. Category: Beverages. Description: Fresh or packaged beverage. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Not verified. Base price PKR 280.00. Preparation time 5 minutes. Service window: All day.",
+    "token_count": 34,
+    "section": "Beverages",
+    "metadata_json": {
+      "section": "Beverages"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0116",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 116,
+    "content": "MENU117 Mineral Water 1.5L. Category: Beverages. Description: Fresh or packaged beverage. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Not verified. Base price PKR 180.00. Preparation time 5 minutes. Service window: All day.",
+    "token_count": 34,
+    "section": "Beverages",
+    "metadata_json": {
+      "section": "Beverages"
+    }
+  },
+  {
+    "chunk_id": "menu:catalog_narratives:0117",
+    "document_id": "menu:catalog_narratives",
+    "ordinal": 117,
+    "content": "MENU118 Lassi Sweet. Category: Beverages. Description: Fresh or packaged beverage. Dietary hint: Vegetarian candidate — verify recipe. Allergen hint: Milk. Base price PKR 450.00. Preparation time 5 minutes. Service window: All day.",
+    "token_count": 32,
+    "section": "Beverages",
+    "metadata_json": {
+      "section": "Beverages"
+    }
+  }
+]

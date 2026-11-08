@@ -17,11 +17,11 @@ from __future__ import annotations
 import asyncio
 import uuid
 from dataclasses import dataclass
-from datetime import datetime, timezone
-from enum import Enum
+from datetime import UTC, datetime
+from enum import StrEnum
 
 
-class JobStatus(str, Enum):
+class JobStatus(StrEnum):
     PENDING = "pending"
     RUNNING = "running"
     SUCCESS = "success"
@@ -65,7 +65,7 @@ class JobStore:
                 job_id=str(uuid.uuid4()),
                 domain=domain,
                 status=JobStatus.PENDING,
-                created_at=datetime.now(timezone.utc),
+                created_at=datetime.now(UTC),
             )
             self._jobs[job.job_id] = job
             self._order.append(job.job_id)
@@ -104,9 +104,9 @@ class JobStore:
             if error is not None:
                 job.error = error
             if started:
-                job.started_at = datetime.now(timezone.utc)
+                job.started_at = datetime.now(UTC)
             if finished:
-                job.finished_at = datetime.now(timezone.utc)
+                job.finished_at = datetime.now(UTC)
             return job
 
 

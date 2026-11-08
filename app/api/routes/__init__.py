@@ -1,6 +1,8 @@
 from __future__ import annotations
+
 from fastapi import APIRouter
-from app.api.routes import health, menu, inventory, search, admin, assistant
+
+from app.api.routes import admin, assistant, health, inventory, menu, search
 
 api_router = APIRouter(prefix="/api/v1")
 

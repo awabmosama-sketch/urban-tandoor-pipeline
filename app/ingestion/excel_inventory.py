@@ -1,45 +1,42 @@
-"""
-Inventory workbook ingestion. Populates: suppliers, ingredients, branches,
-branch_stock, recipes, stock_movements.
+"""Inventory workbook parsing: Excel -> JSON.
+
+Populates six collections: suppliers, ingredients, branches, branch_stock,
+recipes and stock_movements.
 
 BranchStock computed fields are derived in Python (on_hand, available,
 suggested_buy, stock_status, stock_value_pkr) — never read from the workbook's
-stale formula columns.
-
-Recipes DROPS the workbook's PECHS_*/Gulshan_* formula columns — those are
-derived at query time by the API.
+stale formula columns. Recipes drop the workbook's PECHS_*/Gulshan_* formula
+columns because those are derived at query time by the API.
 """
+
 from __future__ import annotations
-import pandas as pd
-from datetime import date, datetime, time, timezone
-from decimal import Decimal
+
+from datetime import UTC, date, datetime, time
 from pathlib import Path
-from sqlalchemy.ext.asyncio import AsyncSession
+
+import pandas as pd
 
 from app.config import get_settings
 from app.ingestion._parsers import (
-    _null, _req_str, _opt_str, _req_int, _opt_int,
-    _req_float, _opt_float, _req_dec, _opt_dec, _req_bool,
+    _null,
+    _opt_str,
+    _req_dec,
+    _req_float,
+    _req_int,
+    _req_str,
 )
-from app.ingestion._upsert import upsert_rows
-from app.models import (
-    Supplier, Ingredient, Branch, BranchStock, Recipe, StockMovement,
-)
+from app.ingestion.json_store import write_collection
 
 INVENTORY_WORKBOOK_FILENAME = "Urban_Tandoor_Two_Branch_Inventory_Dataset.xlsx"
-_DROP_RECIPE_COLUMNS = {
-    "PECHS_Available", "PECHS_Max_Portions",
-    "Gulshan_Available", "Gulshan_Max_Portions",
-}
 
 
 def _workbook_path() -> Path:
-    p = Path(get_settings().data_dir) / INVENTORY_WORKBOOK_FILENAME
-    if not p.exists():
+    path = Path(get_settings().data_dir) / INVENTORY_WORKBOOK_FILENAME
+    if not path.exists():
         raise FileNotFoundError(
-            f"Copy the workbook to {p.resolve()} before running Phase 7 ingestion."
+            f"Copy the workbook to {path.resolve()} before exporting inventory JSON."
         )
-    return p
+    return path
 
 
 def _load_sheet(xls: pd.ExcelFile, sheet: str) -> pd.DataFrame:
@@ -48,57 +45,61 @@ def _load_sheet(xls: pd.ExcelFile, sheet: str) -> pd.DataFrame:
     return df
 
 
-async def upsert_suppliers(session, df) -> int:
-    rows = [{
-        "supplier_id": _req_str(r, "Supplier_ID"),
-        "supplier_name": _req_str(r, "Supplier_Name"),
-        "supply_category": _req_str(r, "Supply_Category"),
-        "contact": _opt_str(r, "Contact"),
-        "verification": _req_str(r, "Verification"),
-    } for r in df.to_dict(orient="records")]
-    return await upsert_rows(session, Supplier, rows, ["supplier_id"])
+def parse_suppliers(df: pd.DataFrame) -> list[dict]:
+    return [
+        {
+            "supplier_id": _req_str(r, "Supplier_ID"),
+            "supplier_name": _req_str(r, "Supplier_Name"),
+            "supply_category": _req_str(r, "Supply_Category"),
+            "contact": _opt_str(r, "Contact"),
+            "verification": _req_str(r, "Verification"),
+        }
+        for r in df.to_dict(orient="records")
+    ]
 
 
-async def upsert_ingredients(session, df) -> int:
-    rows = [{
-        "ingredient_id": _req_str(r, "Ingredient_ID"),
-        "ingredient_name": _req_str(r, "Ingredient_Name"),
-        "category": _req_str(r, "Category"),
-        "unit": _req_str(r, "Unit"),
-        "unit_cost_pkr": _req_dec(r, "Unit_Cost_PKR"),
-        "default_reorder": _req_float(r, "Default_Reorder"),
-        "default_target": _req_float(r, "Default_Target"),
-        "supplier_id": _opt_str(r, "Supplier_ID"),
-        "status": _req_str(r, "Status") if _null(r.get("Status")) else "Active",
-    } for r in df.to_dict(orient="records")]
-    return await upsert_rows(session, Ingredient, rows, ["ingredient_id"])
+def parse_ingredients(df: pd.DataFrame) -> list[dict]:
+    return [
+        {
+            "ingredient_id": _req_str(r, "Ingredient_ID"),
+            "ingredient_name": _req_str(r, "Ingredient_Name"),
+            "category": _req_str(r, "Category"),
+            "unit": _req_str(r, "Unit"),
+            "unit_cost_pkr": float(_req_dec(r, "Unit_Cost_PKR")),
+            "default_reorder": _req_float(r, "Default_Reorder"),
+            "default_target": _req_float(r, "Default_Target"),
+            "supplier_id": _opt_str(r, "Supplier_ID"),
+            "status": _req_str(r, "Status") if _null(r.get("Status")) else "Active",
+        }
+        for r in df.to_dict(orient="records")
+    ]
 
 
-async def upsert_branches(session, df) -> int:
-    rows = [{
-        "branch_id": _req_str(r, "Branch_ID"),
-        "branch_name": _req_str(r, "Branch_Name"),
-        "address_demo": _opt_str(r, "Address_Demo"),
-        "tables_count": _req_int(r, "Tables"),
-        "seats": _req_int(r, "Seats"),
-        "hours": _req_str(r, "Hours"),
-        "status": _req_str(r, "Status"),
-    } for r in df.to_dict(orient="records")]
-    return await upsert_rows(session, Branch, rows, ["branch_id"])
+def parse_branches(df: pd.DataFrame) -> list[dict]:
+    return [
+        {
+            "branch_id": _req_str(r, "Branch_ID"),
+            "branch_name": _req_str(r, "Branch_Name"),
+            "address_demo": _opt_str(r, "Address_Demo"),
+            "tables_count": _req_int(r, "Tables"),
+            "seats": _req_int(r, "Seats"),
+            "hours": _req_str(r, "Hours"),
+            "status": _req_str(r, "Status"),
+        }
+        for r in df.to_dict(orient="records")
+    ]
 
 
-def _compute_branch_stock_row(r: dict) -> dict:
-    """Given a source row dict, return a BranchStock row dict with ALL 20
-    fields (raw inputs + computed + snapshot_at), on_hand via Python formula."""
-    opening   = _req_float(r, "Opening")
-    received  = _req_float(r, "Received")
-    consumed  = _req_float(r, "Consumed")
-    wastage   = _req_float(r, "Wastage")
-    adjustment = _req_float(r, "Adjustment")
-    reserved  = _req_float(r, "Reserved")
-    reorder   = _req_float(r, "Reorder_Level")
-    target    = _req_float(r, "Target_Stock")
-    unit_cost = _req_dec(r, "Unit_Cost_PKR")
+def _compute_branch_stock_row(row: dict) -> dict:
+    opening = _req_float(row, "Opening")
+    received = _req_float(row, "Received")
+    consumed = _req_float(row, "Consumed")
+    wastage = _req_float(row, "Wastage")
+    adjustment = _req_float(row, "Adjustment")
+    reserved = _req_float(row, "Reserved")
+    reorder = _req_float(row, "Reorder_Level")
+    target = _req_float(row, "Target_Stock")
+    unit_cost = _req_dec(row, "Unit_Cost_PKR")
 
     on_hand = opening + received - consumed - wastage + adjustment
     available = max(0.0, on_hand - reserved)
@@ -111,89 +112,124 @@ def _compute_branch_stock_row(r: dict) -> dict:
         stock_status = "REORDER"
     else:
         stock_status = "OK"
-    stock_value = Decimal(str(max(0.0, on_hand))) * unit_cost
+    stock_value = max(0.0, on_hand) * float(unit_cost)
 
-    raw_updated = _null(r.get("Updated_At"))
+    raw_updated = _null(row.get("Updated_At"))
     if raw_updated:
         try:
-            d = date.fromisoformat(str(raw_updated)[:10])
-            snapshot_at = datetime.combine(d, time.min, tzinfo=timezone.utc)
+            day = date.fromisoformat(str(raw_updated)[:10])
+            snapshot_at = datetime.combine(day, time.min, tzinfo=UTC)
         except Exception:
-            snapshot_at = datetime.now(timezone.utc)
+            snapshot_at = datetime.now(UTC)
     else:
-        snapshot_at = datetime.now(timezone.utc)
+        snapshot_at = datetime.now(UTC)
 
     return {
-        "branch_id": _req_str(r, "Branch_ID"),
-        "ingredient_id": _req_str(r, "Ingredient_ID"),
-        "ingredient_name": _req_str(r, "Ingredient_Name"),
-        "category": _req_str(r, "Category"),
-        "unit": _req_str(r, "Unit"),
-        "opening": opening, "received": received, "consumed": consumed,
-        "wastage": wastage, "adjustment": adjustment, "reserved": reserved,
-        "on_hand": on_hand, "available": available,
-        "suggested_buy": suggested_buy, "stock_status": stock_status,
+        "branch_id": _req_str(row, "Branch_ID"),
+        "ingredient_id": _req_str(row, "Ingredient_ID"),
+        "ingredient_name": _req_str(row, "Ingredient_Name"),
+        "category": _req_str(row, "Category"),
+        "unit": _req_str(row, "Unit"),
+        "opening": opening,
+        "received": received,
+        "consumed": consumed,
+        "wastage": wastage,
+        "adjustment": adjustment,
+        "reserved": reserved,
+        "on_hand": on_hand,
+        "available": available,
+        "suggested_buy": suggested_buy,
+        "stock_status": stock_status,
         "stock_value_pkr": stock_value,
-        "reorder_level": reorder, "target_stock": target,
-        "unit_cost_pkr": unit_cost, "snapshot_at": snapshot_at,
+        "reorder_level": reorder,
+        "target_stock": target,
+        "unit_cost_pkr": float(unit_cost),
+        "snapshot_at": snapshot_at,
     }
 
 
-async def upsert_branch_stock(session, df) -> int:
-    rows = [_compute_branch_stock_row(r) for r in df.to_dict(orient="records")]
-    return await upsert_rows(
-        session, BranchStock, rows, ["branch_id", "ingredient_id"],
-    )
+def parse_branch_stock(df: pd.DataFrame) -> list[dict]:
+    return [_compute_branch_stock_row(row) for row in df.to_dict(orient="records")]
 
 
-async def upsert_recipes(session, df) -> int:
-    # Defensive: if the DataFrame somehow has the dropped columns, ignore them.
-    rows = [{
-        "menu_id": _req_str(r, "Menu_ID"),
-        "ingredient_id": _req_str(r, "Ingredient_ID"),
-        "menu_item": _req_str(r, "Menu_Item"),
-        "category": _req_str(r, "Category"),
-        "qty_per_portion": _req_float(r, "Qty_Per_Portion"),
-        "ingredient_name": _req_str(r, "Ingredient_Name"),
-    } for r in df.to_dict(orient="records")]
-    return await upsert_rows(session, Recipe, rows, ["menu_id", "ingredient_id"])
+def parse_recipes(df: pd.DataFrame) -> list[dict]:
+    return [
+        {
+            "menu_id": _req_str(r, "Menu_ID"),
+            "ingredient_id": _req_str(r, "Ingredient_ID"),
+            "menu_item": _req_str(r, "Menu_Item"),
+            "category": _req_str(r, "Category"),
+            "qty_per_portion": _req_float(r, "Qty_Per_Portion"),
+            "ingredient_name": _req_str(r, "Ingredient_Name"),
+        }
+        for r in df.to_dict(orient="records")
+    ]
 
 
-async def upsert_stock_movements(session, df) -> int:
-    rows = []
+def parse_stock_movements(df: pd.DataFrame) -> list[dict]:
+    rows: list[dict] = []
     for r in df.to_dict(orient="records"):
         raw_date = _req_str(r, "Movement_Date")
         try:
-            mv_date = date.fromisoformat(str(raw_date)[:10])
+            movement_date = date.fromisoformat(str(raw_date)[:10])
         except Exception as exc:
-            raise ValueError(f"Invalid Movement_Date {raw_date!r}: {exc}")
-        rows.append({
-            "movement_id": _req_str(r, "Movement_ID"),
-            "movement_date": mv_date,
-            "branch_id": _req_str(r, "Branch_ID"),
-            "ingredient_id": _req_str(r, "Ingredient_ID"),
-            "movement_type": _req_str(r, "Movement_Type"),
-            "qty_signed": _req_float(r, "Qty_Signed"),
-            "unit": _req_str(r, "Unit"),
-            "reference": _opt_str(r, "Reference"),
-            "reason": _opt_str(r, "Reason"),
-            "data_type": _req_str(r, "Data_Type") if _null(r.get("Data_Type")) else "Demo",
-        })
-    return await upsert_rows(session, StockMovement, rows, ["movement_id"])
+            raise ValueError(f"Invalid Movement_Date {raw_date!r}: {exc}") from exc
+        rows.append(
+            {
+                "movement_id": _req_str(r, "Movement_ID"),
+                "movement_date": movement_date,
+                "branch_id": _req_str(r, "Branch_ID"),
+                "ingredient_id": _req_str(r, "Ingredient_ID"),
+                "movement_type": _req_str(r, "Movement_Type"),
+                "qty_signed": _req_float(r, "Qty_Signed"),
+                "unit": _req_str(r, "Unit"),
+                "reference": _opt_str(r, "Reference"),
+                "reason": _opt_str(r, "Reason"),
+                "data_type": _req_str(r, "Data_Type") if _null(r.get("Data_Type")) else "Demo",
+            }
+        )
+    return rows
 
 
-async def ingest_inventory(session: AsyncSession) -> dict[str, int]:
-    path = _workbook_path()
-    xls = pd.ExcelFile(path)
-    counts: dict[str, int] = {}
-    async def step(name, sheet, fn):
-        df = _load_sheet(xls, sheet)
-        counts[name] = await fn(session, df)
-    # FK ORDER (do not reorder):
-    await step("suppliers", "Suppliers", upsert_suppliers)
-    await step("ingredients", "Ingredients", upsert_ingredients)
-    await step("branches", "Branches", upsert_branches)
-    await step("branch_stock", "Branch_Stock", upsert_branch_stock)
-    await step("recipes", "Recipes", upsert_recipes)
-    await step("stock_movements", "Stock_Movements", upsert_stock_movements)
-    return counts
+SHEET_SPECS = (
+    ("suppliers", "Suppliers", parse_suppliers),
+    ("ingredients", "Ingredients", parse_ingredients),
+    ("branches", "Branches", parse_branches),
+    ("branch_stock", "Branch_Stock", parse_branch_stock),
+    ("recipes", "Recipes", parse_recipes),
+    ("stock_movements", "Stock_Movements", parse_stock_movements),
+)
+
+
+def build_inventory_datasets() -> dict[str, list[dict]]:
+    """Parse every inventory sheet into ``{collection_name: [documents]}``."""
+    xls = pd.ExcelFile(_workbook_path())
+    return {
+        name: parser(_load_sheet(xls, sheet))
+        for name, sheet, parser in SHEET_SPECS
+    }
+
+
+def export_inventory_json() -> dict[str, int]:
+    """Write the six inventory collections to ``data/json/``."""
+    datasets = build_inventory_datasets()
+    for name, documents in datasets.items():
+        write_collection(name, documents)
+    return {name: len(documents) for name, documents in datasets.items()}
+
+
+async def ingest_inventory(db=None) -> dict[str, int]:
+    """Export the workbook to JSON, then load that JSON into MongoDB."""
+    from app.database import get_db
+    from app.ingestion.json_ingest import ingest_json_domain
+
+    export_inventory_json()
+    return await ingest_json_domain(db or get_db(), "inventory")
+
+
+__all__ = [
+    "INVENTORY_WORKBOOK_FILENAME",
+    "build_inventory_datasets",
+    "export_inventory_json",
+    "ingest_inventory",
+]

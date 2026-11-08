@@ -4,7 +4,6 @@ Expected values from workbook Snapshot_Max_Portions, verified by Phases 7 and 11
 """
 import pytest
 
-
 EXPECTED = [
     # (menu_id, branch_id, expected_portions, expected_status, expected_limiting)
     ("MENU001", "UTG-KHI-001", 142, "AVAILABLE", "ING002"),
@@ -18,7 +17,9 @@ EXPECTED = [
 
 @pytest.mark.asyncio
 @pytest.mark.parametrize("menu_id,branch_id,expected_p,expected_s,expected_limit", EXPECTED)
-async def test_availability_individual(client, menu_id, branch_id, expected_p, expected_s, expected_limit):
+async def test_availability_individual(
+    client, menu_id, branch_id, expected_p, expected_s, expected_limit
+):
     r = await client.get(
         f"/api/v1/inventory/availability/{menu_id}?branch_id={branch_id}"
     )
@@ -28,8 +29,10 @@ async def test_availability_individual(client, menu_id, branch_id, expected_p, e
         f"{menu_id}@{branch_id}: expected {expected_p}, got {body['max_portions']}"
     assert body["status"] == expected_s
     if expected_limit is not None:
-        assert body["limiting_ingredient_id"] == expected_limit, \
-            f"{menu_id}@{branch_id}: expected limiting={expected_limit}, got {body.get('limiting_ingredient_id')}"
+        assert body["limiting_ingredient_id"] == expected_limit, (
+            f"{menu_id}@{branch_id}: expected limiting={expected_limit}, "
+            f"got {body.get('limiting_ingredient_id')}"
+        )
 
 
 @pytest.mark.asyncio
@@ -82,7 +85,11 @@ async def test_bulk_availability_matches_individual(client):
             )
             single = single_r.json()
             assert bulk[menu_id]["max_portions"] == single["max_portions"], \
-                f"{menu_id}@{branch_id}: bulk={bulk[menu_id]['max_portions']} single={single['max_portions']}"
+                (
+                    f"{menu_id}@{branch_id}: "
+                    f"bulk={bulk[menu_id]['max_portions']} "
+                    f"single={single['max_portions']}"
+                )
             assert bulk[menu_id]["status"] == single["status"]
 
 

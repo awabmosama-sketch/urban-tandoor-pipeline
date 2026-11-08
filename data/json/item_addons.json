@@ -1,0 +1,1990 @@
+[
+  {
+    "mapping_id": "IA00001",
+    "menu_id": "MENU001",
+    "addon_id": "ADD006",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00002",
+    "menu_id": "MENU001",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00003",
+    "menu_id": "MENU002",
+    "addon_id": "ADD006",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00004",
+    "menu_id": "MENU002",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00005",
+    "menu_id": "MENU003",
+    "addon_id": "ADD006",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00006",
+    "menu_id": "MENU003",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00007",
+    "menu_id": "MENU004",
+    "addon_id": "ADD006",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00008",
+    "menu_id": "MENU004",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00009",
+    "menu_id": "MENU005",
+    "addon_id": "ADD006",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00010",
+    "menu_id": "MENU005",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00011",
+    "menu_id": "MENU006",
+    "addon_id": "ADD006",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00012",
+    "menu_id": "MENU006",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00013",
+    "menu_id": "MENU007",
+    "addon_id": "ADD002",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00014",
+    "menu_id": "MENU007",
+    "addon_id": "ADD006",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00015",
+    "menu_id": "MENU007",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00016",
+    "menu_id": "MENU008",
+    "addon_id": "ADD002",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00017",
+    "menu_id": "MENU008",
+    "addon_id": "ADD006",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00018",
+    "menu_id": "MENU008",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00019",
+    "menu_id": "MENU009",
+    "addon_id": "ADD002",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00020",
+    "menu_id": "MENU009",
+    "addon_id": "ADD006",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00021",
+    "menu_id": "MENU009",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00022",
+    "menu_id": "MENU010",
+    "addon_id": "ADD002",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00023",
+    "menu_id": "MENU010",
+    "addon_id": "ADD006",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00024",
+    "menu_id": "MENU010",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00025",
+    "menu_id": "MENU011",
+    "addon_id": "ADD001",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00026",
+    "menu_id": "MENU011",
+    "addon_id": "ADD002",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00027",
+    "menu_id": "MENU011",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00028",
+    "menu_id": "MENU011",
+    "addon_id": "ADD004",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00029",
+    "menu_id": "MENU011",
+    "addon_id": "ADD005",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00030",
+    "menu_id": "MENU011",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00031",
+    "menu_id": "MENU012",
+    "addon_id": "ADD001",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00032",
+    "menu_id": "MENU012",
+    "addon_id": "ADD002",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00033",
+    "menu_id": "MENU012",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00034",
+    "menu_id": "MENU012",
+    "addon_id": "ADD004",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00035",
+    "menu_id": "MENU012",
+    "addon_id": "ADD005",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00036",
+    "menu_id": "MENU012",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00037",
+    "menu_id": "MENU013",
+    "addon_id": "ADD001",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00038",
+    "menu_id": "MENU013",
+    "addon_id": "ADD002",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00039",
+    "menu_id": "MENU013",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00040",
+    "menu_id": "MENU013",
+    "addon_id": "ADD004",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00041",
+    "menu_id": "MENU013",
+    "addon_id": "ADD005",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00042",
+    "menu_id": "MENU013",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00043",
+    "menu_id": "MENU014",
+    "addon_id": "ADD001",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00044",
+    "menu_id": "MENU014",
+    "addon_id": "ADD002",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00045",
+    "menu_id": "MENU014",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00046",
+    "menu_id": "MENU014",
+    "addon_id": "ADD004",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00047",
+    "menu_id": "MENU014",
+    "addon_id": "ADD005",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00048",
+    "menu_id": "MENU014",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00049",
+    "menu_id": "MENU015",
+    "addon_id": "ADD001",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00050",
+    "menu_id": "MENU015",
+    "addon_id": "ADD008",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00051",
+    "menu_id": "MENU015",
+    "addon_id": "ADD009",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00052",
+    "menu_id": "MENU015",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00053",
+    "menu_id": "MENU016",
+    "addon_id": "ADD001",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00054",
+    "menu_id": "MENU016",
+    "addon_id": "ADD008",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00055",
+    "menu_id": "MENU016",
+    "addon_id": "ADD009",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00056",
+    "menu_id": "MENU016",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00057",
+    "menu_id": "MENU017",
+    "addon_id": "ADD001",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00058",
+    "menu_id": "MENU017",
+    "addon_id": "ADD008",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00059",
+    "menu_id": "MENU017",
+    "addon_id": "ADD009",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00060",
+    "menu_id": "MENU017",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00061",
+    "menu_id": "MENU018",
+    "addon_id": "ADD001",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00062",
+    "menu_id": "MENU018",
+    "addon_id": "ADD008",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00063",
+    "menu_id": "MENU018",
+    "addon_id": "ADD009",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00064",
+    "menu_id": "MENU018",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00065",
+    "menu_id": "MENU019",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00066",
+    "menu_id": "MENU019",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00067",
+    "menu_id": "MENU020",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00068",
+    "menu_id": "MENU020",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00069",
+    "menu_id": "MENU021",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00070",
+    "menu_id": "MENU021",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00071",
+    "menu_id": "MENU022",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00072",
+    "menu_id": "MENU022",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00073",
+    "menu_id": "MENU023",
+    "addon_id": "ADD007",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00074",
+    "menu_id": "MENU023",
+    "addon_id": "ADD006",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00075",
+    "menu_id": "MENU024",
+    "addon_id": "ADD007",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00076",
+    "menu_id": "MENU024",
+    "addon_id": "ADD006",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00077",
+    "menu_id": "MENU025",
+    "addon_id": "ADD007",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00078",
+    "menu_id": "MENU025",
+    "addon_id": "ADD006",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00079",
+    "menu_id": "MENU033",
+    "addon_id": "ADD006",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00080",
+    "menu_id": "MENU033",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00081",
+    "menu_id": "MENU034",
+    "addon_id": "ADD006",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00082",
+    "menu_id": "MENU034",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00083",
+    "menu_id": "MENU035",
+    "addon_id": "ADD006",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00084",
+    "menu_id": "MENU035",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00085",
+    "menu_id": "MENU036",
+    "addon_id": "ADD006",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00086",
+    "menu_id": "MENU036",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00087",
+    "menu_id": "MENU037",
+    "addon_id": "ADD006",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00088",
+    "menu_id": "MENU037",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00089",
+    "menu_id": "MENU038",
+    "addon_id": "ADD006",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00090",
+    "menu_id": "MENU038",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00091",
+    "menu_id": "MENU039",
+    "addon_id": "ADD006",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00092",
+    "menu_id": "MENU039",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00093",
+    "menu_id": "MENU040",
+    "addon_id": "ADD006",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00094",
+    "menu_id": "MENU040",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00095",
+    "menu_id": "MENU041",
+    "addon_id": "ADD006",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00096",
+    "menu_id": "MENU041",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00097",
+    "menu_id": "MENU042",
+    "addon_id": "ADD006",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00098",
+    "menu_id": "MENU042",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00099",
+    "menu_id": "MENU043",
+    "addon_id": "ADD006",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00100",
+    "menu_id": "MENU043",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00101",
+    "menu_id": "MENU044",
+    "addon_id": "ADD006",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00102",
+    "menu_id": "MENU044",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00103",
+    "menu_id": "MENU045",
+    "addon_id": "ADD006",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00104",
+    "menu_id": "MENU045",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00105",
+    "menu_id": "MENU046",
+    "addon_id": "ADD006",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00106",
+    "menu_id": "MENU046",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00107",
+    "menu_id": "MENU047",
+    "addon_id": "ADD006",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00108",
+    "menu_id": "MENU047",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00109",
+    "menu_id": "MENU048",
+    "addon_id": "ADD006",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00110",
+    "menu_id": "MENU048",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00111",
+    "menu_id": "MENU049",
+    "addon_id": "ADD002",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00112",
+    "menu_id": "MENU049",
+    "addon_id": "ADD006",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00113",
+    "menu_id": "MENU049",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00114",
+    "menu_id": "MENU050",
+    "addon_id": "ADD002",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00115",
+    "menu_id": "MENU050",
+    "addon_id": "ADD006",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00116",
+    "menu_id": "MENU050",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00117",
+    "menu_id": "MENU051",
+    "addon_id": "ADD002",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00118",
+    "menu_id": "MENU051",
+    "addon_id": "ADD006",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00119",
+    "menu_id": "MENU051",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00120",
+    "menu_id": "MENU052",
+    "addon_id": "ADD002",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00121",
+    "menu_id": "MENU052",
+    "addon_id": "ADD006",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00122",
+    "menu_id": "MENU052",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00123",
+    "menu_id": "MENU053",
+    "addon_id": "ADD002",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00124",
+    "menu_id": "MENU053",
+    "addon_id": "ADD006",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00125",
+    "menu_id": "MENU053",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00126",
+    "menu_id": "MENU054",
+    "addon_id": "ADD002",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00127",
+    "menu_id": "MENU054",
+    "addon_id": "ADD006",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00128",
+    "menu_id": "MENU054",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00129",
+    "menu_id": "MENU055",
+    "addon_id": "ADD002",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00130",
+    "menu_id": "MENU055",
+    "addon_id": "ADD006",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00131",
+    "menu_id": "MENU055",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00132",
+    "menu_id": "MENU056",
+    "addon_id": "ADD002",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00133",
+    "menu_id": "MENU056",
+    "addon_id": "ADD006",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00134",
+    "menu_id": "MENU056",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00135",
+    "menu_id": "MENU057",
+    "addon_id": "ADD002",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00136",
+    "menu_id": "MENU057",
+    "addon_id": "ADD006",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00137",
+    "menu_id": "MENU057",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00138",
+    "menu_id": "MENU058",
+    "addon_id": "ADD002",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00139",
+    "menu_id": "MENU058",
+    "addon_id": "ADD006",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00140",
+    "menu_id": "MENU058",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00141",
+    "menu_id": "MENU059",
+    "addon_id": "ADD001",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00142",
+    "menu_id": "MENU059",
+    "addon_id": "ADD002",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00143",
+    "menu_id": "MENU059",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00144",
+    "menu_id": "MENU059",
+    "addon_id": "ADD004",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00145",
+    "menu_id": "MENU059",
+    "addon_id": "ADD005",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00146",
+    "menu_id": "MENU059",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00147",
+    "menu_id": "MENU060",
+    "addon_id": "ADD001",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00148",
+    "menu_id": "MENU060",
+    "addon_id": "ADD002",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00149",
+    "menu_id": "MENU060",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00150",
+    "menu_id": "MENU060",
+    "addon_id": "ADD004",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00151",
+    "menu_id": "MENU060",
+    "addon_id": "ADD005",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00152",
+    "menu_id": "MENU060",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00153",
+    "menu_id": "MENU061",
+    "addon_id": "ADD001",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00154",
+    "menu_id": "MENU061",
+    "addon_id": "ADD002",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00155",
+    "menu_id": "MENU061",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00156",
+    "menu_id": "MENU061",
+    "addon_id": "ADD004",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00157",
+    "menu_id": "MENU061",
+    "addon_id": "ADD005",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00158",
+    "menu_id": "MENU061",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00159",
+    "menu_id": "MENU062",
+    "addon_id": "ADD001",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00160",
+    "menu_id": "MENU062",
+    "addon_id": "ADD002",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00161",
+    "menu_id": "MENU062",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00162",
+    "menu_id": "MENU062",
+    "addon_id": "ADD004",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00163",
+    "menu_id": "MENU062",
+    "addon_id": "ADD005",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00164",
+    "menu_id": "MENU062",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00165",
+    "menu_id": "MENU063",
+    "addon_id": "ADD001",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00166",
+    "menu_id": "MENU063",
+    "addon_id": "ADD002",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00167",
+    "menu_id": "MENU063",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00168",
+    "menu_id": "MENU063",
+    "addon_id": "ADD004",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00169",
+    "menu_id": "MENU063",
+    "addon_id": "ADD005",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00170",
+    "menu_id": "MENU063",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00171",
+    "menu_id": "MENU064",
+    "addon_id": "ADD001",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00172",
+    "menu_id": "MENU064",
+    "addon_id": "ADD002",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00173",
+    "menu_id": "MENU064",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00174",
+    "menu_id": "MENU064",
+    "addon_id": "ADD004",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00175",
+    "menu_id": "MENU064",
+    "addon_id": "ADD005",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00176",
+    "menu_id": "MENU064",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00177",
+    "menu_id": "MENU065",
+    "addon_id": "ADD001",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00178",
+    "menu_id": "MENU065",
+    "addon_id": "ADD002",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00179",
+    "menu_id": "MENU065",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00180",
+    "menu_id": "MENU065",
+    "addon_id": "ADD004",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00181",
+    "menu_id": "MENU065",
+    "addon_id": "ADD005",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00182",
+    "menu_id": "MENU065",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00183",
+    "menu_id": "MENU066",
+    "addon_id": "ADD001",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00184",
+    "menu_id": "MENU066",
+    "addon_id": "ADD002",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00185",
+    "menu_id": "MENU066",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00186",
+    "menu_id": "MENU066",
+    "addon_id": "ADD004",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00187",
+    "menu_id": "MENU066",
+    "addon_id": "ADD005",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00188",
+    "menu_id": "MENU066",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00189",
+    "menu_id": "MENU067",
+    "addon_id": "ADD001",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00190",
+    "menu_id": "MENU067",
+    "addon_id": "ADD002",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00191",
+    "menu_id": "MENU067",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00192",
+    "menu_id": "MENU067",
+    "addon_id": "ADD004",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00193",
+    "menu_id": "MENU067",
+    "addon_id": "ADD005",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00194",
+    "menu_id": "MENU067",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00195",
+    "menu_id": "MENU068",
+    "addon_id": "ADD001",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00196",
+    "menu_id": "MENU068",
+    "addon_id": "ADD002",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00197",
+    "menu_id": "MENU068",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00198",
+    "menu_id": "MENU068",
+    "addon_id": "ADD004",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00199",
+    "menu_id": "MENU068",
+    "addon_id": "ADD005",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00200",
+    "menu_id": "MENU068",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00201",
+    "menu_id": "MENU069",
+    "addon_id": "ADD001",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00202",
+    "menu_id": "MENU069",
+    "addon_id": "ADD002",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00203",
+    "menu_id": "MENU069",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00204",
+    "menu_id": "MENU069",
+    "addon_id": "ADD004",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00205",
+    "menu_id": "MENU069",
+    "addon_id": "ADD005",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00206",
+    "menu_id": "MENU069",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00207",
+    "menu_id": "MENU070",
+    "addon_id": "ADD001",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00208",
+    "menu_id": "MENU070",
+    "addon_id": "ADD002",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00209",
+    "menu_id": "MENU070",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00210",
+    "menu_id": "MENU070",
+    "addon_id": "ADD004",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00211",
+    "menu_id": "MENU070",
+    "addon_id": "ADD005",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00212",
+    "menu_id": "MENU070",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00213",
+    "menu_id": "MENU071",
+    "addon_id": "ADD001",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00214",
+    "menu_id": "MENU071",
+    "addon_id": "ADD008",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00215",
+    "menu_id": "MENU071",
+    "addon_id": "ADD009",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00216",
+    "menu_id": "MENU071",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00217",
+    "menu_id": "MENU072",
+    "addon_id": "ADD001",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00218",
+    "menu_id": "MENU072",
+    "addon_id": "ADD008",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00219",
+    "menu_id": "MENU072",
+    "addon_id": "ADD009",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00220",
+    "menu_id": "MENU072",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00221",
+    "menu_id": "MENU073",
+    "addon_id": "ADD001",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00222",
+    "menu_id": "MENU073",
+    "addon_id": "ADD008",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00223",
+    "menu_id": "MENU073",
+    "addon_id": "ADD009",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00224",
+    "menu_id": "MENU073",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00225",
+    "menu_id": "MENU074",
+    "addon_id": "ADD001",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00226",
+    "menu_id": "MENU074",
+    "addon_id": "ADD008",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00227",
+    "menu_id": "MENU074",
+    "addon_id": "ADD009",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00228",
+    "menu_id": "MENU074",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00229",
+    "menu_id": "MENU075",
+    "addon_id": "ADD001",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00230",
+    "menu_id": "MENU075",
+    "addon_id": "ADD008",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00231",
+    "menu_id": "MENU075",
+    "addon_id": "ADD009",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00232",
+    "menu_id": "MENU075",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00233",
+    "menu_id": "MENU076",
+    "addon_id": "ADD001",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00234",
+    "menu_id": "MENU076",
+    "addon_id": "ADD008",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00235",
+    "menu_id": "MENU076",
+    "addon_id": "ADD009",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00236",
+    "menu_id": "MENU076",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00237",
+    "menu_id": "MENU077",
+    "addon_id": "ADD001",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00238",
+    "menu_id": "MENU077",
+    "addon_id": "ADD008",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00239",
+    "menu_id": "MENU077",
+    "addon_id": "ADD009",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00240",
+    "menu_id": "MENU077",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00241",
+    "menu_id": "MENU078",
+    "addon_id": "ADD001",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00242",
+    "menu_id": "MENU078",
+    "addon_id": "ADD008",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00243",
+    "menu_id": "MENU078",
+    "addon_id": "ADD009",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00244",
+    "menu_id": "MENU078",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00245",
+    "menu_id": "MENU079",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00246",
+    "menu_id": "MENU079",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00247",
+    "menu_id": "MENU080",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00248",
+    "menu_id": "MENU080",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00249",
+    "menu_id": "MENU081",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00250",
+    "menu_id": "MENU081",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00251",
+    "menu_id": "MENU082",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00252",
+    "menu_id": "MENU082",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00253",
+    "menu_id": "MENU083",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00254",
+    "menu_id": "MENU083",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00255",
+    "menu_id": "MENU084",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00256",
+    "menu_id": "MENU084",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00257",
+    "menu_id": "MENU085",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00258",
+    "menu_id": "MENU085",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00259",
+    "menu_id": "MENU086",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00260",
+    "menu_id": "MENU086",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00261",
+    "menu_id": "MENU087",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00262",
+    "menu_id": "MENU087",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00263",
+    "menu_id": "MENU088",
+    "addon_id": "ADD003",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00264",
+    "menu_id": "MENU088",
+    "addon_id": "ADD010",
+    "selectable": false,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00265",
+    "menu_id": "MENU089",
+    "addon_id": "ADD007",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00266",
+    "menu_id": "MENU089",
+    "addon_id": "ADD006",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00267",
+    "menu_id": "MENU090",
+    "addon_id": "ADD007",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00268",
+    "menu_id": "MENU090",
+    "addon_id": "ADD006",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00269",
+    "menu_id": "MENU091",
+    "addon_id": "ADD007",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00270",
+    "menu_id": "MENU091",
+    "addon_id": "ADD006",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00271",
+    "menu_id": "MENU092",
+    "addon_id": "ADD007",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00272",
+    "menu_id": "MENU092",
+    "addon_id": "ADD006",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00273",
+    "menu_id": "MENU093",
+    "addon_id": "ADD007",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00274",
+    "menu_id": "MENU093",
+    "addon_id": "ADD006",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00275",
+    "menu_id": "MENU094",
+    "addon_id": "ADD007",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00276",
+    "menu_id": "MENU094",
+    "addon_id": "ADD006",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00277",
+    "menu_id": "MENU095",
+    "addon_id": "ADD007",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00278",
+    "menu_id": "MENU095",
+    "addon_id": "ADD006",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00279",
+    "menu_id": "MENU096",
+    "addon_id": "ADD007",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00280",
+    "menu_id": "MENU096",
+    "addon_id": "ADD006",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00281",
+    "menu_id": "MENU097",
+    "addon_id": "ADD007",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00282",
+    "menu_id": "MENU097",
+    "addon_id": "ADD006",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00283",
+    "menu_id": "MENU098",
+    "addon_id": "ADD007",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  },
+  {
+    "mapping_id": "IA00284",
+    "menu_id": "MENU098",
+    "addon_id": "ADD006",
+    "selectable": true,
+    "operational_notes": "Not orderable until addon recipe + stock validated"
+  }
+]

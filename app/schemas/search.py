@@ -1,4 +1,5 @@
 from __future__ import annotations
+
 from pydantic import BaseModel, Field
 
 
@@ -31,7 +32,7 @@ class SearchHealthResponse(BaseModel):
     chunks_with_embedding: int
     distinct_documents: int
     embedding_dim: int
-    hnsw_index_present: bool
+    vector_index_present: bool
 
 
 class DocumentOut(BaseModel):

@@ -1,8 +1,8 @@
 """
 Urban Tandoor & Grill — FastAPI application.
 
-Phase 10 bootstrap:
-  - Lifespan: startup DB ping (non-fatal), shutdown engine disposal
+Bootstrap:
+  - Lifespan: MongoDB index bootstrap + ping (non-fatal), shutdown client close
   - Middlewares: RequestID (outermost), CORS, GZip (innermost)
   - Routes: /health (top-level, back-compat), /api/v1/* (versioned)
   - Docs: /docs (Swagger UI), /redoc (ReDoc), /openapi.json
@@ -18,40 +18,44 @@ from fastapi.middleware.gzip import GZipMiddleware
 from fastapi.responses import RedirectResponse
 from fastapi.staticfiles import StaticFiles
 
+import app as app_pkg
 from app.api.middleware import RequestIDMiddleware
 from app.api.routes import api_router
 from app.api.routes.health import router as health_router
-from app.database import engine, ping_db
-
-import app as app_pkg
+from app.database import close_db, ensure_indexes, ping_db
 
 STATIC_DIR = Path(__file__).resolve().parent / "static"
 
 
 @asynccontextmanager
 async def lifespan(_app: FastAPI):
-    # Startup: probe DB but NEVER block startup on failure.
-    ok, err = await ping_db()
+    # Startup: probe MongoDB but NEVER block startup on failure.
+    ok, error = await ping_db()
     if ok:
-        print("[startup] DB reachable", flush=True)
+        print("[startup] MongoDB reachable", flush=True)
+        try:
+            await ensure_indexes()
+            print("[startup] MongoDB indexes ready", flush=True)
+        except Exception as exc:  # noqa: BLE001
+            print(f"[startup] index bootstrap skipped: {exc}", flush=True)
     else:
-        print(f"[startup] DB unreachable at boot: {err}", flush=True)
+        print(f"[startup] MongoDB unreachable at boot: {error}", flush=True)
     try:
         yield
     finally:
-        # Shutdown: dispose engine (closes pooled connections cleanly).
         try:
-            await engine.dispose()
-            print("[shutdown] DB engine disposed", flush=True)
+            await close_db()
+            print("[shutdown] MongoDB client closed", flush=True)
         except Exception as exc:  # noqa: BLE001
-            print(f"[shutdown] engine.dispose error: {exc}", flush=True)
+            print(f"[shutdown] MongoDB close error: {exc}", flush=True)
 
 
 app = FastAPI(
     title="Urban Tandoor & Grill — Menu & Inventory API",
     description=(
-        "Async FastAPI + SQLModel + Neon Postgres + pgvector for menu, "
-        "inventory, availability and RAG. All data is synthetic demo data."
+        "Async FastAPI + MongoDB Atlas for menu, inventory, availability and "
+        "retrieval. Data is ingested from JSON snapshots. All data is synthetic "
+        "demo data."
     ),
     version=getattr(app_pkg, "__version__", "0.1.0"),
     lifespan=lifespan,

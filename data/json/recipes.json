@@ -1,0 +1,1042 @@
+[
+  {
+    "menu_id": "MENU001",
+    "ingredient_id": "ING002",
+    "menu_item": "Chicken Biryani",
+    "category": "Pakistani",
+    "qty_per_portion": 0.25,
+    "ingredient_name": "Chicken bone-in"
+  },
+  {
+    "menu_id": "MENU001",
+    "ingredient_id": "ING007",
+    "menu_item": "Chicken Biryani",
+    "category": "Pakistani",
+    "qty_per_portion": 0.18,
+    "ingredient_name": "Rice basmati"
+  },
+  {
+    "menu_id": "MENU001",
+    "ingredient_id": "ING022",
+    "menu_item": "Chicken Biryani",
+    "category": "Pakistani",
+    "qty_per_portion": 0.05,
+    "ingredient_name": "Onions"
+  },
+  {
+    "menu_id": "MENU001",
+    "ingredient_id": "ING060",
+    "menu_item": "Chicken Biryani",
+    "category": "Pakistani",
+    "qty_per_portion": 0.02,
+    "ingredient_name": "Biryani masala"
+  },
+  {
+    "menu_id": "MENU001",
+    "ingredient_id": "ING031",
+    "menu_item": "Chicken Biryani",
+    "category": "Pakistani",
+    "qty_per_portion": 0.025,
+    "ingredient_name": "Cooking oil"
+  },
+  {
+    "menu_id": "MENU002",
+    "ingredient_id": "ING003",
+    "menu_item": "Beef Biryani",
+    "category": "Pakistani",
+    "qty_per_portion": 0.23,
+    "ingredient_name": "Beef boneless"
+  },
+  {
+    "menu_id": "MENU002",
+    "ingredient_id": "ING007",
+    "menu_item": "Beef Biryani",
+    "category": "Pakistani",
+    "qty_per_portion": 0.18,
+    "ingredient_name": "Rice basmati"
+  },
+  {
+    "menu_id": "MENU002",
+    "ingredient_id": "ING022",
+    "menu_item": "Beef Biryani",
+    "category": "Pakistani",
+    "qty_per_portion": 0.05,
+    "ingredient_name": "Onions"
+  },
+  {
+    "menu_id": "MENU002",
+    "ingredient_id": "ING060",
+    "menu_item": "Beef Biryani",
+    "category": "Pakistani",
+    "qty_per_portion": 0.02,
+    "ingredient_name": "Biryani masala"
+  },
+  {
+    "menu_id": "MENU002",
+    "ingredient_id": "ING031",
+    "menu_item": "Beef Biryani",
+    "category": "Pakistani",
+    "qty_per_portion": 0.025,
+    "ingredient_name": "Cooking oil"
+  },
+  {
+    "menu_id": "MENU003",
+    "ingredient_id": "ING002",
+    "menu_item": "Chicken Karahi",
+    "category": "Pakistani",
+    "qty_per_portion": 0.5,
+    "ingredient_name": "Chicken bone-in"
+  },
+  {
+    "menu_id": "MENU003",
+    "ingredient_id": "ING021",
+    "menu_item": "Chicken Karahi",
+    "category": "Pakistani",
+    "qty_per_portion": 0.18,
+    "ingredient_name": "Tomatoes"
+  },
+  {
+    "menu_id": "MENU003",
+    "ingredient_id": "ING026",
+    "menu_item": "Chicken Karahi",
+    "category": "Pakistani",
+    "qty_per_portion": 0.025,
+    "ingredient_name": "Ginger garlic paste"
+  },
+  {
+    "menu_id": "MENU003",
+    "ingredient_id": "ING031",
+    "menu_item": "Chicken Karahi",
+    "category": "Pakistani",
+    "qty_per_portion": 0.04,
+    "ingredient_name": "Cooking oil"
+  },
+  {
+    "menu_id": "MENU003",
+    "ingredient_id": "ING034",
+    "menu_item": "Chicken Karahi",
+    "category": "Pakistani",
+    "qty_per_portion": 0.009,
+    "ingredient_name": "Red chilli powder"
+  },
+  {
+    "menu_id": "MENU004",
+    "ingredient_id": "ING004",
+    "menu_item": "Mutton Karahi",
+    "category": "Pakistani",
+    "qty_per_portion": 0.5,
+    "ingredient_name": "Mutton"
+  },
+  {
+    "menu_id": "MENU004",
+    "ingredient_id": "ING021",
+    "menu_item": "Mutton Karahi",
+    "category": "Pakistani",
+    "qty_per_portion": 0.18,
+    "ingredient_name": "Tomatoes"
+  },
+  {
+    "menu_id": "MENU004",
+    "ingredient_id": "ING026",
+    "menu_item": "Mutton Karahi",
+    "category": "Pakistani",
+    "qty_per_portion": 0.025,
+    "ingredient_name": "Ginger garlic paste"
+  },
+  {
+    "menu_id": "MENU004",
+    "ingredient_id": "ING031",
+    "menu_item": "Mutton Karahi",
+    "category": "Pakistani",
+    "qty_per_portion": 0.04,
+    "ingredient_name": "Cooking oil"
+  },
+  {
+    "menu_id": "MENU004",
+    "ingredient_id": "ING034",
+    "menu_item": "Mutton Karahi",
+    "category": "Pakistani",
+    "qty_per_portion": 0.009,
+    "ingredient_name": "Red chilli powder"
+  },
+  {
+    "menu_id": "MENU005",
+    "ingredient_id": "ING001",
+    "menu_item": "Chicken Handi",
+    "category": "Pakistani",
+    "qty_per_portion": 0.28,
+    "ingredient_name": "Chicken boneless"
+  },
+  {
+    "menu_id": "MENU005",
+    "ingredient_id": "ING016",
+    "menu_item": "Chicken Handi",
+    "category": "Pakistani",
+    "qty_per_portion": 0.08,
+    "ingredient_name": "Cream"
+  },
+  {
+    "menu_id": "MENU005",
+    "ingredient_id": "ING020",
+    "menu_item": "Chicken Handi",
+    "category": "Pakistani",
+    "qty_per_portion": 0.07,
+    "ingredient_name": "Yogurt"
+  },
+  {
+    "menu_id": "MENU005",
+    "ingredient_id": "ING022",
+    "menu_item": "Chicken Handi",
+    "category": "Pakistani",
+    "qty_per_portion": 0.05,
+    "ingredient_name": "Onions"
+  },
+  {
+    "menu_id": "MENU005",
+    "ingredient_id": "ING031",
+    "menu_item": "Chicken Handi",
+    "category": "Pakistani",
+    "qty_per_portion": 0.03,
+    "ingredient_name": "Cooking oil"
+  },
+  {
+    "menu_id": "MENU006",
+    "ingredient_id": "ING048",
+    "menu_item": "Daal Makhani",
+    "category": "Pakistani",
+    "qty_per_portion": 0.18,
+    "ingredient_name": "Lentils mixed"
+  },
+  {
+    "menu_id": "MENU006",
+    "ingredient_id": "ING019",
+    "menu_item": "Daal Makhani",
+    "category": "Pakistani",
+    "qty_per_portion": 0.02,
+    "ingredient_name": "Butter"
+  },
+  {
+    "menu_id": "MENU006",
+    "ingredient_id": "ING016",
+    "menu_item": "Daal Makhani",
+    "category": "Pakistani",
+    "qty_per_portion": 0.03,
+    "ingredient_name": "Cream"
+  },
+  {
+    "menu_id": "MENU006",
+    "ingredient_id": "ING021",
+    "menu_item": "Daal Makhani",
+    "category": "Pakistani",
+    "qty_per_portion": 0.06,
+    "ingredient_name": "Tomatoes"
+  },
+  {
+    "menu_id": "MENU007",
+    "ingredient_id": "ING002",
+    "menu_item": "Chicken Tikka",
+    "category": "BBQ",
+    "qty_per_portion": 0.38,
+    "ingredient_name": "Chicken bone-in"
+  },
+  {
+    "menu_id": "MENU007",
+    "ingredient_id": "ING020",
+    "menu_item": "Chicken Tikka",
+    "category": "BBQ",
+    "qty_per_portion": 0.06,
+    "ingredient_name": "Yogurt"
+  },
+  {
+    "menu_id": "MENU007",
+    "ingredient_id": "ING039",
+    "menu_item": "Chicken Tikka",
+    "category": "BBQ",
+    "qty_per_portion": 0.07,
+    "ingredient_name": "BBQ marinade"
+  },
+  {
+    "menu_id": "MENU007",
+    "ingredient_id": "ING031",
+    "menu_item": "Chicken Tikka",
+    "category": "BBQ",
+    "qty_per_portion": 0.015,
+    "ingredient_name": "Cooking oil"
+  },
+  {
+    "menu_id": "MENU008",
+    "ingredient_id": "ING001",
+    "menu_item": "Chicken Malai Boti",
+    "category": "BBQ",
+    "qty_per_portion": 0.25,
+    "ingredient_name": "Chicken boneless"
+  },
+  {
+    "menu_id": "MENU008",
+    "ingredient_id": "ING016",
+    "menu_item": "Chicken Malai Boti",
+    "category": "BBQ",
+    "qty_per_portion": 0.05,
+    "ingredient_name": "Cream"
+  },
+  {
+    "menu_id": "MENU008",
+    "ingredient_id": "ING020",
+    "menu_item": "Chicken Malai Boti",
+    "category": "BBQ",
+    "qty_per_portion": 0.05,
+    "ingredient_name": "Yogurt"
+  },
+  {
+    "menu_id": "MENU008",
+    "ingredient_id": "ING039",
+    "menu_item": "Chicken Malai Boti",
+    "category": "BBQ",
+    "qty_per_portion": 0.06,
+    "ingredient_name": "BBQ marinade"
+  },
+  {
+    "menu_id": "MENU009",
+    "ingredient_id": "ING006",
+    "menu_item": "Beef Seekh Kabab",
+    "category": "BBQ",
+    "qty_per_portion": 0.25,
+    "ingredient_name": "Beef mince"
+  },
+  {
+    "menu_id": "MENU009",
+    "ingredient_id": "ING022",
+    "menu_item": "Beef Seekh Kabab",
+    "category": "BBQ",
+    "qty_per_portion": 0.04,
+    "ingredient_name": "Onions"
+  },
+  {
+    "menu_id": "MENU009",
+    "ingredient_id": "ING039",
+    "menu_item": "Beef Seekh Kabab",
+    "category": "BBQ",
+    "qty_per_portion": 0.04,
+    "ingredient_name": "BBQ marinade"
+  },
+  {
+    "menu_id": "MENU009",
+    "ingredient_id": "ING029",
+    "menu_item": "Beef Seekh Kabab",
+    "category": "BBQ",
+    "qty_per_portion": 0.01,
+    "ingredient_name": "Fresh coriander"
+  },
+  {
+    "menu_id": "MENU010",
+    "ingredient_id": "ING001",
+    "menu_item": "Mixed BBQ Platter",
+    "category": "BBQ",
+    "qty_per_portion": 0.25,
+    "ingredient_name": "Chicken boneless"
+  },
+  {
+    "menu_id": "MENU010",
+    "ingredient_id": "ING002",
+    "menu_item": "Mixed BBQ Platter",
+    "category": "BBQ",
+    "qty_per_portion": 0.25,
+    "ingredient_name": "Chicken bone-in"
+  },
+  {
+    "menu_id": "MENU010",
+    "ingredient_id": "ING006",
+    "menu_item": "Mixed BBQ Platter",
+    "category": "BBQ",
+    "qty_per_portion": 0.18,
+    "ingredient_name": "Beef mince"
+  },
+  {
+    "menu_id": "MENU010",
+    "ingredient_id": "ING039",
+    "menu_item": "Mixed BBQ Platter",
+    "category": "BBQ",
+    "qty_per_portion": 0.1,
+    "ingredient_name": "BBQ marinade"
+  },
+  {
+    "menu_id": "MENU011",
+    "ingredient_id": "ING001",
+    "menu_item": "Zinger Burger",
+    "category": "Fast Food",
+    "qty_per_portion": 0.16,
+    "ingredient_name": "Chicken boneless"
+  },
+  {
+    "menu_id": "MENU011",
+    "ingredient_id": "ING011",
+    "menu_item": "Zinger Burger",
+    "category": "Fast Food",
+    "qty_per_portion": 1.0,
+    "ingredient_name": "Burger buns"
+  },
+  {
+    "menu_id": "MENU011",
+    "ingredient_id": "ING008",
+    "menu_item": "Zinger Burger",
+    "category": "Fast Food",
+    "qty_per_portion": 0.07,
+    "ingredient_name": "All-purpose flour"
+  },
+  {
+    "menu_id": "MENU011",
+    "ingredient_id": "ING040",
+    "menu_item": "Zinger Burger",
+    "category": "Fast Food",
+    "qty_per_portion": 0.03,
+    "ingredient_name": "Mayonnaise"
+  },
+  {
+    "menu_id": "MENU011",
+    "ingredient_id": "ING027",
+    "menu_item": "Zinger Burger",
+    "category": "Fast Food",
+    "qty_per_portion": 0.02,
+    "ingredient_name": "Lettuce"
+  },
+  {
+    "menu_id": "MENU011",
+    "ingredient_id": "ING031",
+    "menu_item": "Zinger Burger",
+    "category": "Fast Food",
+    "qty_per_portion": 0.04,
+    "ingredient_name": "Cooking oil"
+  },
+  {
+    "menu_id": "MENU012",
+    "ingredient_id": "ING006",
+    "menu_item": "Beef Burger",
+    "category": "Fast Food",
+    "qty_per_portion": 0.17,
+    "ingredient_name": "Beef mince"
+  },
+  {
+    "menu_id": "MENU012",
+    "ingredient_id": "ING011",
+    "menu_item": "Beef Burger",
+    "category": "Fast Food",
+    "qty_per_portion": 1.0,
+    "ingredient_name": "Burger buns"
+  },
+  {
+    "menu_id": "MENU012",
+    "ingredient_id": "ING018",
+    "menu_item": "Beef Burger",
+    "category": "Fast Food",
+    "qty_per_portion": 0.025,
+    "ingredient_name": "Cheddar cheese"
+  },
+  {
+    "menu_id": "MENU012",
+    "ingredient_id": "ING040",
+    "menu_item": "Beef Burger",
+    "category": "Fast Food",
+    "qty_per_portion": 0.02,
+    "ingredient_name": "Mayonnaise"
+  },
+  {
+    "menu_id": "MENU012",
+    "ingredient_id": "ING027",
+    "menu_item": "Beef Burger",
+    "category": "Fast Food",
+    "qty_per_portion": 0.02,
+    "ingredient_name": "Lettuce"
+  },
+  {
+    "menu_id": "MENU013",
+    "ingredient_id": "ING012",
+    "menu_item": "Club Sandwich",
+    "category": "Fast Food",
+    "qty_per_portion": 3.0,
+    "ingredient_name": "Bread slices"
+  },
+  {
+    "menu_id": "MENU013",
+    "ingredient_id": "ING001",
+    "menu_item": "Club Sandwich",
+    "category": "Fast Food",
+    "qty_per_portion": 0.1,
+    "ingredient_name": "Chicken boneless"
+  },
+  {
+    "menu_id": "MENU013",
+    "ingredient_id": "ING014",
+    "menu_item": "Club Sandwich",
+    "category": "Fast Food",
+    "qty_per_portion": 1.0,
+    "ingredient_name": "Eggs"
+  },
+  {
+    "menu_id": "MENU013",
+    "ingredient_id": "ING040",
+    "menu_item": "Club Sandwich",
+    "category": "Fast Food",
+    "qty_per_portion": 0.025,
+    "ingredient_name": "Mayonnaise"
+  },
+  {
+    "menu_id": "MENU014",
+    "ingredient_id": "ING023",
+    "menu_item": "Loaded Fries",
+    "category": "Fast Food",
+    "qty_per_portion": 0.24,
+    "ingredient_name": "Potatoes"
+  },
+  {
+    "menu_id": "MENU014",
+    "ingredient_id": "ING017",
+    "menu_item": "Loaded Fries",
+    "category": "Fast Food",
+    "qty_per_portion": 0.06,
+    "ingredient_name": "Mozzarella"
+  },
+  {
+    "menu_id": "MENU014",
+    "ingredient_id": "ING040",
+    "menu_item": "Loaded Fries",
+    "category": "Fast Food",
+    "qty_per_portion": 0.03,
+    "ingredient_name": "Mayonnaise"
+  },
+  {
+    "menu_id": "MENU014",
+    "ingredient_id": "ING041",
+    "menu_item": "Loaded Fries",
+    "category": "Fast Food",
+    "qty_per_portion": 0.025,
+    "ingredient_name": "Ketchup"
+  },
+  {
+    "menu_id": "MENU014",
+    "ingredient_id": "ING031",
+    "menu_item": "Loaded Fries",
+    "category": "Fast Food",
+    "qty_per_portion": 0.04,
+    "ingredient_name": "Cooking oil"
+  },
+  {
+    "menu_id": "MENU015",
+    "ingredient_id": "ING010",
+    "menu_item": "Chicken Fajita Pizza",
+    "category": "Pizza & Italian",
+    "qty_per_portion": 1.0,
+    "ingredient_name": "Pizza dough"
+  },
+  {
+    "menu_id": "MENU015",
+    "ingredient_id": "ING001",
+    "menu_item": "Chicken Fajita Pizza",
+    "category": "Pizza & Italian",
+    "qty_per_portion": 0.16,
+    "ingredient_name": "Chicken boneless"
+  },
+  {
+    "menu_id": "MENU015",
+    "ingredient_id": "ING017",
+    "menu_item": "Chicken Fajita Pizza",
+    "category": "Pizza & Italian",
+    "qty_per_portion": 0.18,
+    "ingredient_name": "Mozzarella"
+  },
+  {
+    "menu_id": "MENU015",
+    "ingredient_id": "ING024",
+    "menu_item": "Chicken Fajita Pizza",
+    "category": "Pizza & Italian",
+    "qty_per_portion": 0.06,
+    "ingredient_name": "Capsicum"
+  },
+  {
+    "menu_id": "MENU015",
+    "ingredient_id": "ING044",
+    "menu_item": "Chicken Fajita Pizza",
+    "category": "Pizza & Italian",
+    "qty_per_portion": 0.07,
+    "ingredient_name": "Pizza sauce"
+  },
+  {
+    "menu_id": "MENU016",
+    "ingredient_id": "ING010",
+    "menu_item": "Chicken Tikka Pizza",
+    "category": "Pizza & Italian",
+    "qty_per_portion": 1.0,
+    "ingredient_name": "Pizza dough"
+  },
+  {
+    "menu_id": "MENU016",
+    "ingredient_id": "ING001",
+    "menu_item": "Chicken Tikka Pizza",
+    "category": "Pizza & Italian",
+    "qty_per_portion": 0.16,
+    "ingredient_name": "Chicken boneless"
+  },
+  {
+    "menu_id": "MENU016",
+    "ingredient_id": "ING017",
+    "menu_item": "Chicken Tikka Pizza",
+    "category": "Pizza & Italian",
+    "qty_per_portion": 0.18,
+    "ingredient_name": "Mozzarella"
+  },
+  {
+    "menu_id": "MENU016",
+    "ingredient_id": "ING039",
+    "menu_item": "Chicken Tikka Pizza",
+    "category": "Pizza & Italian",
+    "qty_per_portion": 0.035,
+    "ingredient_name": "BBQ marinade"
+  },
+  {
+    "menu_id": "MENU016",
+    "ingredient_id": "ING044",
+    "menu_item": "Chicken Tikka Pizza",
+    "category": "Pizza & Italian",
+    "qty_per_portion": 0.07,
+    "ingredient_name": "Pizza sauce"
+  },
+  {
+    "menu_id": "MENU017",
+    "ingredient_id": "ING045",
+    "menu_item": "Alfredo Pasta",
+    "category": "Pizza & Italian",
+    "qty_per_portion": 0.18,
+    "ingredient_name": "Pasta dry"
+  },
+  {
+    "menu_id": "MENU017",
+    "ingredient_id": "ING016",
+    "menu_item": "Alfredo Pasta",
+    "category": "Pizza & Italian",
+    "qty_per_portion": 0.12,
+    "ingredient_name": "Cream"
+  },
+  {
+    "menu_id": "MENU017",
+    "ingredient_id": "ING017",
+    "menu_item": "Alfredo Pasta",
+    "category": "Pizza & Italian",
+    "qty_per_portion": 0.05,
+    "ingredient_name": "Mozzarella"
+  },
+  {
+    "menu_id": "MENU017",
+    "ingredient_id": "ING019",
+    "menu_item": "Alfredo Pasta",
+    "category": "Pizza & Italian",
+    "qty_per_portion": 0.018,
+    "ingredient_name": "Butter"
+  },
+  {
+    "menu_id": "MENU017",
+    "ingredient_id": "ING030",
+    "menu_item": "Alfredo Pasta",
+    "category": "Pizza & Italian",
+    "qty_per_portion": 0.06,
+    "ingredient_name": "Mushrooms"
+  },
+  {
+    "menu_id": "MENU018",
+    "ingredient_id": "ING045",
+    "menu_item": "Arrabbiata Pasta",
+    "category": "Pizza & Italian",
+    "qty_per_portion": 0.18,
+    "ingredient_name": "Pasta dry"
+  },
+  {
+    "menu_id": "MENU018",
+    "ingredient_id": "ING021",
+    "menu_item": "Arrabbiata Pasta",
+    "category": "Pizza & Italian",
+    "qty_per_portion": 0.15,
+    "ingredient_name": "Tomatoes"
+  },
+  {
+    "menu_id": "MENU018",
+    "ingredient_id": "ING044",
+    "menu_item": "Arrabbiata Pasta",
+    "category": "Pizza & Italian",
+    "qty_per_portion": 0.08,
+    "ingredient_name": "Pizza sauce"
+  },
+  {
+    "menu_id": "MENU018",
+    "ingredient_id": "ING034",
+    "menu_item": "Arrabbiata Pasta",
+    "category": "Pizza & Italian",
+    "qty_per_portion": 0.005,
+    "ingredient_name": "Red chilli powder"
+  },
+  {
+    "menu_id": "MENU019",
+    "ingredient_id": "ING046",
+    "menu_item": "Chicken Chow Mein",
+    "category": "Chinese & Continental",
+    "qty_per_portion": 0.17,
+    "ingredient_name": "Noodles"
+  },
+  {
+    "menu_id": "MENU019",
+    "ingredient_id": "ING001",
+    "menu_item": "Chicken Chow Mein",
+    "category": "Chinese & Continental",
+    "qty_per_portion": 0.14,
+    "ingredient_name": "Chicken boneless"
+  },
+  {
+    "menu_id": "MENU019",
+    "ingredient_id": "ING024",
+    "menu_item": "Chicken Chow Mein",
+    "category": "Chinese & Continental",
+    "qty_per_portion": 0.07,
+    "ingredient_name": "Capsicum"
+  },
+  {
+    "menu_id": "MENU019",
+    "ingredient_id": "ING042",
+    "menu_item": "Chicken Chow Mein",
+    "category": "Chinese & Continental",
+    "qty_per_portion": 0.025,
+    "ingredient_name": "Soy sauce"
+  },
+  {
+    "menu_id": "MENU019",
+    "ingredient_id": "ING031",
+    "menu_item": "Chicken Chow Mein",
+    "category": "Chinese & Continental",
+    "qty_per_portion": 0.02,
+    "ingredient_name": "Cooking oil"
+  },
+  {
+    "menu_id": "MENU020",
+    "ingredient_id": "ING007",
+    "menu_item": "Chicken Fried Rice",
+    "category": "Chinese & Continental",
+    "qty_per_portion": 0.18,
+    "ingredient_name": "Rice basmati"
+  },
+  {
+    "menu_id": "MENU020",
+    "ingredient_id": "ING001",
+    "menu_item": "Chicken Fried Rice",
+    "category": "Chinese & Continental",
+    "qty_per_portion": 0.13,
+    "ingredient_name": "Chicken boneless"
+  },
+  {
+    "menu_id": "MENU020",
+    "ingredient_id": "ING014",
+    "menu_item": "Chicken Fried Rice",
+    "category": "Chinese & Continental",
+    "qty_per_portion": 1.0,
+    "ingredient_name": "Eggs"
+  },
+  {
+    "menu_id": "MENU020",
+    "ingredient_id": "ING042",
+    "menu_item": "Chicken Fried Rice",
+    "category": "Chinese & Continental",
+    "qty_per_portion": 0.02,
+    "ingredient_name": "Soy sauce"
+  },
+  {
+    "menu_id": "MENU020",
+    "ingredient_id": "ING031",
+    "menu_item": "Chicken Fried Rice",
+    "category": "Chinese & Continental",
+    "qty_per_portion": 0.02,
+    "ingredient_name": "Cooking oil"
+  },
+  {
+    "menu_id": "MENU021",
+    "ingredient_id": "ING001",
+    "menu_item": "Chicken Manchurian",
+    "category": "Chinese & Continental",
+    "qty_per_portion": 0.22,
+    "ingredient_name": "Chicken boneless"
+  },
+  {
+    "menu_id": "MENU021",
+    "ingredient_id": "ING021",
+    "menu_item": "Chicken Manchurian",
+    "category": "Chinese & Continental",
+    "qty_per_portion": 0.08,
+    "ingredient_name": "Tomatoes"
+  },
+  {
+    "menu_id": "MENU021",
+    "ingredient_id": "ING043",
+    "menu_item": "Chicken Manchurian",
+    "category": "Chinese & Continental",
+    "qty_per_portion": 0.04,
+    "ingredient_name": "Chilli sauce"
+  },
+  {
+    "menu_id": "MENU021",
+    "ingredient_id": "ING042",
+    "menu_item": "Chicken Manchurian",
+    "category": "Chinese & Continental",
+    "qty_per_portion": 0.025,
+    "ingredient_name": "Soy sauce"
+  },
+  {
+    "menu_id": "MENU021",
+    "ingredient_id": "ING008",
+    "menu_item": "Chicken Manchurian",
+    "category": "Chinese & Continental",
+    "qty_per_portion": 0.03,
+    "ingredient_name": "All-purpose flour"
+  },
+  {
+    "menu_id": "MENU022",
+    "ingredient_id": "ING001",
+    "menu_item": "Grilled Chicken Steak",
+    "category": "Chinese & Continental",
+    "qty_per_portion": 0.28,
+    "ingredient_name": "Chicken boneless"
+  },
+  {
+    "menu_id": "MENU022",
+    "ingredient_id": "ING023",
+    "menu_item": "Grilled Chicken Steak",
+    "category": "Chinese & Continental",
+    "qty_per_portion": 0.2,
+    "ingredient_name": "Potatoes"
+  },
+  {
+    "menu_id": "MENU022",
+    "ingredient_id": "ING030",
+    "menu_item": "Grilled Chicken Steak",
+    "category": "Chinese & Continental",
+    "qty_per_portion": 0.07,
+    "ingredient_name": "Mushrooms"
+  },
+  {
+    "menu_id": "MENU022",
+    "ingredient_id": "ING016",
+    "menu_item": "Grilled Chicken Steak",
+    "category": "Chinese & Continental",
+    "qty_per_portion": 0.05,
+    "ingredient_name": "Cream"
+  },
+  {
+    "menu_id": "MENU023",
+    "ingredient_id": "ING008",
+    "menu_item": "Halwa Puri",
+    "category": "Breakfast",
+    "qty_per_portion": 0.2,
+    "ingredient_name": "All-purpose flour"
+  },
+  {
+    "menu_id": "MENU023",
+    "ingredient_id": "ING032",
+    "menu_item": "Halwa Puri",
+    "category": "Breakfast",
+    "qty_per_portion": 0.06,
+    "ingredient_name": "Ghee"
+  },
+  {
+    "menu_id": "MENU023",
+    "ingredient_id": "ING047",
+    "menu_item": "Halwa Puri",
+    "category": "Breakfast",
+    "qty_per_portion": 0.1,
+    "ingredient_name": "Chickpeas dry"
+  },
+  {
+    "menu_id": "MENU023",
+    "ingredient_id": "ING049",
+    "menu_item": "Halwa Puri",
+    "category": "Breakfast",
+    "qty_per_portion": 0.06,
+    "ingredient_name": "Sugar"
+  },
+  {
+    "menu_id": "MENU024",
+    "ingredient_id": "ING014",
+    "menu_item": "Anda Paratha",
+    "category": "Breakfast",
+    "qty_per_portion": 2.0,
+    "ingredient_name": "Eggs"
+  },
+  {
+    "menu_id": "MENU024",
+    "ingredient_id": "ING013",
+    "menu_item": "Anda Paratha",
+    "category": "Breakfast",
+    "qty_per_portion": 1.0,
+    "ingredient_name": "Paratha dough"
+  },
+  {
+    "menu_id": "MENU024",
+    "ingredient_id": "ING031",
+    "menu_item": "Anda Paratha",
+    "category": "Breakfast",
+    "qty_per_portion": 0.015,
+    "ingredient_name": "Cooking oil"
+  },
+  {
+    "menu_id": "MENU025",
+    "ingredient_id": "ING047",
+    "menu_item": "Chana Masala",
+    "category": "Breakfast",
+    "qty_per_portion": 0.18,
+    "ingredient_name": "Chickpeas dry"
+  },
+  {
+    "menu_id": "MENU025",
+    "ingredient_id": "ING021",
+    "menu_item": "Chana Masala",
+    "category": "Breakfast",
+    "qty_per_portion": 0.09,
+    "ingredient_name": "Tomatoes"
+  },
+  {
+    "menu_id": "MENU025",
+    "ingredient_id": "ING022",
+    "menu_item": "Chana Masala",
+    "category": "Breakfast",
+    "qty_per_portion": 0.04,
+    "ingredient_name": "Onions"
+  },
+  {
+    "menu_id": "MENU025",
+    "ingredient_id": "ING031",
+    "menu_item": "Chana Masala",
+    "category": "Breakfast",
+    "qty_per_portion": 0.02,
+    "ingredient_name": "Cooking oil"
+  },
+  {
+    "menu_id": "MENU026",
+    "ingredient_id": "ING057",
+    "menu_item": "Chocolate Brownie",
+    "category": "Desserts",
+    "qty_per_portion": 1.0,
+    "ingredient_name": "Brownie pieces"
+  },
+  {
+    "menu_id": "MENU026",
+    "ingredient_id": "ING056",
+    "menu_item": "Chocolate Brownie",
+    "category": "Desserts",
+    "qty_per_portion": 0.025,
+    "ingredient_name": "Chocolate syrup"
+  },
+  {
+    "menu_id": "MENU027",
+    "ingredient_id": "ING057",
+    "menu_item": "Brownie with Ice Cream",
+    "category": "Desserts",
+    "qty_per_portion": 1.0,
+    "ingredient_name": "Brownie pieces"
+  },
+  {
+    "menu_id": "MENU027",
+    "ingredient_id": "ING058",
+    "menu_item": "Brownie with Ice Cream",
+    "category": "Desserts",
+    "qty_per_portion": 2.0,
+    "ingredient_name": "Ice cream scoops"
+  },
+  {
+    "menu_id": "MENU027",
+    "ingredient_id": "ING056",
+    "menu_item": "Brownie with Ice Cream",
+    "category": "Desserts",
+    "qty_per_portion": 0.035,
+    "ingredient_name": "Chocolate syrup"
+  },
+  {
+    "menu_id": "MENU028",
+    "ingredient_id": "ING015",
+    "menu_item": "Mango Shake",
+    "category": "Beverages",
+    "qty_per_portion": 0.25,
+    "ingredient_name": "Milk"
+  },
+  {
+    "menu_id": "MENU028",
+    "ingredient_id": "ING054",
+    "menu_item": "Mango Shake",
+    "category": "Beverages",
+    "qty_per_portion": 0.18,
+    "ingredient_name": "Mango pulp"
+  },
+  {
+    "menu_id": "MENU028",
+    "ingredient_id": "ING049",
+    "menu_item": "Mango Shake",
+    "category": "Beverages",
+    "qty_per_portion": 0.02,
+    "ingredient_name": "Sugar"
+  },
+  {
+    "menu_id": "MENU029",
+    "ingredient_id": "ING028",
+    "menu_item": "Mint Margarita",
+    "category": "Beverages",
+    "qty_per_portion": 2.0,
+    "ingredient_name": "Lemon"
+  },
+  {
+    "menu_id": "MENU029",
+    "ingredient_id": "ING055",
+    "menu_item": "Mint Margarita",
+    "category": "Beverages",
+    "qty_per_portion": 0.025,
+    "ingredient_name": "Mint leaves"
+  },
+  {
+    "menu_id": "MENU029",
+    "ingredient_id": "ING049",
+    "menu_item": "Mint Margarita",
+    "category": "Beverages",
+    "qty_per_portion": 0.025,
+    "ingredient_name": "Sugar"
+  },
+  {
+    "menu_id": "MENU030",
+    "ingredient_id": "ING015",
+    "menu_item": "Tea",
+    "category": "Beverages",
+    "qty_per_portion": 0.15,
+    "ingredient_name": "Milk"
+  },
+  {
+    "menu_id": "MENU030",
+    "ingredient_id": "ING050",
+    "menu_item": "Tea",
+    "category": "Beverages",
+    "qty_per_portion": 0.008,
+    "ingredient_name": "Tea leaves"
+  },
+  {
+    "menu_id": "MENU030",
+    "ingredient_id": "ING049",
+    "menu_item": "Tea",
+    "category": "Beverages",
+    "qty_per_portion": 0.015,
+    "ingredient_name": "Sugar"
+  },
+  {
+    "menu_id": "MENU031",
+    "ingredient_id": "ING053",
+    "menu_item": "Mineral Water",
+    "category": "Beverages",
+    "qty_per_portion": 1.0,
+    "ingredient_name": "Water bottles 500ml"
+  },
+  {
+    "menu_id": "MENU032",
+    "ingredient_id": "ING052",
+    "menu_item": "Soft Drink Can",
+    "category": "Beverages",
+    "qty_per_portion": 1.0,
+    "ingredient_name": "Soft drink cans"
+  }
+]

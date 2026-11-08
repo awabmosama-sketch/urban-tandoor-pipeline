@@ -1,0 +1,58 @@
+[
+  {
+    "category_id": "CAT-PK",
+    "category_name": "Pakistani",
+    "sort_order": 1,
+    "status": "Active",
+    "customer_description": "Traditional curries, rice, naan and tandoor"
+  },
+  {
+    "category_id": "CAT-BBQ",
+    "category_name": "BBQ",
+    "sort_order": 2,
+    "status": "Active",
+    "customer_description": "Chargrilled meats and platters"
+  },
+  {
+    "category_id": "CAT-FF",
+    "category_name": "Fast Food",
+    "sort_order": 3,
+    "status": "Active",
+    "customer_description": "Burgers, sandwiches, wraps and snacks"
+  },
+  {
+    "category_id": "CAT-PIZ",
+    "category_name": "Pizza & Italian",
+    "sort_order": 4,
+    "status": "Active",
+    "customer_description": "Pizzas and pasta"
+  },
+  {
+    "category_id": "CAT-CH",
+    "category_name": "Chinese & Continental",
+    "sort_order": 5,
+    "status": "Active",
+    "customer_description": "Stir-fry, rice, soup and mains"
+  },
+  {
+    "category_id": "CAT-BR",
+    "category_name": "Breakfast",
+    "sort_order": 6,
+    "status": "Active",
+    "customer_description": "Traditional and continental breakfasts"
+  },
+  {
+    "category_id": "CAT-DS",
+    "category_name": "Desserts",
+    "sort_order": 7,
+    "status": "Active",
+    "customer_description": "Sweet dishes and ice cream"
+  },
+  {
+    "category_id": "CAT-BV",
+    "category_name": "Beverages",
+    "sort_order": 8,
+    "status": "Active",
+    "customer_description": "Hot and cold drinks"
+  }
+]

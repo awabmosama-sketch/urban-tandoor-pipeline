@@ -1,0 +1,107 @@
+[
+  {
+    "deal_id": "DEAL001",
+    "menu_id": "MENU011",
+    "item_name": "Zinger Burger",
+    "qty": 1,
+    "variant_id": "VAR-MENU011-STD"
+  },
+  {
+    "deal_id": "DEAL001",
+    "menu_id": "MENU014",
+    "item_name": "Loaded Fries",
+    "qty": 1,
+    "variant_id": "VAR-MENU014-STD"
+  },
+  {
+    "deal_id": "DEAL001",
+    "menu_id": "MENU032",
+    "item_name": "Soft Drink Can",
+    "qty": 1,
+    "variant_id": "VAR-MENU032-STD"
+  },
+  {
+    "deal_id": "DEAL002",
+    "menu_id": "MENU001",
+    "item_name": "Chicken Biryani",
+    "qty": 2,
+    "variant_id": "VAR-MENU001-STD"
+  },
+  {
+    "deal_id": "DEAL002",
+    "menu_id": "MENU032",
+    "item_name": "Soft Drink Can",
+    "qty": 2,
+    "variant_id": "VAR-MENU032-STD"
+  },
+  {
+    "deal_id": "DEAL003",
+    "menu_id": "MENU010",
+    "item_name": "Mixed BBQ Platter",
+    "qty": 1,
+    "variant_id": "VAR-MENU010-STD"
+  },
+  {
+    "deal_id": "DEAL003",
+    "menu_id": "MENU045",
+    "item_name": "Plain Naan",
+    "qty": 2,
+    "variant_id": "VAR-MENU045-STD"
+  },
+  {
+    "deal_id": "DEAL003",
+    "menu_id": "MENU032",
+    "item_name": "Soft Drink Can",
+    "qty": 2,
+    "variant_id": "VAR-MENU032-STD"
+  },
+  {
+    "deal_id": "DEAL004",
+    "menu_id": "MENU015",
+    "item_name": "Chicken Fajita Pizza",
+    "qty": 1,
+    "variant_id": "VAR-MENU015-MED"
+  },
+  {
+    "deal_id": "DEAL004",
+    "menu_id": "MENU032",
+    "item_name": "Soft Drink Can",
+    "qty": 2,
+    "variant_id": "VAR-MENU032-STD"
+  },
+  {
+    "deal_id": "DEAL005",
+    "menu_id": "MENU003",
+    "item_name": "Chicken Karahi",
+    "qty": 1,
+    "variant_id": "VAR-MENU003-STD"
+  },
+  {
+    "deal_id": "DEAL005",
+    "menu_id": "MENU045",
+    "item_name": "Plain Naan",
+    "qty": 4,
+    "variant_id": "VAR-MENU045-STD"
+  },
+  {
+    "deal_id": "DEAL005",
+    "menu_id": "MENU032",
+    "item_name": "Soft Drink Can",
+    "qty": 2,
+    "variant_id": "VAR-MENU032-STD"
+  },
+  {
+    "deal_id": "DEAL006",
+    "menu_id": "MENU024",
+    "item_name": "Anda Paratha",
+    "qty": 2,
+    "variant_id": "VAR-MENU024-STD"
+  },
+  {
+    "deal_id": "DEAL006",
+    "menu_id": "MENU030",
+    "item_name": "Tea",
+    "qty": 2,
+    "variant_id": "VAR-MENU030-STD"
+  }
+]

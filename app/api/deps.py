@@ -6,10 +6,10 @@ from __future__ import annotations
 from typing import Annotated
 
 from fastapi import Depends
-from sqlalchemy.ext.asyncio import AsyncSession
+from motor.motor_asyncio import AsyncIOMotorDatabase
 
 from app.config import Settings, get_settings
-from app.database import get_session
+from app.database import get_db
 
-SessionDep = Annotated[AsyncSession, Depends(get_session)]
+DatabaseDep = Annotated[AsyncIOMotorDatabase, Depends(get_db)]
 SettingsDep = Annotated[Settings, Depends(get_settings)]

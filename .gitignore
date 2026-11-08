@@ -32,9 +32,6 @@ coverage.xml
 # uv cache (lockfile is committed)
 .uv/
 
-# Alembic runtime caches
-alembic/versions/__pycache__/
-
 # IDEs / OS
 .idea/
 .vscode/
@@ -44,3 +41,8 @@ Thumbs.db
 # Local data artefacts (kept out of the repo; source files live in data/)
 data/processed/
 data/*.parquet
+
+# Canonical JSON snapshots are committed on purpose: they are the ingestion
+# source of truth and make the pipeline inspectable without the workbooks.
+!data/json/
+!data/json/*.json

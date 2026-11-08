@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from fastapi import APIRouter, HTTPException
 
-from app.api.deps import SessionDep
+from app.api.deps import DatabaseDep
 from app.schemas.assistant import AssistantRequest, AssistantResponse
 from app.services.assistant_service import (
     AssistantBranchNotFound,
@@ -15,11 +15,11 @@ router = APIRouter(prefix="/assistant", tags=["assistant"])
 
 
 @router.post("/chat", response_model=AssistantResponse)
-async def chat(req: AssistantRequest, session: SessionDep) -> AssistantResponse:
+async def chat(req: AssistantRequest, db: DatabaseDep) -> AssistantResponse:
     """Grounded restaurant chat. The Groq key stays server-side."""
     try:
-        out = await ask_concierge(
-            session,
+        output = await ask_concierge(
+            db,
             message=req.message,
             history=req.history,
             branch_id=req.branch_id,
@@ -30,4 +30,4 @@ async def chat(req: AssistantRequest, session: SessionDep) -> AssistantResponse:
         raise HTTPException(status_code=503, detail=str(exc)) from exc
     except AssistantError as exc:
         raise HTTPException(status_code=exc.status_code, detail=str(exc)) from exc
-    return AssistantResponse(**out)
+    return AssistantResponse(**output)

@@ -4,7 +4,7 @@ offline development and idempotent re-runs. Switch to real providers
 by setting EMBEDDING_PROVIDER=openai or gemini in .env.
 """
 from __future__ import annotations
-import asyncio
+
 import hashlib
 from abc import ABC, abstractmethod
 
@@ -64,8 +64,8 @@ class OpenAIEmbedder(Embedder):
 
 class GeminiEmbedder(Embedder):
     """Gemini text-embedding-004 produces 768-dim vectors by default.
-    IMPORTANT: if switching to this, you MUST also change the DB column
-    dimension via a migration. The self-check will BLOCK on mismatch."""
+    IMPORTANT: if switching to this, also set EMBEDDING_DIM=768 and re-ingest
+    the docs domain so every chunk is re-embedded at the new dimension."""
     def __init__(self, model: str, dim: int) -> None:
         self.model = model
         self.dim = dim
@@ -74,7 +74,7 @@ class GeminiEmbedder(Embedder):
         raise NotImplementedError(
             "Gemini embedder not wired. To use it: set EMBEDDING_PROVIDER=gemini, "
             "EMBEDDING_MODEL=text-embedding-004, EMBEDDING_DIM=768 in .env, then "
-            "run an Alembic migration to alter document_chunks.embedding to vector(768)."
+            "run `utg-ingest --only docs --wipe --yes` to re-embed all chunks."
         )
 
 

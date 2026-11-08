@@ -1,0 +1,20 @@
+[
+  {
+    "branch_id": "UTG-KHI-001",
+    "branch_name": "PECHS",
+    "address_demo": "Main Shahrah-e-Faisal, PECHS, Karachi (demo address)",
+    "tables_count": 18,
+    "seats": 72,
+    "hours": "24/7",
+    "status": "Active"
+  },
+  {
+    "branch_id": "UTG-KHI-002",
+    "branch_name": "Gulshan-e-Iqbal",
+    "address_demo": "Main University Road, Gulshan-e-Iqbal, Karachi (demo address)",
+    "tables_count": 24,
+    "seats": 112,
+    "hours": "24/7",
+    "status": "Active"
+  }
+]

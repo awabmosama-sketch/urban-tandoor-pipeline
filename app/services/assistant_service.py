@@ -5,17 +5,15 @@ The API key lives only in the server environment. The browser talks to this
 service, never to Groq directly.
 
 Grounding: every request rebuilds a compact snapshot of the restaurant from
-Postgres (active menu, branches, low stock for the selected branch) and puts
-it in the system prompt, so answers are tied to the actual demo data.
+MongoDB (active menu, branches, low stock for the selected branch) and puts it
+in the system prompt, so answers are tied to the actual demo data.
 """
 from __future__ import annotations
 
 import httpx
-from sqlalchemy import select
-from sqlalchemy.ext.asyncio import AsyncSession
+from motor.motor_asyncio import AsyncIOMotorDatabase
 
 from app.config import get_settings
-from app.models import Branch, BranchStock, MenuItem
 from app.schemas.assistant import ChatTurn
 
 SYSTEM_PROMPT = """You are the concierge for Urban Tandoor & Grill, a Pakistani \
@@ -53,25 +51,18 @@ class AssistantUpstream(AssistantError):
     status_code = 502
 
 
-async def build_context(session: AsyncSession, branch_id: str | None = None) -> str:
-    items = (
-        await session.execute(
-            select(MenuItem)
-            .where(MenuItem.catalog_status == "Active")
-            .order_by(MenuItem.category, MenuItem.item_name)
-        )
-    ).scalars().all()
-    branches = (
-        await session.execute(select(Branch).order_by(Branch.branch_id))
-    ).scalars().all()
+async def build_context(db: AsyncIOMotorDatabase, branch_id: str | None = None) -> str:
+    items = await db.menu_items.find({"catalog_status": "Active"}).sort(
+        [("category", 1), ("item_name", 1)]
+    ).to_list(length=None)
+    branches = await db.branches.find({}).sort("branch_id", 1).to_list(length=None)
 
-    lines: list[str] = [
-        "BRANCHES:",
-    ]
-    for b in branches:
+    lines: list[str] = ["BRANCHES:"]
+    for branch in branches:
         lines.append(
-            f"- {b.branch_id} | {b.branch_name} | {b.seats} seats | "
-            f"{b.tables_count} tables | {b.hours}"
+            f"- {branch['branch_id']} | {branch['branch_name']} | "
+            f"{branch.get('seats', 0)} seats | "
+            f"{branch.get('tables_count', 0)} tables | {branch.get('hours', '')}"
         )
 
     lines.append("")
@@ -79,32 +70,26 @@ async def build_context(session: AsyncSession, branch_id: str | None = None) -> 
         f"ACTIVE MENU ({len(items)} dishes) — id | name | category | price | "
         "prep min | dietary | allergens:"
     )
-    for m in items:
+    for item in items:
         lines.append(
-            f"- {m.menu_id} | {m.item_name} | {m.category} | "
-            f"{float(m.base_price_pkr):.0f} PKR | {m.prep_time_min} min | "
-            f"{m.dietary_hint or '-'} | {m.allergen_hint or '-'}"
+            f"- {item['menu_id']} | {item['item_name']} | {item['category']} | "
+            f"{float(item.get('base_price_pkr') or 0):.0f} PKR | "
+            f"{item.get('prep_time_min', 0)} min | "
+            f"{item.get('dietary_hint') or '-'} | {item.get('allergen_hint') or '-'}"
         )
 
     if branch_id:
-        stock = (
-            await session.execute(
-                select(BranchStock)
-                .where(
-                    BranchStock.branch_id == branch_id,
-                    BranchStock.stock_status != "OK",
-                )
-                .order_by(BranchStock.available.asc())
-                .limit(12)
-            )
-        ).scalars().all()
+        stock = await db.branch_stock.find(
+            {"branch_id": branch_id, "stock_status": {"$ne": "OK"}}
+        ).sort("available", 1).limit(12).to_list(length=None)
         lines.append("")
         if stock:
             lines.append(f"LOW / OUT OF STOCK AT {branch_id}:")
-            for s in stock:
+            for row in stock:
                 lines.append(
-                    f"- {s.ingredient_id} | {s.ingredient_name} | "
-                    f"{s.available:.2f} {s.unit} available | {s.stock_status}"
+                    f"- {row['ingredient_id']} | {row['ingredient_name']} | "
+                    f"{float(row.get('available') or 0):.2f} {row.get('unit', '')} "
+                    f"available | {row.get('stock_status', '')}"
                 )
         else:
             lines.append(f"STOCK AT {branch_id}: no low-stock lines.")
@@ -113,7 +98,7 @@ async def build_context(session: AsyncSession, branch_id: str | None = None) -> 
 
 
 async def ask_concierge(
-    session: AsyncSession,
+    db: AsyncIOMotorDatabase,
     *,
     message: str,
     history: list[ChatTurn],
@@ -126,11 +111,11 @@ async def ask_concierge(
         )
 
     if branch_id:
-        branch = await session.get(Branch, branch_id)
+        branch = await db.branches.find_one({"branch_id": branch_id})
         if branch is None:
             raise AssistantBranchNotFound(f"Unknown branch: {branch_id}")
 
-    context = await build_context(session, branch_id)
+    context = await build_context(db, branch_id)
     messages: list[dict] = [
         {"role": "system", "content": f"{SYSTEM_PROMPT}\n\nRESTAURANT DATA:\n{context}"}
     ]
@@ -152,7 +137,7 @@ async def ask_concierge(
 
     try:
         async with httpx.AsyncClient(timeout=settings.groq_timeout_s) as client:
-            resp = await client.post(
+            response = await client.post(
                 f"{settings.groq_base_url}/chat/completions",
                 headers=headers,
                 json=payload,
@@ -162,11 +147,11 @@ async def ask_concierge(
     except httpx.HTTPError as exc:
         raise AssistantUpstream(f"Could not reach the AI provider: {type(exc).__name__}") from exc
 
-    if resp.status_code != 200:
-        detail = resp.text[:240].replace("\n", " ")
-        raise AssistantUpstream(f"AI provider returned {resp.status_code}: {detail}")
+    if response.status_code != 200:
+        detail = response.text[:240].replace("\n", " ")
+        raise AssistantUpstream(f"AI provider returned {response.status_code}: {detail}")
 
-    data = resp.json()
+    data = response.json()
     try:
         reply = data["choices"][0]["message"]["content"].strip()
     except (KeyError, IndexError, AttributeError) as exc:

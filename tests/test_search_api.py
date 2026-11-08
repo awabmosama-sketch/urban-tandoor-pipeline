@@ -14,7 +14,9 @@ async def test_search_health(client):
     assert h["chunks_with_embedding"] == 128
     assert h["distinct_documents"] == 2
     assert h["embedding_dim"] == 1536
-    assert h["hnsw_index_present"] is True
+    # Cosine ranking runs in-process on the free tier, so there is no Atlas
+    # Vector Search index to report.
+    assert h["vector_index_present"] is False
 
 
 @pytest.mark.asyncio

@@ -1,25 +1,71 @@
 """
-Semantic search service.
+Semantic search service (MongoDB).
 
-Uses pgvector's cosine-distance operator via SQLAlchemy's
-`embedding.cosine_distance(vec)` which compiles to `embedding <=> :vec`.
-Similarity = 1 - distance.
+For the demo dataset (128 chunks) cosine similarity is calculated in Python
+with NumPy. This works on the MongoDB Atlas free tier without requiring an
+Atlas Vector Search index. Scores are the same cosine similarity values the
+previous relational vector query produced (``1 - cosine_distance``).
 
-With FakeEmbedder, results are deterministic but not semantically meaningful —
-structural correctness is what we test; relevance requires a real provider.
+If the dataset grows, replace ``_rank_chunks`` with an Atlas ``$vectorSearch``
+aggregation stage; the rest of the response contract stays unchanged.
 """
 from __future__ import annotations
 
-from sqlalchemy import func, select, text
-from sqlalchemy.ext.asyncio import AsyncSession
+from datetime import datetime
 
+import numpy as np
+from motor.motor_asyncio import AsyncIOMotorDatabase
+
+from app.config import get_settings
 from app.ingestion.embedder import get_embedder
-from app.models import DocumentChunk, SourceDocument
 from app.schemas.search import ChunkResult
 
 
+def _normalise(vector: np.ndarray) -> np.ndarray:
+    norm = float(np.linalg.norm(vector))
+    return vector if norm == 0 else vector / norm
+
+
+def _rank_chunks(
+    chunks: list[dict],
+    query_vector: list[float],
+    *,
+    top_k: int,
+    min_score: float,
+) -> list[tuple[dict, float]]:
+    if not chunks:
+        return []
+
+    query = _normalise(np.asarray(query_vector, dtype=np.float64))
+    matrix_rows: list[np.ndarray] = []
+    valid_chunks: list[dict] = []
+    for chunk in chunks:
+        embedding = chunk.get("embedding")
+        if not embedding:
+            continue
+        vector = np.asarray(embedding, dtype=np.float64)
+        if vector.shape != query.shape:
+            continue
+        matrix_rows.append(_normalise(vector))
+        valid_chunks.append(chunk)
+    if not matrix_rows:
+        return []
+
+    matrix = np.vstack(matrix_rows)
+    scores = matrix @ query
+    ranked = sorted(
+        zip(valid_chunks, scores.tolist(), strict=True),
+        key=lambda pair: (-pair[1], pair[0].get("chunk_id", "")),
+    )
+    return [
+        (chunk, score)
+        for chunk, score in ranked
+        if score >= min_score
+    ][:top_k]
+
+
 async def semantic_search(
-    session: AsyncSession,
+    db: AsyncIOMotorDatabase,
     *,
     query: str,
     top_k: int = 8,
@@ -30,118 +76,98 @@ async def semantic_search(
     vectors = await embedder.embed_batch([query])
     if not vectors:
         return []
-    qvec = vectors[0]
+    query_vector = vectors[0]
 
-    # pgvector distance operator. Similarity = 1 - cosine_distance.
-    distance_expr = DocumentChunk.embedding.cosine_distance(qvec).label("distance")
-    stmt = (
-        select(DocumentChunk, distance_expr)
-        .where(DocumentChunk.embedding.is_not(None))
-        .order_by(distance_expr.asc())          # smallest distance = highest similarity
-        .limit(top_k)
+    chunks = await db.document_chunks.find(
+        {},
+        {
+            "chunk_id": 1,
+            "document_id": 1,
+            "section": 1,
+            "content": 1,
+            "token_count": 1,
+            "embedding": 1,
+        },
+    ).to_list(length=None)
+
+    ranked = _rank_chunks(
+        chunks,
+        query_vector,
+        top_k=top_k,
+        min_score=min_score,
     )
-    rows = (await session.execute(stmt)).all()
-    if not rows:
+    if not ranked:
         return []
 
-    # Load document titles in one round-trip.
-    doc_ids = list({row.DocumentChunk.document_id for row in rows})
-    doc_rows = (await session.execute(
-        select(SourceDocument.document_id, SourceDocument.title)
-        .where(SourceDocument.document_id.in_(doc_ids))
-    )).all()
-    titles = {d: t for d, t in doc_rows}
+    document_ids = sorted({chunk["document_id"] for chunk, _ in ranked})
+    document_docs = await db.source_documents.find(
+        {"document_id": {"$in": document_ids}},
+        {"document_id": 1, "title": 1},
+    ).to_list(length=None)
+    titles = {doc["document_id"]: doc.get("title") for doc in document_docs}
 
-    out: list[ChunkResult] = []
-    for row in rows:
-        chunk: DocumentChunk = row.DocumentChunk
-        distance = float(row.distance)
-        score = 1.0 - distance
-        if score < min_score:
-            continue
-        out.append(ChunkResult(
-            chunk_id=chunk.chunk_id,
-            document_id=chunk.document_id,
-            document_title=titles.get(chunk.document_id),
-            section=chunk.section,
-            content=chunk.content,
-            token_count=chunk.token_count,
-            score=round(score, 6),
-        ))
-    # Already DESC by similarity because we ORDER BY distance ASC and
-    # filter preserves order.
-    return out
+    return [
+        ChunkResult(
+            chunk_id=chunk["chunk_id"],
+            document_id=chunk["document_id"],
+            document_title=titles.get(chunk["document_id"]),
+            section=chunk.get("section"),
+            content=chunk["content"],
+            token_count=int(chunk.get("token_count") or 0),
+            score=round(float(score), 6),
+        )
+        for chunk, score in ranked
+    ]
 
 
-async def search_health(session: AsyncSession) -> dict:
+async def search_health(db: AsyncIOMotorDatabase) -> dict:
     """Aggregate stats about the search index."""
-    total = (await session.execute(
-        select(func.count()).select_from(DocumentChunk)
-    )).scalar() or 0
-    with_emb = (await session.execute(
-        select(func.count()).select_from(DocumentChunk)
-        .where(DocumentChunk.embedding.is_not(None))
-    )).scalar() or 0
-    distinct_docs = (await session.execute(
-        select(func.count(func.distinct(DocumentChunk.document_id)))
-    )).scalar() or 0
+    chunks = await db.document_chunks.find(
+        {},
+        {"document_id": 1, "embedding": 1},
+    ).to_list(length=None)
 
-    # pgvector dim: query the column typmod
-    emb_type = (await session.execute(text(
-        "SELECT format_type(atttypid, atttypmod) FROM pg_attribute "
-        "WHERE attrelid = 'document_chunks'::regclass AND attname = 'embedding'"
-    ))).scalar() or ""
-    dim = 0
-    if "vector(" in (emb_type or ""):
-        try:
-            dim = int(str(emb_type).split("vector(")[1].rstrip(")"))
-        except Exception:
-            dim = 0
+    total = len(chunks)
+    with_embedding = [chunk for chunk in chunks if chunk.get("embedding")]
+    distinct_documents = len({chunk.get("document_id") for chunk in chunks})
 
-    hnsw = (await session.execute(text(
-        "SELECT 1 FROM pg_indexes WHERE tablename='document_chunks' "
-        "AND indexdef ILIKE '%USING hnsw%' LIMIT 1"
-    ))).scalar()
+    embedding_dim = get_settings().embedding_dim
+    if with_embedding:
+        embedding_dim = len(with_embedding[0]["embedding"])
 
     return {
         "chunks_total": int(total),
-        "chunks_with_embedding": int(with_emb),
-        "distinct_documents": int(distinct_docs),
-        "embedding_dim": dim,
-        "hnsw_index_present": bool(hnsw),
+        "chunks_with_embedding": len(with_embedding),
+        "distinct_documents": int(distinct_documents),
+        "embedding_dim": int(embedding_dim),
+        # Cosine ranking currently happens in the application process.
+        "vector_index_present": False,
     }
 
 
-async def list_documents(session: AsyncSession) -> list[dict]:
+def _isoformat(value) -> str:
+    if isinstance(value, datetime):
+        return value.isoformat()
+    return str(value or "")
+
+
+async def list_documents(db: AsyncIOMotorDatabase) -> list[dict]:
     """List source documents with their chunk counts."""
-    stmt = (
-        select(
-            SourceDocument.document_id,
-            SourceDocument.source_path,
-            SourceDocument.source_type,
-            SourceDocument.title,
-            SourceDocument.checksum,
-            SourceDocument.loaded_at,
-            func.count(DocumentChunk.chunk_id).label("chunk_count"),
+    documents = await db.source_documents.find({}).sort("document_id", 1).to_list(length=None)
+    output: list[dict] = []
+    for document in documents:
+        chunk_count = await db.document_chunks.count_documents(
+            {"document_id": document["document_id"]}
         )
-        .outerjoin(DocumentChunk, DocumentChunk.document_id == SourceDocument.document_id)
-        .group_by(
-            SourceDocument.document_id, SourceDocument.source_path,
-            SourceDocument.source_type, SourceDocument.title,
-            SourceDocument.checksum, SourceDocument.loaded_at,
+        output.append(
+            {
+                "document_id": document["document_id"],
+                "source_path": document.get("source_path", ""),
+                "source_type": document.get("source_type", ""),
+                "title": document.get("title"),
+                "checksum": document.get("checksum", ""),
+                "loaded_at": _isoformat(document.get("loaded_at")),
+                "chunk_count": int(chunk_count),
+            }
         )
-        .order_by(SourceDocument.document_id)
-    )
-    rows = (await session.execute(stmt)).all()
-    return [
-        {
-            "document_id": r.document_id,
-            "source_path": r.source_path,
-            "source_type": r.source_type,
-            "title": r.title,
-            "checksum": r.checksum,
-            "loaded_at": r.loaded_at.isoformat() if r.loaded_at else "",
-            "chunk_count": int(r.chunk_count),
-        }
-        for r in rows
-    ]
+    return output
