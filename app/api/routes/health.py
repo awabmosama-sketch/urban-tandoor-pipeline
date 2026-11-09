@@ -9,7 +9,7 @@ from __future__ import annotations
 from fastapi import APIRouter
 
 import app as app_pkg
-from app.database import ping_db
+from app.runtime import ping_db
 
 router = APIRouter(tags=["health"])
 

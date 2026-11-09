@@ -20,6 +20,16 @@ class Settings(BaseSettings):
     # Application
     app_env: str = "dev"
 
+    # Active database backend: "mongodb" (Atlas / local Mongo) or
+    # "postgres" (Neon / any PostgreSQL 14+).
+    db_backend: Literal["mongodb", "postgres"] = "mongodb"
+
+    # PostgreSQL / Neon (used when DB_BACKEND=postgres)
+    database_url: str = (
+        "postgresql+asyncpg://postgres:postgres@localhost:5432/urban_tandoor"
+    )
+    database_echo: bool = False
+
     # MongoDB Atlas (free M0 tier works fine)
     mongodb_uri: str = "mongodb://localhost:27017"
     mongodb_db: str = "urban_tandoor"

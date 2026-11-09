@@ -2,7 +2,15 @@ from __future__ import annotations
 
 from fastapi import APIRouter
 
-from app.api.routes import admin, assistant, health, inventory, menu, search
+from app.api.routes import admin, health
+from app.config import get_settings
+
+# Data routes are backend-specific: MongoDB routes use Motor directly, while
+# PostgreSQL routes use SQLModel sessions. Both expose the same URL contract.
+if get_settings().db_backend == "postgres":
+    from app.backends.postgres.routes import assistant, inventory, menu, search
+else:
+    from app.api.routes import assistant, inventory, menu, search
 
 api_router = APIRouter(prefix="/api/v1")
 

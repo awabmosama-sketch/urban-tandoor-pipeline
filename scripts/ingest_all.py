@@ -4,6 +4,9 @@ Unified JSON ingestion CLI for the Urban Tandoor pipeline.
 Usage:
   python scripts/ingest_all.py [--only DOMAIN ...] [--strict] [--wipe [--yes]]
 
+The target database is selected with ``DB_BACKEND`` in `.env`
+(``mongodb`` or ``postgres``).
+
 Domains: menu, inventory, docs
 JSON summary printed to STDOUT. Human progress printed to STDERR.
 Exit codes: 0 = all ok, 1 = any error (or wipe-safety-gate refused),
@@ -20,13 +23,44 @@ import time
 from datetime import UTC, datetime
 
 from app.config import get_settings
-from app.database import close_db, get_db
-from app.ingestion.json_ingest import (
-    ingest_json_domain,
-    wipe_all_collections,
-)
+from app.database import get_db
+from app.ingestion.json_ingest import ingest_json_domain, wipe_all_collections
+from app.runtime import backend_name, close_db
 
 DOMAINS = ("menu", "inventory", "docs")
+
+
+def _is_postgres() -> bool:
+    return backend_name() == "postgres"
+
+
+async def _ingest_domain(name: str) -> dict[str, int]:
+    if _is_postgres():
+        from app.backends.postgres.database import session_scope
+        from app.backends.postgres.ingest import ingest_json_domain as pg_ingest
+
+        async with session_scope() as session:
+            return await pg_ingest(session, name)
+    return await ingest_json_domain(get_db(), name)
+
+
+async def _wipe() -> int:
+    if _is_postgres():
+        from app.backends.postgres.database import session_scope
+        from app.backends.postgres.ingest import wipe_all
+
+        async with session_scope() as session:
+            await wipe_all(session)
+        return 0
+    deleted = await wipe_all_collections(get_db())
+    return sum(deleted.values())
+
+
+async def _ensure_schema() -> None:
+    if _is_postgres():
+        from app.backends.postgres.database import ensure_schema
+
+        await ensure_schema()
 
 
 async def _run_domain(name: str, *, strict: bool) -> dict:
@@ -42,7 +76,7 @@ async def _run_domain(name: str, *, strict: bool) -> dict:
     started = time.monotonic()
     print(f"[ingest] {name}: starting", file=sys.stderr)
     try:
-        counts = await ingest_json_domain(get_db(), name)
+        counts = await _ingest_domain(name)
         duration = time.monotonic() - started
         print(f"[ingest] {name}: ok ({duration:.2f}s)", file=sys.stderr)
         return {"status": "ok", "result": counts, "duration_s": round(duration, 2)}
@@ -80,16 +114,18 @@ async def _main(args: argparse.Namespace) -> int:
 
     domains = args.only or list(DOMAINS)
 
+    await _ensure_schema()
+
     if args.wipe:
-        print("[ingest] wiping all 20 collections...", file=sys.stderr)
-        deleted = await wipe_all_collections(get_db())
-        print(
-            f"[ingest] wipe complete ({sum(deleted.values())} documents removed)",
-            file=sys.stderr,
-        )
+        target = "20 PostgreSQL tables" if _is_postgres() else "20 MongoDB collections"
+        print(f"[ingest] wiping all {target}...", file=sys.stderr)
+        removed = await _wipe()
+        suffix = f" ({removed} documents removed)" if not _is_postgres() else ""
+        print(f"[ingest] wipe complete{suffix}", file=sys.stderr)
 
     summary: dict = {
         "status": "ok",
+        "backend": backend_name(),
         "json_dir": str(get_settings().json_dir),
         "started_at": datetime.now(UTC).isoformat(),
         "domains_requested": domains,
@@ -130,7 +166,7 @@ async def _run_and_close(args: argparse.Namespace) -> int:
 def cli(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(
         prog="utg-ingest",
-        description="Load Urban Tandoor JSON snapshots into MongoDB Atlas.",
+        description="Load Urban Tandoor JSON snapshots into MongoDB Atlas or PostgreSQL.",
     )
     parser.add_argument(
         "--only",

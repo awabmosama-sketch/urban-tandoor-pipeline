@@ -2,7 +2,8 @@
 Urban Tandoor & Grill — FastAPI application.
 
 Bootstrap:
-  - Lifespan: MongoDB index bootstrap + ping (non-fatal), shutdown client close
+  - Lifespan: index/schema bootstrap + ping (non-fatal), shutdown pool close
+  - Backend is selected with DB_BACKEND=mongodb|postgres (see app/runtime.py)
   - Middlewares: RequestID (outermost), CORS, GZip (innermost)
   - Routes: /health (top-level, back-compat), /api/v1/* (versioned)
   - Docs: /docs (Swagger UI), /redoc (ReDoc), /openapi.json
@@ -22,40 +23,41 @@ import app as app_pkg
 from app.api.middleware import RequestIDMiddleware
 from app.api.routes import api_router
 from app.api.routes.health import router as health_router
-from app.database import close_db, ensure_indexes, ping_db
+from app.runtime import backend_name, close_db, ensure_indexes, ping_db
 
 STATIC_DIR = Path(__file__).resolve().parent / "static"
 
 
 @asynccontextmanager
 async def lifespan(_app: FastAPI):
-    # Startup: probe MongoDB but NEVER block startup on failure.
+    backend = backend_name()
+    # Startup: probe the database but NEVER block startup on failure.
     ok, error = await ping_db()
     if ok:
-        print("[startup] MongoDB reachable", flush=True)
+        print(f"[startup] {backend} reachable", flush=True)
         try:
             await ensure_indexes()
-            print("[startup] MongoDB indexes ready", flush=True)
+            print(f"[startup] {backend} indexes/schema ready", flush=True)
         except Exception as exc:  # noqa: BLE001
-            print(f"[startup] index bootstrap skipped: {exc}", flush=True)
+            print(f"[startup] index/schema bootstrap skipped: {exc}", flush=True)
     else:
-        print(f"[startup] MongoDB unreachable at boot: {error}", flush=True)
+        print(f"[startup] {backend} unreachable at boot: {error}", flush=True)
     try:
         yield
     finally:
         try:
             await close_db()
-            print("[shutdown] MongoDB client closed", flush=True)
+            print(f"[shutdown] {backend} connection closed", flush=True)
         except Exception as exc:  # noqa: BLE001
-            print(f"[shutdown] MongoDB close error: {exc}", flush=True)
+            print(f"[shutdown] {backend} close error: {exc}", flush=True)
 
 
 app = FastAPI(
     title="Urban Tandoor & Grill — Menu & Inventory API",
     description=(
-        "Async FastAPI + MongoDB Atlas for menu, inventory, availability and "
-        "retrieval. Data is ingested from JSON snapshots. All data is synthetic "
-        "demo data."
+        "Async FastAPI + MongoDB Atlas / PostgreSQL (Neon) for menu, inventory, "
+        "availability and retrieval. Data is ingested from JSON snapshots. All "
+        "data is synthetic demo data."
     ),
     version=getattr(app_pkg, "__version__", "0.1.0"),
     lifespan=lifespan,

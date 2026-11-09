@@ -1,14 +1,21 @@
 # Urban Tandoor & Grill — Menu & Inventory API
 
 Data engineering pipeline that turns two Excel workbooks and a DOCX restaurant
-profile into JSON snapshots, loads those snapshots into **MongoDB Atlas**, and
-serves the data through an async **FastAPI** application with menu, inventory,
-availability, semantic-search and admin-refresh endpoints.
+profile into JSON snapshots, loads those snapshots into **MongoDB Atlas** or
+**PostgreSQL (Neon)**, and serves the data through an async **FastAPI**
+application with menu, inventory, availability, semantic-search and
+admin-refresh endpoints.
+
+The database backend is selected with a single `.env` flag:
+
+```env
+DB_BACKEND=postgres   # or: mongodb
+```
 
 JSON is the canonical ingestion format:
 
 ```text
-Excel / DOCX  ->  data/json/<collection>.json  ->  MongoDB Atlas  ->  FastAPI
+Excel / DOCX  ->  data/json/<collection>.json  ->  MongoDB / PostgreSQL  ->  FastAPI
 ```
 
 All data is **synthetic demo data**. The three source files live in `data/`.
@@ -34,11 +41,11 @@ All data is **synthetic demo data**. The three source files live in `data/`.
                          └──────────────────┬───────────────────────┘
                                             │  utg-ingest / admin refresh
                          ┌──────────────────▼───────────────────────┐
-                         │           MongoDB Atlas (M0)             │
-                         │  20 collections · unique natural keys    │
+                         │   MongoDB Atlas  or  PostgreSQL / Neon   │
+                         │  20 collections/tables · natural keys    │
                          │  embeddings stored as float arrays       │
                          └──────────────────┬───────────────────────┘
-                                            │  Motor (async PyMongo)
+                                            │  Motor (Mongo) / asyncpg (PG)
                          ┌──────────────────▼───────────────────────┐
                          │           FastAPI application            │
                          │  RequestID · CORS · GZip middleware      │
@@ -68,7 +75,7 @@ All data is **synthetic demo data**. The three source files live in `data/`.
   import time, so the JSON stays small and readable.
 - **Semantic search** — cosine similarity ranking with NumPy, min-score
   filtering, document listing and index health. Works on the Atlas free tier
-  without a Vector Search index.
+  without a Vector Search index, and on Neon without the pgvector extension.
 - **Admin refresh** — background, non-blocking refreshes per domain
   (`menu | inventory | docs | all`) with an in-memory job lifecycle
   (`pending → running → success | error`) protected by `X-Admin-Token`.
@@ -102,11 +109,19 @@ urban-tandoor-pipeline/
 │   │   ├── chunker.py        # document chunking
 │   │   └── embedder.py       # fake / OpenAI / Gemini providers
 │   ├── schemas/              # Pydantic response/request DTOs
-│   ├── services/             # availability, search, jobs, refresh, assistant
+│   ├── services/             # availability, search, jobs, refresh, assistant (MongoDB)
+│   ├── backends/
+│   │   └── postgres/         # PostgreSQL / Neon backend
+│   │       ├── models.py     # 20 SQLModel tables
+│   │       ├── database.py   # async engine, session factory, schema bootstrap
+│   │       ├── ingest.py     # JSON -> PostgreSQL upserts + embeddings
+│   │       ├── routes/       # menu, inventory, search, assistant
+│   │       └── services/     # availability, search, assistant (PostgreSQL)
 │   ├── static/               # hand-built frontend (HTML/CSS/JS)
 │   ├── collections.py        # collection names, natural keys, index specs
 │   ├── config.py             # pydantic-settings
 │   ├── database.py           # Motor client, database dependency, index bootstrap
+│   ├── runtime.py            # DB_BACKEND dispatch (ping/schema/close)
 │   └── main.py               # FastAPI app + lifespan
 ├── data/                     # source workbooks + DOCX
 │   └── json/                 # canonical JSON snapshots (committed)
@@ -126,7 +141,8 @@ urban-tandoor-pipeline/
 ### 1. Prerequisites
 
 - Python 3.11+ and [`uv`](https://docs.astral.sh/uv/)
-- A free **MongoDB Atlas M0** cluster (or any MongoDB 5+ deployment)
+- Either a **PostgreSQL 14+ / Neon** database **or** a free **MongoDB Atlas M0**
+  cluster (pick one with `DB_BACKEND`)
 
 ### 2. Install
 
@@ -140,9 +156,25 @@ uv sync
 cp .env.example .env      # Windows: copy .env.example .env
 ```
 
-Create a free cluster at <https://www.mongodb.com/atlas>, add a database user,
-allow your IP (or `0.0.0.0/0` for a throwaway demo), then copy the connection
-string into `.env`:
+Pick the backend first:
+
+```env
+DB_BACKEND=postgres       # postgres | mongodb
+```
+
+**PostgreSQL / Neon** (`DB_BACKEND=postgres`): copy a connection string from the
+Neon dashboard (or any PostgreSQL server) and force the asyncpg driver:
+
+```env
+DATABASE_URL=postgresql+asyncpg://USER:PASSWORD@HOST/DATABASE?ssl=require
+```
+
+The 20 tables are created automatically (`SQLModel.metadata.create_all`) at
+startup and before ingestion, so no Alembic migration step is required.
+
+**MongoDB Atlas** (`DB_BACKEND=mongodb`): create a free cluster at
+<https://www.mongodb.com/atlas>, add a database user, allow your IP (or
+`0.0.0.0/0` for a throwaway demo), then copy the connection string:
 
 ```env
 MONGODB_URI=mongodb+srv://USER:PASSWORD@cluster0.xxxxx.mongodb.net/?retryWrites=true&w=majority
@@ -151,8 +183,11 @@ MONGODB_DB=urban_tandoor
 
 | Variable | Default | Purpose |
 | --- | --- | --- |
+| `DB_BACKEND` | `mongodb` | Active backend: `mongodb` or `postgres` |
+| `DATABASE_URL` | local PostgreSQL URL | Async PostgreSQL/Neon URL (`postgresql+asyncpg://...`) |
+| `DATABASE_ECHO` | `false` | Log SQL statements (PostgreSQL) |
 | `MONGODB_URI` | `mongodb://localhost:27017` | Atlas connection string used by the app and CLIs |
-| `MONGODB_DB` | `urban_tandoor` | Database name |
+| `MONGODB_DB` | `urban_tandoor` | MongoDB database name |
 | `MONGODB_TIMEOUT_MS` | `8000` | Server-selection timeout |
 | `JSON_DIR` | `./data/json` | Canonical JSON snapshot directory |
 | `APP_ENV` | `dev` | Free-form environment label |
@@ -191,10 +226,10 @@ uv run utg-export --only docs
 uv run utg-export --json-dir ./tmp/json
 ```
 
-### 5. Load JSON into MongoDB
+### 5. Load JSON into the selected database
 
 ```bash
-uv run utg-ingest                 # all domains
+uv run utg-ingest                 # all domains (uses DB_BACKEND)
 uv run utg-ingest --only menu     # menu only
 uv run utg-ingest --only inventory
 uv run utg-ingest --only docs
@@ -202,9 +237,11 @@ uv run utg-ingest --strict        # fail fast on any domain error
 uv run utg-ingest --wipe --yes    # destructive clean reload
 ```
 
-Ingestion is idempotent: every document is upserted on its natural key, so
-rerunning updates documents in place. Document embeddings are generated during
-`utg-ingest --only docs`, not inside the JSON files.
+Ingestion is idempotent: every document/row is upserted on its natural key, so
+rerunning updates data in place. Document embeddings are generated during
+`utg-ingest --only docs`, not inside the JSON files. With
+`DB_BACKEND=postgres`, the same JSON is upserted into the 20 PostgreSQL tables
+(`INSERT ... ON CONFLICT DO UPDATE`).
 
 ### 6. Run the API
 
@@ -246,7 +283,7 @@ the UI keeps working.
 
 | Method | Path | Description |
 | --- | --- | --- |
-| `GET` | `/health` | App + MongoDB status, version, request ID |
+| `GET` | `/health` | App + active database status, version, request ID |
 | `GET` | `/api/v1/` | Service metadata and endpoint index |
 
 ### Menu
@@ -333,13 +370,16 @@ Groq is unreachable, unconfigured or slow.
 
 ---
 
-## Data model (20 collections)
+## Data model (20 collections / tables)
 
-| Group | Collections |
+| Group | Collections / tables |
 | --- | --- |
 | Menu | `categories`, `menu_items`, `variants`, `addons`, `item_addons`, `item_aliases`, `branch_menu`, `inventory_links`, `deals`, `deal_items`, `allergen_guide`, `service_rules` |
 | Inventory | `suppliers`, `ingredients`, `branches`, `branch_stock`, `recipes`, `stock_movements` |
-| Documents | `source_documents`, `document_chunks` (`embedding` float array, `metadata_json` object) |
+| Documents | `source_documents`, `document_chunks` (`embedding` float array, `metadata_json` JSONB/object) |
+
+Both backends store the same fields: MongoDB uses one collection per table and
+PostgreSQL uses one SQLModel table per collection.
 
 Baseline document counts:
 
@@ -359,9 +399,10 @@ stock_movements 8    item_aliases  158
 ```
 
 Natural keys are declared in `app/collections.py` and drive idempotent upserts.
-Unique indexes enforce those keys; secondary indexes cover the read paths
+Unique indexes enforce those keys in MongoDB; the PostgreSQL schema declares the
+same natural keys as primary keys. Secondary indexes cover the read paths
 (branch stock, menu filters, document chunks). JSON snapshots use ISO-8601
-strings for dates; the importer converts them back to BSON dates.
+strings for dates; the importers convert them to BSON dates or `timestamptz`.
 
 ---
 
@@ -371,10 +412,10 @@ strings for dates; the importer converts them back to BSON dates.
 uv run pytest -q
 ```
 
-The suite runs fully offline against **`mongomock-motor`**. One in-memory
-database is seeded per session through the real JSON ingestion path, so no
-Atlas connection or API key is required. Embeddings are forced to the
-deterministic `fake` provider.
+The suite runs fully offline against **`mongomock-motor`** (`tests/conftest.py`
+forces `DB_BACKEND=mongodb`). One in-memory database is seeded per session
+through the real JSON ingestion path, so no Atlas/Neon connection or API key is
+required. Embeddings are forced to the deterministic `fake` provider.
 
 | File | Scope |
 | --- | --- |
@@ -395,23 +436,28 @@ remain stable.
 ## Design notes
 
 - **JSON is the contract** — every write path (CLI and admin refresh) goes
-  through Excel/DOCX → JSON → MongoDB. Nothing writes directly from a parser
-  into the database.
-- **One collection per former table** — field names are unchanged, so the API
-  and frontend did not need a rewrite when the storage engine changed.
-- **Async everywhere** — Motor async client, async ingestion, async httpx
-  tests via `ASGITransport`.
+  through Excel/DOCX → JSON → database. Nothing writes directly from a parser
+  into the database. The same JSON feeds MongoDB or PostgreSQL.
+- **One collection/table per former table** — field names are unchanged, so the
+  API and frontend do not depend on the storage engine.
+- **Backend selection is a single flag** — `app/runtime.py` dispatches
+  ping/schema/shutdown, `app/api/routes/__init__.py` mounts the matching route
+  modules, and the refresh/CLI code picks the matching ingest path.
+- **Async everywhere** — Motor async client and SQLAlchemy async sessions,
+  async ingestion, async httpx tests via `ASGITransport`.
 - **Embeddings at import time** — `document_chunks.json` stores text and
   metadata only; `utg-ingest --only docs` embeds chunks with the configured
   provider. This keeps the committed JSON small and lets you swap providers
   without regenerating the corpus.
-- **Search without Atlas Vector Search** — for the 128-chunk demo, cosine
-  similarity is computed in Python/NumPy. If the corpus grows, replace
-  `_rank_chunks` in `app/services/search_service.py` with a `$vectorSearch`
-  aggregation stage; the response contract stays the same.
-- **Index bootstrap** — `app/database.py` creates unique/secondary indexes at
-  startup. Startup never fails if Atlas is temporarily unreachable; the health
-  endpoint reports `degraded` instead.
+- **Search without a vector extension** — for the 128-chunk demo, cosine
+  similarity is computed in Python/NumPy on both backends. If the corpus grows,
+  replace `_rank_chunks` with MongoDB `$vectorSearch` or pgvector; the response
+  contract stays the same.
+- **Schema bootstrap is idempotent** — `app/database.py` creates MongoDB
+  indexes; `app/backends/postgres/database.py` runs
+  `SQLModel.metadata.create_all` for the 20 tables (no Alembic step). Startup
+  never fails if the database is temporarily unreachable; the health endpoint
+  reports `degraded` instead.
 - **Availability formula** — portions are the minimum across recipe lines of
   `floor(available_ingredient / qty_per_portion)`; zero/negative outcomes are
   reported as `OUT_OF_STOCK`/`NOT_ACTIVE` with a limiting ingredient where
@@ -438,8 +484,9 @@ remain stable.
   for real deployments.
 - Ingestion assumes the source workbooks keep their current sheet names and
   column headers.
-- MongoDB Atlas M0 is fine for this demo. Very large embedding collections
-  should use Atlas Vector Search or a dedicated vector store.
+- MongoDB Atlas M0 and Neon's free tier are fine for this demo. Very large
+  embedding collections should use Atlas Vector Search, pgvector or a dedicated
+  vector store.
 
 ---
 
@@ -449,6 +496,8 @@ remain stable.
 | --- | --- |
 | `ServerSelectionTimeoutError` | Check `MONGODB_URI`, the database user and the Atlas IP allowlist |
 | `DNS operation timed out` / SRV lookup fails | Some networks block `_mongodb._tcp` SRV queries. Use the direct form instead: `mongodb://USER:PASSWORD@shard-00-00…,shard-00-01…,shard-00-02…/?authSource=admin&replicaSet=…&tls=true` (hostnames and replica set name are in the SRV records / Atlas UI) |
+| `InvalidPasswordError` / connection refused on PostgreSQL | Check `DATABASE_URL`, the database name and `?ssl=require` for Neon |
+| `asyncpg` cannot find a driver | Use a `postgresql+asyncpg://` URL (plain `postgresql://` is normalised automatically) |
 | `JSON snapshot missing ... Run utg-export first` | Run `uv run utg-export` (or pass `--json-dir`) |
 | `E11000 duplicate key` | Stale documents from an older natural key; run `uv run utg-ingest --wipe --yes` |
 | `Missing data file` | Confirm the three source files exist under `DATA_DIR` |
