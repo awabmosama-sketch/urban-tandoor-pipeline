@@ -76,7 +76,7 @@ async def build_context(
     lines.append("")
     lines.append(
         f"ACTIVE MENU ({len(items)} dishes) — id | name | category | price | "
-        "prep min | dietary | allergens:"
+        "prep min | dietary | allergens | description:"
     )
     vocabulary: list[str] = []
     for item in items:
@@ -84,7 +84,8 @@ async def build_context(
         lines.append(
             f"- {item.menu_id} | {item.item_name} | {item.category} | "
             f"{float(item.base_price_pkr):.0f} PKR | {item.prep_time_min} min | "
-            f"{item.dietary_hint or '-'} | {item.allergen_hint or '-'}"
+            f"{item.dietary_hint or '-'} | {item.allergen_hint or '-'} | "
+            f"{item.description or '-'}"
         )
 
     if branch_id:

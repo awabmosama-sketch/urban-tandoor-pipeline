@@ -4,6 +4,7 @@ import pytest
 from app.schemas.assistant import ChatTurn
 from app.services.guardrails import (
     SCOPE_REFUSAL,
+    SYSTEM_PROMPT,
     GroundingContext,
     build_messages,
     is_in_scope,
@@ -39,10 +40,19 @@ def test_off_topic_questions_are_rejected(message):
         "do you have a family deal?",
         "hello",
         "recommend something for two people",
+        "how your biryani reviews and taste ?",
+        "how does the chicken biryani taste?",
+        "what are the reviews like?",
     ],
 )
 def test_restaurant_questions_are_allowed(message):
     assert is_in_scope(message, VOCABULARY) is True
+
+
+def test_prompt_distinguishes_off_topic_from_missing_on_topic_detail():
+    assert "ONLY when a question is unrelated to this restaurant" in SYSTEM_PROMPT
+    assert "Do not refuse them as off-topic" in SYSTEM_PROMPT
+    assert "Never invent ingredients" in SYSTEM_PROMPT
 
 
 def test_live_menu_vocabulary_beats_off_topic_words():
@@ -87,6 +97,16 @@ def test_build_messages_drops_off_topic_history():
     assert "how much is chicken biryani?" in system
     assert "RESTAURANT DATA:" in system
     assert "EARLIER CONVERSATION" in system
+
+
+@pytest.mark.asyncio
+async def test_context_carries_grounded_dish_description(db):
+    from app.services.assistant_service import build_context
+
+    context = await build_context(db)
+
+    assert "Chicken Biryani" in context.vocabulary
+    assert "Traditional Pakistani-style preparation" in context.text
 
 
 @pytest.mark.asyncio
