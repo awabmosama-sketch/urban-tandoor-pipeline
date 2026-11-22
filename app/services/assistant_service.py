@@ -7,6 +7,10 @@ service, never to Groq directly.
 Grounding: every request rebuilds a compact snapshot of the restaurant from
 MongoDB (active menu, branches, low stock for the selected branch) and puts it
 in the system prompt, so answers are tied to the actual demo data.
+
+Scope: ``app.services.guardrails`` rejects off-topic questions before any
+network call and supplies the strict system prompt that keeps the concierge
+focused on this restaurant.
 """
 from __future__ import annotations
 
@@ -15,20 +19,15 @@ from motor.motor_asyncio import AsyncIOMotorDatabase
 
 from app.config import get_settings
 from app.schemas.assistant import ChatTurn
-
-SYSTEM_PROMPT = """You are the concierge for Urban Tandoor & Grill, a Pakistani \
-grill restaurant in Karachi with two 24/7 branches. All data is synthetic demo data.
-
-Rules:
-- Answer in at most 120 words, warm and precise. Use short lines.
-- Do not use markdown, asterisks, bold, headings or tables. Hyphen lines are fine.
-- Use ONLY the RESTAURANT DATA below for menu items, prices, branches, stock and
-  availability. If a fact is absent, say you do not have it. Never invent dishes,
-  prices, discounts or promises.
-- Prices are PKR. Availability is a live estimate derived from recipes and branch
-  stock, not a reservation.
-- Speak like a knowledgeable host, not a chatbot. No markdown tables.
-"""
+from app.services.guardrails import (
+    SCOPE_REFUSAL,
+    SYSTEM_PROMPT,
+    GroundingContext,
+    build_messages,
+    is_in_scope,
+    is_reply_in_scope,
+    sanitize_message,
+)
 
 
 class AssistantError(Exception):
@@ -51,7 +50,9 @@ class AssistantUpstream(AssistantError):
     status_code = 502
 
 
-async def build_context(db: AsyncIOMotorDatabase, branch_id: str | None = None) -> str:
+async def build_context(
+    db: AsyncIOMotorDatabase, branch_id: str | None = None
+) -> GroundingContext:
     items = await db.menu_items.find({"catalog_status": "Active"}).sort(
         [("category", 1), ("item_name", 1)]
     ).to_list(length=None)
@@ -70,7 +71,9 @@ async def build_context(db: AsyncIOMotorDatabase, branch_id: str | None = None) 
         f"ACTIVE MENU ({len(items)} dishes) — id | name | category | price | "
         "prep min | dietary | allergens:"
     )
+    vocabulary: list[str] = []
     for item in items:
+        vocabulary.append(item["item_name"])
         lines.append(
             f"- {item['menu_id']} | {item['item_name']} | {item['category']} | "
             f"{float(item.get('base_price_pkr') or 0):.0f} PKR | "
@@ -94,7 +97,10 @@ async def build_context(db: AsyncIOMotorDatabase, branch_id: str | None = None) 
         else:
             lines.append(f"STOCK AT {branch_id}: no low-stock lines.")
 
-    return "\n".join(lines)
+    aliases = await db.item_aliases.find({}).to_list(length=None)
+    vocabulary.extend(alias["customer_phrase"] for alias in aliases)
+
+    return GroundingContext(text="\n".join(lines), vocabulary=tuple(vocabulary))
 
 
 async def ask_concierge(
@@ -105,6 +111,14 @@ async def ask_concierge(
     branch_id: str | None = None,
 ) -> dict:
     settings = get_settings()
+    message = sanitize_message(message)
+
+    context = await build_context(db, branch_id)
+
+    # Guardrail first: a refusal needs no provider key and no network call.
+    if not message or not is_in_scope(message, context.vocabulary):
+        return {"reply": SCOPE_REFUSAL, "model": "scope-guard"}
+
     if not settings.groq_api_key:
         raise AssistantUnavailable(
             "AI concierge is not configured yet (GROQ_API_KEY is missing)."
@@ -115,14 +129,7 @@ async def ask_concierge(
         if branch is None:
             raise AssistantBranchNotFound(f"Unknown branch: {branch_id}")
 
-    context = await build_context(db, branch_id)
-    messages: list[dict] = [
-        {"role": "system", "content": f"{SYSTEM_PROMPT}\n\nRESTAURANT DATA:\n{context}"}
-    ]
-    for turn in history[-8:]:
-        messages.append({"role": turn.role, "content": turn.content})
-    messages.append({"role": "user", "content": message})
-
+    messages = build_messages(context, history, message)
     payload = {
         "model": settings.groq_model,
         "messages": messages,
@@ -160,4 +167,10 @@ async def ask_concierge(
     if not reply:
         raise AssistantUpstream("AI provider returned an empty answer.")
 
+    if not is_reply_in_scope(reply, context.vocabulary):
+        return {"reply": SCOPE_REFUSAL, "model": "scope-guard"}
+
     return {"reply": reply, "model": data.get("model", settings.groq_model)}
+
+
+__all__ = ["SYSTEM_PROMPT", "ask_concierge", "build_context"]

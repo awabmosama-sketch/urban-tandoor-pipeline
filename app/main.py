@@ -24,6 +24,7 @@ from app.api.middleware import RequestIDMiddleware
 from app.api.routes import api_router
 from app.api.routes.health import router as health_router
 from app.runtime import backend_name, close_db, ensure_indexes, ping_db
+from app.services.auto_ingest import run_at_startup, start_watcher, stop_watcher
 
 STATIC_DIR = Path(__file__).resolve().parent / "static"
 
@@ -31,6 +32,7 @@ STATIC_DIR = Path(__file__).resolve().parent / "static"
 @asynccontextmanager
 async def lifespan(_app: FastAPI):
     backend = backend_name()
+    watcher = None
     # Startup: probe the database but NEVER block startup on failure.
     ok, error = await ping_db()
     if ok:
@@ -40,11 +42,16 @@ async def lifespan(_app: FastAPI):
             print(f"[startup] {backend} indexes/schema ready", flush=True)
         except Exception as exc:  # noqa: BLE001
             print(f"[startup] index/schema bootstrap skipped: {exc}", flush=True)
+        # JSON snapshots are the source of truth: load them automatically.
+        await run_at_startup()
+        watcher = start_watcher()
     else:
         print(f"[startup] {backend} unreachable at boot: {error}", flush=True)
     try:
         yield
     finally:
+        if watcher is not None:
+            await stop_watcher()
         try:
             await close_db()
             print(f"[shutdown] {backend} connection closed", flush=True)

@@ -35,6 +35,7 @@ __all__ = [
     "ItemAddon",
     "ItemAlias",
     "MenuItem",
+    "PipelineMeta",
     "Recipe",
     "ServiceRule",
     "SourceDocument",
@@ -342,6 +343,26 @@ class DocumentChunk(SQLModel, table=True):
     metadata_json: dict[str, Any] = Field(
         default_factory=dict,
         sa_column=Column(JSONB, nullable=False, server_default=text("'{}'::jsonb")),
+    )
+
+
+class PipelineMeta(SQLModel, table=True):
+    """Bookkeeping for automatic JSON ingestion.
+
+    This table is deliberately outside ``COLLECTION_MODELS`` so
+    ``utg-ingest --wipe`` never truncates the snapshot fingerprints.
+    """
+
+    __tablename__ = "pipeline_meta"
+
+    key: str = Field(primary_key=True, max_length=64)
+    fingerprints: dict[str, str] = Field(
+        default_factory=dict,
+        sa_column=Column(JSONB, nullable=False, server_default=text("'{}'::jsonb")),
+    )
+    updated_at: datetime = Field(
+        default_factory=_utcnow,
+        sa_type=DateTime(timezone=True),
     )
 
 

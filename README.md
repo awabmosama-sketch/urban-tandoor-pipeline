@@ -243,6 +243,14 @@ rerunning updates data in place. Document embeddings are generated during
 `DB_BACKEND=postgres`, the same JSON is upserted into the 20 PostgreSQL tables
 (`INSERT ... ON CONFLICT DO UPDATE`).
 
+`utg-ingest` is still available for manual loads, but the API now does it for
+you: at startup it ingests every domain whose JSON fingerprint changed (or all
+domains when the database is empty), and a background watcher re-ingests within
+about 10 seconds of any JSON edit. Only the changed domains are reloaded. Use
+`AUTO_INGEST_ON_STARTUP=false` / `AUTO_INGEST_WATCH=false` to opt out, and
+`AUTO_INGEST_POLL_SECONDS` to tune the watcher. Fingerprints live in
+`_pipeline_meta` (MongoDB) or `pipeline_meta` (PostgreSQL) and survive a wipe.
+
 ### 6. Run the API
 
 ```bash
@@ -365,8 +373,14 @@ Request body:
 `history` is optional (max 12 turns, the server uses the last 8) and
 `branch_id` is optional. The service rebuilds a compact snapshot of the active
 menu, branches and low-stock lines for that branch and puts it in the system
-prompt, so answers stay tied to the demo data. Returns `502`/`503`/`504` when
-Groq is unreachable, unconfigured or slow.
+prompt, so answers stay tied to the demo data.
+
+A scope guardrail (`app/services/guardrails.py`) keeps the concierge on-task:
+questions outside this restaurant (for example "who is the CEO of Meta?") are
+answered with a fixed, polite refusal **without calling Groq**. Chat history is
+filtered the same way so off-topic turns cannot steer later answers, and the
+model is told to treat history as data rather than instructions. Returns
+`502`/`503`/`504` when Groq is unreachable, unconfigured or slow.
 
 ---
 

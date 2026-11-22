@@ -21,6 +21,9 @@ os.environ["EMBEDDING_DIM"] = "1536"
 # The suite runs against mongomock-motor; never pick up DB_BACKEND=postgres
 # from a developer's .env.
 os.environ["DB_BACKEND"] = "mongodb"
+# The suite seeds the in-memory DB explicitly; startup auto-ingest is not needed.
+os.environ["AUTO_INGEST_ON_STARTUP"] = "false"
+os.environ["AUTO_INGEST_WATCH"] = "false"
 
 from collections.abc import AsyncIterator  # noqa: E402
 

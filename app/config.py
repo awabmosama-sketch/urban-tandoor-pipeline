@@ -49,6 +49,12 @@ class Settings(BaseSettings):
     chunk_size: int = Field(default=800, gt=0)
     chunk_overlap: int = Field(default=120, ge=0)
 
+    # Auto ingestion: the API loads/refreshes JSON snapshots itself at boot and
+    # keeps watching them, so a changed menu never stays stuck in the database.
+    auto_ingest_on_startup: bool = True
+    auto_ingest_watch: bool = True
+    auto_ingest_poll_seconds: float = Field(default=5.0, gt=0)
+
     # Admin
     admin_token: str = "change-me"
     admin_job_max_history: int = 100
