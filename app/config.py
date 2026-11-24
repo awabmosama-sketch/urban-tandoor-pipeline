@@ -1,0 +1,86 @@
+"""Application settings loaded from the environment / `.env`."""
+
+from functools import lru_cache
+from typing import Literal
+
+from pydantic import Field, model_validator
+from pydantic_settings import BaseSettings, SettingsConfigDict
+
+
+class Settings(BaseSettings):
+    """Typed view over the environment used by the pipeline."""
+
+    model_config = SettingsConfigDict(
+        env_file=".env",
+        env_file_encoding="utf-8",
+        case_sensitive=False,
+        extra="ignore",
+    )
+
+    # Application
+    app_env: str = "dev"
+
+    # Active database backend: "mongodb" (Atlas / local Mongo) or
+    # "postgres" (Neon / any PostgreSQL 14+).
+    db_backend: Literal["mongodb", "postgres"] = "mongodb"
+
+    # PostgreSQL / Neon (used when DB_BACKEND=postgres)
+    database_url: str = (
+        "postgresql+asyncpg://postgres:postgres@localhost:5432/urban_tandoor"
+    )
+    database_echo: bool = False
+
+    # MongoDB Atlas (free M0 tier works fine)
+    mongodb_uri: str = "mongodb://localhost:27017"
+    mongodb_db: str = "urban_tandoor"
+    mongodb_timeout_ms: int = Field(default=8000, gt=0)
+
+    # Embeddings
+    embedding_provider: Literal["openai", "gemini", "fake"] = "openai"
+    embedding_model: str = "text-embedding-3-small"
+    embedding_dim: int = Field(default=1536, gt=0)
+    openai_api_key: str = ""
+    gemini_api_key: str = ""
+
+    # AI concierge provider
+    llm_provider: Literal["gemini", "groq", "openai"] = "gemini"
+    groq_api_key: str = ""
+    groq_model: str = "openai/gpt-oss-120b"
+    groq_base_url: str = "https://api.groq.com/openai/v1"
+    openai_model: str = "gpt-4o-mini"
+    openai_base_url: str = "https://api.openai.com/v1"
+    llm_timeout_s: float = Field(default=30.0, gt=0)
+
+    # Ingestion
+    data_dir: str = "./data"
+    # JSON is the canonical ingestion format. Export writes here; ingest reads here.
+    json_dir: str = "./data/json"
+    chunk_size: int = Field(default=800, gt=0)
+    chunk_overlap: int = Field(default=120, ge=0)
+
+    # Auto ingestion: the API loads/refreshes JSON snapshots itself at boot and
+    # keeps watching them, so a changed menu never stays stuck in the database.
+    auto_ingest_on_startup: bool = True
+    auto_ingest_watch: bool = True
+    auto_ingest_poll_seconds: float = Field(default=5.0, ge=0.5)
+
+    # Admin
+    admin_token: str = "change-me"
+    admin_job_max_history: int = 100
+
+    # Gemini (AI concierge / embeddings — key stays server-side)
+    gemini_model: str = "gemini-3.5-flash-lite"
+    gemini_base_url: str = "https://generativelanguage.googleapis.com/v1beta"
+    gemini_timeout_s: float = Field(default=30.0, gt=0)
+
+    @model_validator(mode="after")
+    def _validate_chunking(self) -> "Settings":
+        if self.chunk_overlap >= self.chunk_size:
+            raise ValueError("CHUNK_OVERLAP must be smaller than CHUNK_SIZE")
+        return self
+
+
+@lru_cache
+def get_settings() -> Settings:
+    """Return a process-wide cached `Settings` instance."""
+    return Settings()

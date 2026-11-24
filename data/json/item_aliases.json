@@ -1,0 +1,1108 @@
+[
+  {
+    "alias_id": "ALS0001",
+    "menu_id": "MENU001",
+    "customer_phrase": "chicken biryani",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0002",
+    "menu_id": "MENU001",
+    "customer_phrase": "chikkan biryani",
+    "language": "Roman Urdu",
+    "alias_notes": "Phonetic alias — demo"
+  },
+  {
+    "alias_id": "ALS0003",
+    "menu_id": "MENU001",
+    "customer_phrase": "chicken biryani plate",
+    "language": "Roman Urdu",
+    "alias_notes": "Natural request alias"
+  },
+  {
+    "alias_id": "ALS0004",
+    "menu_id": "MENU002",
+    "customer_phrase": "beef biryani",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0005",
+    "menu_id": "MENU002",
+    "customer_phrase": "beef biryani plate",
+    "language": "Roman Urdu",
+    "alias_notes": "Natural request alias"
+  },
+  {
+    "alias_id": "ALS0006",
+    "menu_id": "MENU003",
+    "customer_phrase": "chicken karahi",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0007",
+    "menu_id": "MENU003",
+    "customer_phrase": "chikkan karahi",
+    "language": "Roman Urdu",
+    "alias_notes": "Phonetic alias — demo"
+  },
+  {
+    "alias_id": "ALS0008",
+    "menu_id": "MENU004",
+    "customer_phrase": "mutton karahi",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0009",
+    "menu_id": "MENU005",
+    "customer_phrase": "chicken handi",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0010",
+    "menu_id": "MENU005",
+    "customer_phrase": "chikkan handi",
+    "language": "Roman Urdu",
+    "alias_notes": "Phonetic alias — demo"
+  },
+  {
+    "alias_id": "ALS0011",
+    "menu_id": "MENU006",
+    "customer_phrase": "daal makhani",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0012",
+    "menu_id": "MENU007",
+    "customer_phrase": "chicken tikka",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0013",
+    "menu_id": "MENU007",
+    "customer_phrase": "chikkan tikka",
+    "language": "Roman Urdu",
+    "alias_notes": "Phonetic alias — demo"
+  },
+  {
+    "alias_id": "ALS0014",
+    "menu_id": "MENU008",
+    "customer_phrase": "chicken malai boti",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0015",
+    "menu_id": "MENU008",
+    "customer_phrase": "chikkan malai boti",
+    "language": "Roman Urdu",
+    "alias_notes": "Phonetic alias — demo"
+  },
+  {
+    "alias_id": "ALS0016",
+    "menu_id": "MENU009",
+    "customer_phrase": "beef seekh kabab",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0017",
+    "menu_id": "MENU010",
+    "customer_phrase": "mixed bbq platter",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0018",
+    "menu_id": "MENU011",
+    "customer_phrase": "zinger burger",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0019",
+    "menu_id": "MENU012",
+    "customer_phrase": "beef burger",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0020",
+    "menu_id": "MENU013",
+    "customer_phrase": "club sandwich",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0021",
+    "menu_id": "MENU014",
+    "customer_phrase": "loaded fries",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0022",
+    "menu_id": "MENU015",
+    "customer_phrase": "chicken fajita pizza",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0023",
+    "menu_id": "MENU015",
+    "customer_phrase": "chikkan fajita pizza",
+    "language": "Roman Urdu",
+    "alias_notes": "Phonetic alias — demo"
+  },
+  {
+    "alias_id": "ALS0024",
+    "menu_id": "MENU016",
+    "customer_phrase": "chicken tikka pizza",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0025",
+    "menu_id": "MENU016",
+    "customer_phrase": "chikkan tikka pizza",
+    "language": "Roman Urdu",
+    "alias_notes": "Phonetic alias — demo"
+  },
+  {
+    "alias_id": "ALS0026",
+    "menu_id": "MENU017",
+    "customer_phrase": "alfredo pasta",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0027",
+    "menu_id": "MENU018",
+    "customer_phrase": "arrabbiata pasta",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0028",
+    "menu_id": "MENU019",
+    "customer_phrase": "chicken chow mein",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0029",
+    "menu_id": "MENU019",
+    "customer_phrase": "chikkan chow mein",
+    "language": "Roman Urdu",
+    "alias_notes": "Phonetic alias — demo"
+  },
+  {
+    "alias_id": "ALS0030",
+    "menu_id": "MENU020",
+    "customer_phrase": "chicken fried rice",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0031",
+    "menu_id": "MENU020",
+    "customer_phrase": "chikkan fried rice",
+    "language": "Roman Urdu",
+    "alias_notes": "Phonetic alias — demo"
+  },
+  {
+    "alias_id": "ALS0032",
+    "menu_id": "MENU021",
+    "customer_phrase": "chicken manchurian",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0033",
+    "menu_id": "MENU021",
+    "customer_phrase": "chikkan manchurian",
+    "language": "Roman Urdu",
+    "alias_notes": "Phonetic alias — demo"
+  },
+  {
+    "alias_id": "ALS0034",
+    "menu_id": "MENU022",
+    "customer_phrase": "grilled chicken steak",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0035",
+    "menu_id": "MENU022",
+    "customer_phrase": "grilled chikkan steak",
+    "language": "Roman Urdu",
+    "alias_notes": "Phonetic alias — demo"
+  },
+  {
+    "alias_id": "ALS0036",
+    "menu_id": "MENU023",
+    "customer_phrase": "halwa puri",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0037",
+    "menu_id": "MENU024",
+    "customer_phrase": "anda paratha",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0038",
+    "menu_id": "MENU025",
+    "customer_phrase": "chana masala",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0039",
+    "menu_id": "MENU026",
+    "customer_phrase": "chocolate brownie",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0040",
+    "menu_id": "MENU027",
+    "customer_phrase": "brownie with ice cream",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0041",
+    "menu_id": "MENU028",
+    "customer_phrase": "mango shake",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0042",
+    "menu_id": "MENU029",
+    "customer_phrase": "mint margarita",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0043",
+    "menu_id": "MENU030",
+    "customer_phrase": "tea",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0044",
+    "menu_id": "MENU030",
+    "customer_phrase": "chai",
+    "language": "Roman Urdu",
+    "alias_notes": "Common restaurant term"
+  },
+  {
+    "alias_id": "ALS0045",
+    "menu_id": "MENU031",
+    "customer_phrase": "mineral water",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0046",
+    "menu_id": "MENU031",
+    "customer_phrase": "pani ki bottle",
+    "language": "Roman Urdu",
+    "alias_notes": "Common restaurant term"
+  },
+  {
+    "alias_id": "ALS0047",
+    "menu_id": "MENU032",
+    "customer_phrase": "soft drink can",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0048",
+    "menu_id": "MENU033",
+    "customer_phrase": "chicken pulao",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0049",
+    "menu_id": "MENU033",
+    "customer_phrase": "chikkan pulao",
+    "language": "Roman Urdu",
+    "alias_notes": "Phonetic alias — demo"
+  },
+  {
+    "alias_id": "ALS0050",
+    "menu_id": "MENU034",
+    "customer_phrase": "mutton pulao",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0051",
+    "menu_id": "MENU035",
+    "customer_phrase": "chicken white karahi",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0052",
+    "menu_id": "MENU035",
+    "customer_phrase": "chikkan white karahi",
+    "language": "Roman Urdu",
+    "alias_notes": "Phonetic alias — demo"
+  },
+  {
+    "alias_id": "ALS0053",
+    "menu_id": "MENU036",
+    "customer_phrase": "chicken achari karahi",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0054",
+    "menu_id": "MENU036",
+    "customer_phrase": "chikkan achari karahi",
+    "language": "Roman Urdu",
+    "alias_notes": "Phonetic alias — demo"
+  },
+  {
+    "alias_id": "ALS0055",
+    "menu_id": "MENU037",
+    "customer_phrase": "mutton white karahi",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0056",
+    "menu_id": "MENU038",
+    "customer_phrase": "chicken tikka handi",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0057",
+    "menu_id": "MENU038",
+    "customer_phrase": "chikkan tikka handi",
+    "language": "Roman Urdu",
+    "alias_notes": "Phonetic alias — demo"
+  },
+  {
+    "alias_id": "ALS0058",
+    "menu_id": "MENU039",
+    "customer_phrase": "beef nihari",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0059",
+    "menu_id": "MENU040",
+    "customer_phrase": "chicken qorma",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0060",
+    "menu_id": "MENU040",
+    "customer_phrase": "chikkan qorma",
+    "language": "Roman Urdu",
+    "alias_notes": "Phonetic alias — demo"
+  },
+  {
+    "alias_id": "ALS0061",
+    "menu_id": "MENU041",
+    "customer_phrase": "mix vegetable curry",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0062",
+    "menu_id": "MENU042",
+    "customer_phrase": "palak paneer",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0063",
+    "menu_id": "MENU043",
+    "customer_phrase": "chicken haleem",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0064",
+    "menu_id": "MENU043",
+    "customer_phrase": "chikkan haleem",
+    "language": "Roman Urdu",
+    "alias_notes": "Phonetic alias — demo"
+  },
+  {
+    "alias_id": "ALS0065",
+    "menu_id": "MENU044",
+    "customer_phrase": "chapli kabab platter",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0066",
+    "menu_id": "MENU045",
+    "customer_phrase": "plain naan",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0067",
+    "menu_id": "MENU046",
+    "customer_phrase": "garlic naan",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0068",
+    "menu_id": "MENU047",
+    "customer_phrase": "butter naan",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0069",
+    "menu_id": "MENU048",
+    "customer_phrase": "tandoori roti",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0070",
+    "menu_id": "MENU049",
+    "customer_phrase": "chicken seekh kabab",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0071",
+    "menu_id": "MENU049",
+    "customer_phrase": "chikkan seekh kabab",
+    "language": "Roman Urdu",
+    "alias_notes": "Phonetic alias — demo"
+  },
+  {
+    "alias_id": "ALS0072",
+    "menu_id": "MENU050",
+    "customer_phrase": "reshmi kabab",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0073",
+    "menu_id": "MENU051",
+    "customer_phrase": "chicken bihari boti",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0074",
+    "menu_id": "MENU051",
+    "customer_phrase": "chikkan bihari boti",
+    "language": "Roman Urdu",
+    "alias_notes": "Phonetic alias — demo"
+  },
+  {
+    "alias_id": "ALS0075",
+    "menu_id": "MENU052",
+    "customer_phrase": "beef bihari boti",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0076",
+    "menu_id": "MENU053",
+    "customer_phrase": "chicken wings bbq",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0077",
+    "menu_id": "MENU053",
+    "customer_phrase": "chikkan wings bbq",
+    "language": "Roman Urdu",
+    "alias_notes": "Phonetic alias — demo"
+  },
+  {
+    "alias_id": "ALS0078",
+    "menu_id": "MENU054",
+    "customer_phrase": "grilled chicken half",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0079",
+    "menu_id": "MENU054",
+    "customer_phrase": "grilled chikkan half",
+    "language": "Roman Urdu",
+    "alias_notes": "Phonetic alias — demo"
+  },
+  {
+    "alias_id": "ALS0080",
+    "menu_id": "MENU055",
+    "customer_phrase": "grilled chicken full",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0081",
+    "menu_id": "MENU055",
+    "customer_phrase": "grilled chikkan full",
+    "language": "Roman Urdu",
+    "alias_notes": "Phonetic alias — demo"
+  },
+  {
+    "alias_id": "ALS0082",
+    "menu_id": "MENU056",
+    "customer_phrase": "bbq family platter",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0083",
+    "menu_id": "MENU057",
+    "customer_phrase": "fish tikka",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0084",
+    "menu_id": "MENU058",
+    "customer_phrase": "chicken cheese kabab",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0085",
+    "menu_id": "MENU058",
+    "customer_phrase": "chikkan cheese kabab",
+    "language": "Roman Urdu",
+    "alias_notes": "Phonetic alias — demo"
+  },
+  {
+    "alias_id": "ALS0086",
+    "menu_id": "MENU059",
+    "customer_phrase": "grilled chicken burger",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0087",
+    "menu_id": "MENU059",
+    "customer_phrase": "grilled chikkan burger",
+    "language": "Roman Urdu",
+    "alias_notes": "Phonetic alias — demo"
+  },
+  {
+    "alias_id": "ALS0088",
+    "menu_id": "MENU060",
+    "customer_phrase": "double zinger burger",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0089",
+    "menu_id": "MENU061",
+    "customer_phrase": "cheese beef burger",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0090",
+    "menu_id": "MENU062",
+    "customer_phrase": "chicken shawarma",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0091",
+    "menu_id": "MENU062",
+    "customer_phrase": "chikkan shawarma",
+    "language": "Roman Urdu",
+    "alias_notes": "Phonetic alias — demo"
+  },
+  {
+    "alias_id": "ALS0092",
+    "menu_id": "MENU063",
+    "customer_phrase": "chicken wrap",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0093",
+    "menu_id": "MENU063",
+    "customer_phrase": "chikkan wrap",
+    "language": "Roman Urdu",
+    "alias_notes": "Phonetic alias — demo"
+  },
+  {
+    "alias_id": "ALS0094",
+    "menu_id": "MENU064",
+    "customer_phrase": "crispy chicken wrap",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0095",
+    "menu_id": "MENU064",
+    "customer_phrase": "crispy chikkan wrap",
+    "language": "Roman Urdu",
+    "alias_notes": "Phonetic alias — demo"
+  },
+  {
+    "alias_id": "ALS0096",
+    "menu_id": "MENU065",
+    "customer_phrase": "plain french fries",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0097",
+    "menu_id": "MENU066",
+    "customer_phrase": "masala fries",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0098",
+    "menu_id": "MENU067",
+    "customer_phrase": "chicken nuggets",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0099",
+    "menu_id": "MENU067",
+    "customer_phrase": "chikkan nuggets",
+    "language": "Roman Urdu",
+    "alias_notes": "Phonetic alias — demo"
+  },
+  {
+    "alias_id": "ALS0100",
+    "menu_id": "MENU068",
+    "customer_phrase": "chicken cheese sandwich",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0101",
+    "menu_id": "MENU068",
+    "customer_phrase": "chikkan cheese sandwich",
+    "language": "Roman Urdu",
+    "alias_notes": "Phonetic alias — demo"
+  },
+  {
+    "alias_id": "ALS0102",
+    "menu_id": "MENU069",
+    "customer_phrase": "fish burger",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0103",
+    "menu_id": "MENU070",
+    "customer_phrase": "chicken cheese loaded fries",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0104",
+    "menu_id": "MENU070",
+    "customer_phrase": "chikkan cheese loaded fries",
+    "language": "Roman Urdu",
+    "alias_notes": "Phonetic alias — demo"
+  },
+  {
+    "alias_id": "ALS0105",
+    "menu_id": "MENU071",
+    "customer_phrase": "bbq chicken pizza",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0106",
+    "menu_id": "MENU071",
+    "customer_phrase": "bbq chikkan pizza",
+    "language": "Roman Urdu",
+    "alias_notes": "Phonetic alias — demo"
+  },
+  {
+    "alias_id": "ALS0107",
+    "menu_id": "MENU072",
+    "customer_phrase": "margherita pizza",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0108",
+    "menu_id": "MENU073",
+    "customer_phrase": "pepperoni-style pizza",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0109",
+    "menu_id": "MENU074",
+    "customer_phrase": "veggie pizza",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0110",
+    "menu_id": "MENU075",
+    "customer_phrase": "four cheese pizza",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0111",
+    "menu_id": "MENU076",
+    "customer_phrase": "creamy mushroom pasta",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0112",
+    "menu_id": "MENU077",
+    "customer_phrase": "chicken penne pasta",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0113",
+    "menu_id": "MENU077",
+    "customer_phrase": "chikkan penne pasta",
+    "language": "Roman Urdu",
+    "alias_notes": "Phonetic alias — demo"
+  },
+  {
+    "alias_id": "ALS0114",
+    "menu_id": "MENU078",
+    "customer_phrase": "spaghetti bolognese",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0115",
+    "menu_id": "MENU079",
+    "customer_phrase": "egg fried rice",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0116",
+    "menu_id": "MENU080",
+    "customer_phrase": "vegetable fried rice",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0117",
+    "menu_id": "MENU081",
+    "customer_phrase": "beef chow mein",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0118",
+    "menu_id": "MENU082",
+    "customer_phrase": "vegetable chow mein",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0119",
+    "menu_id": "MENU083",
+    "customer_phrase": "kung pao chicken",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0120",
+    "menu_id": "MENU083",
+    "customer_phrase": "kung pao chikkan",
+    "language": "Roman Urdu",
+    "alias_notes": "Phonetic alias — demo"
+  },
+  {
+    "alias_id": "ALS0121",
+    "menu_id": "MENU084",
+    "customer_phrase": "chicken shashlik",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0122",
+    "menu_id": "MENU084",
+    "customer_phrase": "chikkan shashlik",
+    "language": "Roman Urdu",
+    "alias_notes": "Phonetic alias — demo"
+  },
+  {
+    "alias_id": "ALS0123",
+    "menu_id": "MENU085",
+    "customer_phrase": "hot and sour soup",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0124",
+    "menu_id": "MENU086",
+    "customer_phrase": "chicken corn soup",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0125",
+    "menu_id": "MENU086",
+    "customer_phrase": "chikkan corn soup",
+    "language": "Roman Urdu",
+    "alias_notes": "Phonetic alias — demo"
+  },
+  {
+    "alias_id": "ALS0126",
+    "menu_id": "MENU087",
+    "customer_phrase": "creamy mushroom chicken",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0127",
+    "menu_id": "MENU087",
+    "customer_phrase": "creamy mushroom chikkan",
+    "language": "Roman Urdu",
+    "alias_notes": "Phonetic alias — demo"
+  },
+  {
+    "alias_id": "ALS0128",
+    "menu_id": "MENU088",
+    "customer_phrase": "fish and chips",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0129",
+    "menu_id": "MENU089",
+    "customer_phrase": "plain paratha",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0130",
+    "menu_id": "MENU090",
+    "customer_phrase": "aloo paratha",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0131",
+    "menu_id": "MENU091",
+    "customer_phrase": "omelette",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0132",
+    "menu_id": "MENU092",
+    "customer_phrase": "cheese omelette",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0133",
+    "menu_id": "MENU093",
+    "customer_phrase": "halwa",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0134",
+    "menu_id": "MENU094",
+    "customer_phrase": "puri",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0135",
+    "menu_id": "MENU095",
+    "customer_phrase": "masala chai",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0136",
+    "menu_id": "MENU096",
+    "customer_phrase": "french toast",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0137",
+    "menu_id": "MENU097",
+    "customer_phrase": "pancakes",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0138",
+    "menu_id": "MENU098",
+    "customer_phrase": "boiled eggs",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0139",
+    "menu_id": "MENU099",
+    "customer_phrase": "gulab jamun",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0140",
+    "menu_id": "MENU100",
+    "customer_phrase": "kheer",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0141",
+    "menu_id": "MENU101",
+    "customer_phrase": "chocolate lava cake",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0142",
+    "menu_id": "MENU102",
+    "customer_phrase": "vanilla ice cream",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0143",
+    "menu_id": "MENU103",
+    "customer_phrase": "chocolate ice cream",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0144",
+    "menu_id": "MENU104",
+    "customer_phrase": "chocolate sundae",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0145",
+    "menu_id": "MENU105",
+    "customer_phrase": "fruit trifle",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0146",
+    "menu_id": "MENU106",
+    "customer_phrase": "caramel custard",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0147",
+    "menu_id": "MENU107",
+    "customer_phrase": "fresh lime",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0148",
+    "menu_id": "MENU108",
+    "customer_phrase": "chocolate shake",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0149",
+    "menu_id": "MENU109",
+    "customer_phrase": "strawberry shake",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0150",
+    "menu_id": "MENU110",
+    "customer_phrase": "banana shake",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0151",
+    "menu_id": "MENU111",
+    "customer_phrase": "fresh orange juice",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0152",
+    "menu_id": "MENU112",
+    "customer_phrase": "fresh apple juice",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0153",
+    "menu_id": "MENU113",
+    "customer_phrase": "coffee",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0154",
+    "menu_id": "MENU114",
+    "customer_phrase": "cappuccino",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0155",
+    "menu_id": "MENU115",
+    "customer_phrase": "cold coffee",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0156",
+    "menu_id": "MENU116",
+    "customer_phrase": "soft drink 1.5l",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0157",
+    "menu_id": "MENU117",
+    "customer_phrase": "mineral water 1.5l",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  },
+  {
+    "alias_id": "ALS0158",
+    "menu_id": "MENU118",
+    "customer_phrase": "lassi sweet",
+    "language": "English",
+    "alias_notes": "Canonical lowercase"
+  }
+]

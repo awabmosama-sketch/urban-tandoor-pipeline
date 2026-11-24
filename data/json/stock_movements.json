@@ -1,0 +1,98 @@
+[
+  {
+    "movement_id": "MOV0001",
+    "movement_date": "2026-10-31",
+    "branch_id": "UTG-KHI-001",
+    "ingredient_id": "ING001",
+    "movement_type": "RECEIPT",
+    "qty_signed": 12.0,
+    "unit": "kg",
+    "reference": "PO-DEMO-001",
+    "reason": "Warehouse receipt",
+    "data_type": "Demo"
+  },
+  {
+    "movement_id": "MOV0002",
+    "movement_date": "2026-10-31",
+    "branch_id": "UTG-KHI-001",
+    "ingredient_id": "ING007",
+    "movement_type": "CONSUMPTION",
+    "qty_signed": -8.0,
+    "unit": "kg",
+    "reference": "ORD-DEMO-021",
+    "reason": "Kitchen usage",
+    "data_type": "Demo"
+  },
+  {
+    "movement_id": "MOV0003",
+    "movement_date": "2026-10-31",
+    "branch_id": "UTG-KHI-001",
+    "ingredient_id": "ING023",
+    "movement_type": "WASTAGE",
+    "qty_signed": -2.0,
+    "unit": "kg",
+    "reference": "WST-DEMO-001",
+    "reason": "Damaged stock",
+    "data_type": "Demo"
+  },
+  {
+    "movement_id": "MOV0004",
+    "movement_date": "2026-10-31",
+    "branch_id": "UTG-KHI-002",
+    "ingredient_id": "ING017",
+    "movement_type": "CONSUMPTION",
+    "qty_signed": -3.5,
+    "unit": "kg",
+    "reference": "ORD-DEMO-043",
+    "reason": "Pizza service",
+    "data_type": "Demo"
+  },
+  {
+    "movement_id": "MOV0005",
+    "movement_date": "2026-10-31",
+    "branch_id": "UTG-KHI-002",
+    "ingredient_id": "ING010",
+    "movement_type": "RECEIPT",
+    "qty_signed": 10.0,
+    "unit": "pcs",
+    "reference": "PO-DEMO-002",
+    "reason": "Dough delivery",
+    "data_type": "Demo"
+  },
+  {
+    "movement_id": "MOV0006",
+    "movement_date": "2026-10-31",
+    "branch_id": "UTG-KHI-002",
+    "ingredient_id": "ING030",
+    "movement_type": "WASTAGE",
+    "qty_signed": -0.5,
+    "unit": "kg",
+    "reference": "WST-DEMO-002",
+    "reason": "Spoiled mushrooms",
+    "data_type": "Demo"
+  },
+  {
+    "movement_id": "MOV0007",
+    "movement_date": "2026-10-31",
+    "branch_id": "UTG-KHI-001",
+    "ingredient_id": "ING014",
+    "movement_type": "ADJUSTMENT",
+    "qty_signed": 4.0,
+    "unit": "pcs",
+    "reference": "ADJ-DEMO-001",
+    "reason": "Cycle count correction",
+    "data_type": "Demo"
+  },
+  {
+    "movement_id": "MOV0008",
+    "movement_date": "2026-10-31",
+    "branch_id": "UTG-KHI-002",
+    "ingredient_id": "ING052",
+    "movement_type": "RESERVATION",
+    "qty_signed": -12.0,
+    "unit": "pcs",
+    "reference": "PRE-DEMO-010",
+    "reason": "Future event order hold",
+    "data_type": "Demo"
+  }
+]

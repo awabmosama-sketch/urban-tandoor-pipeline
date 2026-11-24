@@ -1,0 +1,51 @@
+[
+  {
+    "supplier_id": "SUP01",
+    "supplier_name": "Karachi Protein Supply",
+    "supply_category": "Meat and poultry",
+    "contact": "Demo supplier",
+    "verification": "Not verified"
+  },
+  {
+    "supplier_id": "SUP02",
+    "supplier_name": "Metro Pantry Wholesale",
+    "supply_category": "Dry goods, spices and oil",
+    "contact": "Demo supplier",
+    "verification": "Not verified"
+  },
+  {
+    "supplier_id": "SUP03",
+    "supplier_name": "Fresh Dairy Distribution",
+    "supply_category": "Dairy and eggs",
+    "contact": "Demo supplier",
+    "verification": "Not verified"
+  },
+  {
+    "supplier_id": "SUP04",
+    "supplier_name": "City Bakers & Dough",
+    "supply_category": "Bakery and prepared dough",
+    "contact": "Demo supplier",
+    "verification": "Not verified"
+  },
+  {
+    "supplier_id": "SUP05",
+    "supplier_name": "Karachi Produce Hub",
+    "supply_category": "Fresh vegetables and herbs",
+    "contact": "Demo supplier",
+    "verification": "Not verified"
+  },
+  {
+    "supplier_id": "SUP06",
+    "supplier_name": "Sauce & Seasoning Co.",
+    "supply_category": "Sauces and marinades",
+    "contact": "Demo supplier",
+    "verification": "Not verified"
+  },
+  {
+    "supplier_id": "SUP07",
+    "supplier_name": "Beverage & Dessert Wholesale",
+    "supply_category": "Drinks and desserts",
+    "contact": "Demo supplier",
+    "verification": "Not verified"
+  }
+]

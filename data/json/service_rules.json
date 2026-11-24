@@ -1,0 +1,58 @@
+[
+  {
+    "rule_id": "RULE001",
+    "rule_name": "Operating hours",
+    "value": "24/7",
+    "applies_to": "Both branches",
+    "verification_status": "Confirmed in synthetic profile",
+    "comment": "Individual item service window may be restricted"
+  },
+  {
+    "rule_id": "RULE002",
+    "rule_name": "Breakfast window",
+    "value": "06:00–12:00",
+    "applies_to": "Breakfast",
+    "verification_status": "Demo assumption",
+    "comment": "Confirm actual schedule"
+  },
+  {
+    "rule_id": "RULE003",
+    "rule_name": "Pre-orders",
+    "value": "Supported",
+    "applies_to": "Delivery / pickup",
+    "verification_status": "Scope confirmed",
+    "comment": "Lead time, cut-off and hold policy pending"
+  },
+  {
+    "rule_id": "RULE004",
+    "rule_name": "Bank promotion",
+    "value": "10%",
+    "applies_to": "Eligible bank payments",
+    "verification_status": "Scope confirmed; eligibility pending",
+    "comment": "Bank list, cap, payment method, stack policy to define"
+  },
+  {
+    "rule_id": "RULE005",
+    "rule_name": "Tax treatment",
+    "value": "Not configured",
+    "applies_to": "All items",
+    "verification_status": "Pending",
+    "comment": "Do not present tax-inclusive final amount"
+  },
+  {
+    "rule_id": "RULE006",
+    "rule_name": "Minimum delivery order",
+    "value": "Not configured",
+    "applies_to": "Delivery",
+    "verification_status": "Pending",
+    "comment": "Configure delivery zone pricing separately"
+  },
+  {
+    "rule_id": "RULE007",
+    "rule_name": "Item-level stock check",
+    "value": "Mandatory",
+    "applies_to": "All channels",
+    "verification_status": "Required design",
+    "comment": "Transactionally reserve ingredients on confirmation"
+  }
+]

@@ -1,0 +1,112 @@
+[
+  {
+    "addon_id": "ADD001",
+    "addon_name": "Extra Cheese",
+    "price_pkr": 160.0,
+    "category": "Dairy & Eggs",
+    "allergen_hint": "Milk",
+    "ingredient_id": "ING018",
+    "qty_ingredient_units": 0.035,
+    "shown_in_menu": true,
+    "order_status": "Draft - addon recipe confirmation"
+  },
+  {
+    "addon_id": "ADD002",
+    "addon_name": "Extra Sauce",
+    "price_pkr": 70.0,
+    "category": "Sauces",
+    "allergen_hint": "Unverified",
+    "ingredient_id": "ING040",
+    "qty_ingredient_units": 0.025,
+    "shown_in_menu": true,
+    "order_status": "Draft - addon recipe confirmation"
+  },
+  {
+    "addon_id": "ADD003",
+    "addon_name": "Extra Chicken",
+    "price_pkr": 250.0,
+    "category": "Protein",
+    "allergen_hint": "None verified",
+    "ingredient_id": "ING001",
+    "qty_ingredient_units": 0.1,
+    "shown_in_menu": true,
+    "order_status": "Draft - addon recipe confirmation"
+  },
+  {
+    "addon_id": "ADD004",
+    "addon_name": "Extra Beef Patty",
+    "price_pkr": 320.0,
+    "category": "Protein",
+    "allergen_hint": "None verified",
+    "ingredient_id": "ING006",
+    "qty_ingredient_units": 0.12,
+    "shown_in_menu": true,
+    "order_status": "Draft - addon recipe confirmation"
+  },
+  {
+    "addon_id": "ADD005",
+    "addon_name": "French Fries Side",
+    "price_pkr": 230.0,
+    "category": "Sides",
+    "allergen_hint": "Not verified",
+    "ingredient_id": "ING023",
+    "qty_ingredient_units": 0.16,
+    "shown_in_menu": true,
+    "order_status": "Draft - addon recipe confirmation"
+  },
+  {
+    "addon_id": "ADD006",
+    "addon_name": "Extra Naan",
+    "price_pkr": 80.0,
+    "category": "Breads",
+    "allergen_hint": "Wheat/Gluten",
+    "ingredient_id": "ING059",
+    "qty_ingredient_units": 1.0,
+    "shown_in_menu": true,
+    "order_status": "Draft - addon recipe confirmation"
+  },
+  {
+    "addon_id": "ADD007",
+    "addon_name": "Extra Egg",
+    "price_pkr": 100.0,
+    "category": "Protein",
+    "allergen_hint": "Egg",
+    "ingredient_id": "ING014",
+    "qty_ingredient_units": 1.0,
+    "shown_in_menu": true,
+    "order_status": "Draft - addon recipe confirmation"
+  },
+  {
+    "addon_id": "ADD008",
+    "addon_name": "Extra Mozzarella",
+    "price_pkr": 190.0,
+    "category": "Dairy & Eggs",
+    "allergen_hint": "Milk",
+    "ingredient_id": "ING017",
+    "qty_ingredient_units": 0.05,
+    "shown_in_menu": true,
+    "order_status": "Draft - addon recipe confirmation"
+  },
+  {
+    "addon_id": "ADD009",
+    "addon_name": "Extra Mushrooms",
+    "price_pkr": 120.0,
+    "category": "Vegetables",
+    "allergen_hint": "Not verified",
+    "ingredient_id": "ING030",
+    "qty_ingredient_units": 0.06,
+    "shown_in_menu": true,
+    "order_status": "Draft - addon recipe confirmation"
+  },
+  {
+    "addon_id": "ADD010",
+    "addon_name": "Drink Upgrade",
+    "price_pkr": 130.0,
+    "category": "Beverage",
+    "allergen_hint": "See drink item",
+    "ingredient_id": null,
+    "qty_ingredient_units": null,
+    "shown_in_menu": true,
+    "order_status": "Requires actual paired menu item"
+  }
+]

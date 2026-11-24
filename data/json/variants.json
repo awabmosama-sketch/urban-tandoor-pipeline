@@ -1,0 +1,1482 @@
+[
+  {
+    "variant_id": "VAR-MENU001-STD",
+    "menu_id": "MENU001",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 420.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": true,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU002-STD",
+    "menu_id": "MENU002",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 520.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": true,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU003-STD",
+    "menu_id": "MENU003",
+    "variant_name": "Half",
+    "price_pkr": 1750.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": true,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU003-FULL",
+    "menu_id": "MENU003",
+    "variant_name": "Full",
+    "price_pkr": 3150.0,
+    "recipe_multiplier_est": 1.8,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Requires variant-specific recipe scaling/validation"
+  },
+  {
+    "variant_id": "VAR-MENU004-STD",
+    "menu_id": "MENU004",
+    "variant_name": "Half",
+    "price_pkr": 2950.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": true,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU004-FULL",
+    "menu_id": "MENU004",
+    "variant_name": "Full",
+    "price_pkr": 5310.0,
+    "recipe_multiplier_est": 1.8,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Requires variant-specific recipe scaling/validation"
+  },
+  {
+    "variant_id": "VAR-MENU005-STD",
+    "menu_id": "MENU005",
+    "variant_name": "Half",
+    "price_pkr": 1850.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": true,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU005-FULL",
+    "menu_id": "MENU005",
+    "variant_name": "Full",
+    "price_pkr": 3330.0,
+    "recipe_multiplier_est": 1.8,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Requires variant-specific recipe scaling/validation"
+  },
+  {
+    "variant_id": "VAR-MENU006-STD",
+    "menu_id": "MENU006",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 490.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": true,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU007-STD",
+    "menu_id": "MENU007",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 590.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": true,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU008-STD",
+    "menu_id": "MENU008",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 790.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": true,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU009-STD",
+    "menu_id": "MENU009",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 670.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": true,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU010-STD",
+    "menu_id": "MENU010",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 2190.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": true,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU011-STD",
+    "menu_id": "MENU011",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 690.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": true,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU012-STD",
+    "menu_id": "MENU012",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 790.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": true,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU013-STD",
+    "menu_id": "MENU013",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 680.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": true,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU014-STD",
+    "menu_id": "MENU014",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 570.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": true,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU015-STD",
+    "menu_id": "MENU015",
+    "variant_name": "Small",
+    "price_pkr": 1090.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": true,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU015-MED",
+    "menu_id": "MENU015",
+    "variant_name": "Medium",
+    "price_pkr": 1680.0,
+    "recipe_multiplier_est": 1.6,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Requires variant-specific recipe scaling/validation"
+  },
+  {
+    "variant_id": "VAR-MENU015-LRG",
+    "menu_id": "MENU015",
+    "variant_name": "Large",
+    "price_pkr": 2450.0,
+    "recipe_multiplier_est": 2.3,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Requires variant-specific recipe scaling/validation"
+  },
+  {
+    "variant_id": "VAR-MENU016-STD",
+    "menu_id": "MENU016",
+    "variant_name": "Small",
+    "price_pkr": 1090.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": true,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU016-MED",
+    "menu_id": "MENU016",
+    "variant_name": "Medium",
+    "price_pkr": 1680.0,
+    "recipe_multiplier_est": 1.6,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Requires variant-specific recipe scaling/validation"
+  },
+  {
+    "variant_id": "VAR-MENU016-LRG",
+    "menu_id": "MENU016",
+    "variant_name": "Large",
+    "price_pkr": 2450.0,
+    "recipe_multiplier_est": 2.3,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Requires variant-specific recipe scaling/validation"
+  },
+  {
+    "variant_id": "VAR-MENU017-STD",
+    "menu_id": "MENU017",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 990.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": true,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU018-STD",
+    "menu_id": "MENU018",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 850.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": true,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU019-STD",
+    "menu_id": "MENU019",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 820.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": true,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU020-STD",
+    "menu_id": "MENU020",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 720.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": true,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU021-STD",
+    "menu_id": "MENU021",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 930.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": true,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU022-STD",
+    "menu_id": "MENU022",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 1490.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": true,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU023-STD",
+    "menu_id": "MENU023",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 380.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": true,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU024-STD",
+    "menu_id": "MENU024",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 290.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": true,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU025-STD",
+    "menu_id": "MENU025",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 320.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": true,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU026-STD",
+    "menu_id": "MENU026",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 420.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": true,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU027-STD",
+    "menu_id": "MENU027",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 550.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": true,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU028-STD",
+    "menu_id": "MENU028",
+    "variant_name": "Regular",
+    "price_pkr": 490.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": true,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU028-LRG",
+    "menu_id": "MENU028",
+    "variant_name": "Large",
+    "price_pkr": 680.0,
+    "recipe_multiplier_est": 1.4,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Requires variant-specific recipe scaling/validation"
+  },
+  {
+    "variant_id": "VAR-MENU029-STD",
+    "menu_id": "MENU029",
+    "variant_name": "Regular",
+    "price_pkr": 390.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": true,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU029-LRG",
+    "menu_id": "MENU029",
+    "variant_name": "Large",
+    "price_pkr": 540.0,
+    "recipe_multiplier_est": 1.4,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Requires variant-specific recipe scaling/validation"
+  },
+  {
+    "variant_id": "VAR-MENU030-STD",
+    "menu_id": "MENU030",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 160.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": true,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU031-STD",
+    "menu_id": "MENU031",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 100.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": true,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU032-STD",
+    "menu_id": "MENU032",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 150.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": true,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU033-STD",
+    "menu_id": "MENU033",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 1050.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU034-STD",
+    "menu_id": "MENU034",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 1100.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU035-STD",
+    "menu_id": "MENU035",
+    "variant_name": "Half",
+    "price_pkr": 1950.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU035-FULL",
+    "menu_id": "MENU035",
+    "variant_name": "Full",
+    "price_pkr": 3510.0,
+    "recipe_multiplier_est": 1.8,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Requires variant-specific recipe scaling/validation"
+  },
+  {
+    "variant_id": "VAR-MENU036-STD",
+    "menu_id": "MENU036",
+    "variant_name": "Half",
+    "price_pkr": 1150.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU036-FULL",
+    "menu_id": "MENU036",
+    "variant_name": "Full",
+    "price_pkr": 2070.0,
+    "recipe_multiplier_est": 1.8,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Requires variant-specific recipe scaling/validation"
+  },
+  {
+    "variant_id": "VAR-MENU037-STD",
+    "menu_id": "MENU037",
+    "variant_name": "Half",
+    "price_pkr": 3250.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU037-FULL",
+    "menu_id": "MENU037",
+    "variant_name": "Full",
+    "price_pkr": 5850.0,
+    "recipe_multiplier_est": 1.8,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Requires variant-specific recipe scaling/validation"
+  },
+  {
+    "variant_id": "VAR-MENU038-STD",
+    "menu_id": "MENU038",
+    "variant_name": "Half",
+    "price_pkr": 950.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU038-FULL",
+    "menu_id": "MENU038",
+    "variant_name": "Full",
+    "price_pkr": 1710.0,
+    "recipe_multiplier_est": 1.8,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Requires variant-specific recipe scaling/validation"
+  },
+  {
+    "variant_id": "VAR-MENU039-STD",
+    "menu_id": "MENU039",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 1050.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU040-STD",
+    "menu_id": "MENU040",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 1100.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU041-STD",
+    "menu_id": "MENU041",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 900.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU042-STD",
+    "menu_id": "MENU042",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 1150.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU043-STD",
+    "menu_id": "MENU043",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 850.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU044-STD",
+    "menu_id": "MENU044",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 950.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU045-STD",
+    "menu_id": "MENU045",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 80.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU046-STD",
+    "menu_id": "MENU046",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 150.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU047-STD",
+    "menu_id": "MENU047",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 120.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU048-STD",
+    "menu_id": "MENU048",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 55.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU049-STD",
+    "menu_id": "MENU049",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 750.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU050-STD",
+    "menu_id": "MENU050",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 850.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU051-STD",
+    "menu_id": "MENU051",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 950.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU052-STD",
+    "menu_id": "MENU052",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 1000.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU053-STD",
+    "menu_id": "MENU053",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 800.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU054-STD",
+    "menu_id": "MENU054",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 1190.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU055-STD",
+    "menu_id": "MENU055",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 2150.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU056-STD",
+    "menu_id": "MENU056",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 3500.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU057-STD",
+    "menu_id": "MENU057",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 950.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU058-STD",
+    "menu_id": "MENU058",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 1000.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU059-STD",
+    "menu_id": "MENU059",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 540.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU060-STD",
+    "menu_id": "MENU060",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 790.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU061-STD",
+    "menu_id": "MENU061",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 490.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU062-STD",
+    "menu_id": "MENU062",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 590.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU063-STD",
+    "menu_id": "MENU063",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 690.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU064-STD",
+    "menu_id": "MENU064",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 740.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU065-STD",
+    "menu_id": "MENU065",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 290.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU066-STD",
+    "menu_id": "MENU066",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 790.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU067-STD",
+    "menu_id": "MENU067",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 490.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU068-STD",
+    "menu_id": "MENU068",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 590.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU069-STD",
+    "menu_id": "MENU069",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 690.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU070-STD",
+    "menu_id": "MENU070",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 740.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU071-STD",
+    "menu_id": "MENU071",
+    "variant_name": "Small",
+    "price_pkr": 1100.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU071-MED",
+    "menu_id": "MENU071",
+    "variant_name": "Medium",
+    "price_pkr": 1700.0,
+    "recipe_multiplier_est": 1.6,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Requires variant-specific recipe scaling/validation"
+  },
+  {
+    "variant_id": "VAR-MENU071-LRG",
+    "menu_id": "MENU071",
+    "variant_name": "Large",
+    "price_pkr": 2470.0,
+    "recipe_multiplier_est": 2.3,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Requires variant-specific recipe scaling/validation"
+  },
+  {
+    "variant_id": "VAR-MENU072-STD",
+    "menu_id": "MENU072",
+    "variant_name": "Small",
+    "price_pkr": 1350.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU072-MED",
+    "menu_id": "MENU072",
+    "variant_name": "Medium",
+    "price_pkr": 2090.0,
+    "recipe_multiplier_est": 1.6,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Requires variant-specific recipe scaling/validation"
+  },
+  {
+    "variant_id": "VAR-MENU072-LRG",
+    "menu_id": "MENU072",
+    "variant_name": "Large",
+    "price_pkr": 3030.0,
+    "recipe_multiplier_est": 2.3,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Requires variant-specific recipe scaling/validation"
+  },
+  {
+    "variant_id": "VAR-MENU073-STD",
+    "menu_id": "MENU073",
+    "variant_name": "Small",
+    "price_pkr": 1050.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU073-MED",
+    "menu_id": "MENU073",
+    "variant_name": "Medium",
+    "price_pkr": 1620.0,
+    "recipe_multiplier_est": 1.6,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Requires variant-specific recipe scaling/validation"
+  },
+  {
+    "variant_id": "VAR-MENU073-LRG",
+    "menu_id": "MENU073",
+    "variant_name": "Large",
+    "price_pkr": 2360.0,
+    "recipe_multiplier_est": 2.3,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Requires variant-specific recipe scaling/validation"
+  },
+  {
+    "variant_id": "VAR-MENU074-STD",
+    "menu_id": "MENU074",
+    "variant_name": "Small",
+    "price_pkr": 1150.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU074-MED",
+    "menu_id": "MENU074",
+    "variant_name": "Medium",
+    "price_pkr": 1780.0,
+    "recipe_multiplier_est": 1.6,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Requires variant-specific recipe scaling/validation"
+  },
+  {
+    "variant_id": "VAR-MENU074-LRG",
+    "menu_id": "MENU074",
+    "variant_name": "Large",
+    "price_pkr": 2580.0,
+    "recipe_multiplier_est": 2.3,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Requires variant-specific recipe scaling/validation"
+  },
+  {
+    "variant_id": "VAR-MENU075-STD",
+    "menu_id": "MENU075",
+    "variant_name": "Small",
+    "price_pkr": 1250.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU075-MED",
+    "menu_id": "MENU075",
+    "variant_name": "Medium",
+    "price_pkr": 1930.0,
+    "recipe_multiplier_est": 1.6,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Requires variant-specific recipe scaling/validation"
+  },
+  {
+    "variant_id": "VAR-MENU075-LRG",
+    "menu_id": "MENU075",
+    "variant_name": "Large",
+    "price_pkr": 2810.0,
+    "recipe_multiplier_est": 2.3,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Requires variant-specific recipe scaling/validation"
+  },
+  {
+    "variant_id": "VAR-MENU076-STD",
+    "menu_id": "MENU076",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 1300.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU077-STD",
+    "menu_id": "MENU077",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 1100.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU078-STD",
+    "menu_id": "MENU078",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 1350.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU079-STD",
+    "menu_id": "MENU079",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 750.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU080-STD",
+    "menu_id": "MENU080",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 850.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU081-STD",
+    "menu_id": "MENU081",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 950.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU082-STD",
+    "menu_id": "MENU082",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 1000.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU083-STD",
+    "menu_id": "MENU083",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 800.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU084-STD",
+    "menu_id": "MENU084",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 1050.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU085-STD",
+    "menu_id": "MENU085",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 450.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU086-STD",
+    "menu_id": "MENU086",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 430.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU087-STD",
+    "menu_id": "MENU087",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 950.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU088-STD",
+    "menu_id": "MENU088",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 1050.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU089-STD",
+    "menu_id": "MENU089",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 150.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU090-STD",
+    "menu_id": "MENU090",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 500.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU091-STD",
+    "menu_id": "MENU091",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 200.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU092-STD",
+    "menu_id": "MENU092",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 300.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU093-STD",
+    "menu_id": "MENU093",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 180.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU094-STD",
+    "menu_id": "MENU094",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 65.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU095-STD",
+    "menu_id": "MENU095",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 170.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU096-STD",
+    "menu_id": "MENU096",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 500.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU097-STD",
+    "menu_id": "MENU097",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 200.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU098-STD",
+    "menu_id": "MENU098",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 180.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU099-STD",
+    "menu_id": "MENU099",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 520.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU100-STD",
+    "menu_id": "MENU100",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 570.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU101-STD",
+    "menu_id": "MENU101",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 370.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU102-STD",
+    "menu_id": "MENU102",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 310.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU103-STD",
+    "menu_id": "MENU103",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 330.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU104-STD",
+    "menu_id": "MENU104",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 420.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU105-STD",
+    "menu_id": "MENU105",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 520.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU106-STD",
+    "menu_id": "MENU106",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 570.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU107-STD",
+    "menu_id": "MENU107",
+    "variant_name": "Regular",
+    "price_pkr": 250.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU107-LRG",
+    "menu_id": "MENU107",
+    "variant_name": "Large",
+    "price_pkr": 350.0,
+    "recipe_multiplier_est": 1.4,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Requires variant-specific recipe scaling/validation"
+  },
+  {
+    "variant_id": "VAR-MENU108-STD",
+    "menu_id": "MENU108",
+    "variant_name": "Regular",
+    "price_pkr": 500.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU108-LRG",
+    "menu_id": "MENU108",
+    "variant_name": "Large",
+    "price_pkr": 700.0,
+    "recipe_multiplier_est": 1.4,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Requires variant-specific recipe scaling/validation"
+  },
+  {
+    "variant_id": "VAR-MENU109-STD",
+    "menu_id": "MENU109",
+    "variant_name": "Regular",
+    "price_pkr": 200.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU109-LRG",
+    "menu_id": "MENU109",
+    "variant_name": "Large",
+    "price_pkr": 280.0,
+    "recipe_multiplier_est": 1.4,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Requires variant-specific recipe scaling/validation"
+  },
+  {
+    "variant_id": "VAR-MENU110-STD",
+    "menu_id": "MENU110",
+    "variant_name": "Regular",
+    "price_pkr": 300.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU110-LRG",
+    "menu_id": "MENU110",
+    "variant_name": "Large",
+    "price_pkr": 420.0,
+    "recipe_multiplier_est": 1.4,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Requires variant-specific recipe scaling/validation"
+  },
+  {
+    "variant_id": "VAR-MENU111-STD",
+    "menu_id": "MENU111",
+    "variant_name": "Regular",
+    "price_pkr": 400.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU111-LRG",
+    "menu_id": "MENU111",
+    "variant_name": "Large",
+    "price_pkr": 560.0,
+    "recipe_multiplier_est": 1.4,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Requires variant-specific recipe scaling/validation"
+  },
+  {
+    "variant_id": "VAR-MENU112-STD",
+    "menu_id": "MENU112",
+    "variant_name": "Regular",
+    "price_pkr": 450.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU112-LRG",
+    "menu_id": "MENU112",
+    "variant_name": "Large",
+    "price_pkr": 630.0,
+    "recipe_multiplier_est": 1.4,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Requires variant-specific recipe scaling/validation"
+  },
+  {
+    "variant_id": "VAR-MENU113-STD",
+    "menu_id": "MENU113",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 230.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU114-STD",
+    "menu_id": "MENU114",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 360.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU115-STD",
+    "menu_id": "MENU115",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 200.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU116-STD",
+    "menu_id": "MENU116",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 280.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU117-STD",
+    "menu_id": "MENU117",
+    "variant_name": "Regular / Standard",
+    "price_pkr": 180.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU118-STD",
+    "menu_id": "MENU118",
+    "variant_name": "Regular",
+    "price_pkr": 450.0,
+    "recipe_multiplier_est": 1.0,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Default recipe quantity"
+  },
+  {
+    "variant_id": "VAR-MENU118-LRG",
+    "menu_id": "MENU118",
+    "variant_name": "Large",
+    "price_pkr": 630.0,
+    "recipe_multiplier_est": 1.4,
+    "shown_in_menu": true,
+    "approved_for_orders": false,
+    "operational_notes": "Requires variant-specific recipe scaling/validation"
+  }
+]
